@@ -884,9 +884,6 @@ img { max-width: 100%; display: block; }
     padding-top: 8px;
     border-top: 1px solid var(--line);
   }
-  /* 滚动 is-compact 始终折叠（不论是否展开） */
-  .filter-bar.is-compact .tier-filter,
-  .filter-bar.is-compact .subtags-wrap { display: none; }
 }
 
 @media (min-width: 641px) {
@@ -926,11 +923,5 @@ img { max-width: 100%; display: block; }
   .card-source a, .card-source .badge { overflow: hidden; text-overflow: ellipsis; max-width: 62%; }
   /* 热度：手机端隐藏（占位置且信息价值低） */
   .foot-left .heat-stat { display: none; }
-
-  /* —— P1：滚动中只留行业 chips（.is-compact 由 main.js 滚动时添加） —— */
-  .filter-bar.is-compact { padding-bottom: 10px; }
-  .filter-bar.is-compact .tier-filter,
-  .filter-bar.is-compact .result-count,
-  .filter-bar.is-compact .subtags-wrap { display: none; }
 }
 

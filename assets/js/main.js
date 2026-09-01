@@ -1155,20 +1155,6 @@
     });
   }
 
-  /* ---------- 手机端：滚动中吸顶筛选区精简（只留行业 chips），停手 0.5s 恢复 ---------- */
-  function initFilterCompact() {
-    var fb = $('filterBar');
-    if (!fb || !window.matchMedia) return;
-    var timer = null;
-    var mq = window.matchMedia('(max-width: 640px)');
-    window.addEventListener('scroll', function () {
-      if (!mq.matches) return;              // 仅手机端生效
-      fb.classList.add('is-compact');
-      if (timer) clearTimeout(timer);
-      timer = setTimeout(function () { fb.classList.remove('is-compact'); }, 500);
-    }, { passive: true });
-  }
-
   /* ---------- 手机端：默认折叠 tier / 热门话题，点"更多筛选"展开/收起 ---------- */
   function initFilterMobileToggle() {
     var fb = $('filterBar'), btn = $('filterToggleMobile');
@@ -1196,7 +1182,6 @@
     initFillModal();
     initEmptyState();
     initScrollUI();
-    initFilterCompact();
     initFilterMobileToggle();
     initReveal();
     initHeroLoad();
