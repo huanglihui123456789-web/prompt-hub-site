@@ -695,11 +695,8 @@ img { max-width: 100%; display: block; }
   .subtags-wrap[open] .subtags::-webkit-scrollbar { display: none; }
 }
 @media (min-width: 641px) {
-  /* 桌面端：summary 永远隐藏，subtags 永远展开（覆盖默认折叠） */
+  /* 桌面端：summary 永远隐藏；subtags 展开由 JS 设 details.open=true 保证（原生 details 折叠 CSS 无法强制展开） */
   .subtags-wrap > summary { display: none; }
-  .subtags-wrap:not([open]) .subtags {
-    display: flex !important; flex-wrap: wrap; overflow: visible; padding-bottom: 0;
-  }
 }
 
 /* ============================================================

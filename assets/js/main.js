@@ -1160,6 +1160,9 @@
     var fb = $('filterBar'), btn = $('filterToggleMobile');
     if (!fb || !btn || !window.matchMedia) return;
     var mq = window.matchMedia('(max-width: 640px)');
+    // 桌面端：热门话题（subtags）始终展开（details 原生折叠无法用 CSS 强制展开，需 JS 设 open）
+    var wrap = document.querySelector('.subtags-wrap');
+    if (wrap) wrap.open = !mq.matches;
     btn.addEventListener('click', function () {
       if (!mq.matches) return;
       var open = fb.classList.toggle('is-mobile-open');
