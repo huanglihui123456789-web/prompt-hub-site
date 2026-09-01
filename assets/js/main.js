@@ -781,7 +781,7 @@
           entries.forEach(function (en) {
             if (en.isIntersecting) { shownCount += RENDER_STEP; renderCards(true); }
           });
-        }, { rootMargin: '300px 0px' });
+        }, { rootMargin: '600px 0px' });
         loadIO.observe(sentinel);
       }
     } else if (loadIO) {
