@@ -533,6 +533,7 @@ img { max-width: 100%; display: block; }
   transition: border-color .2s ease, background .2s ease, transform .2s ease;
 }
 .load-more-btn:hover { border-color: var(--accent); background: var(--accent-soft); transform: translateY(-1px); }
+.load-sentinel { height: 1px; }
 
 /* 英文原名的中文辅助标签（正文保持原文语言，此处仅为辅助阅读/中文搜索） */
 .card-title-zh { font-size: 12.5px; color: var(--muted); margin-top: 2px; letter-spacing: .02em; }

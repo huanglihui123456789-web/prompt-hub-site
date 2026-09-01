@@ -580,7 +580,7 @@
   }
 
   /* ---------- 渲染：卡片（分批渲染，避免一次渲染数百张卡） ---------- */
-  var RENDER_STEP = 60, shownCount = RENDER_STEP;
+  var RENDER_STEP = 60, shownCount = RENDER_STEP, loadIO = null;
   function renderCards(keepShown) {
     if (!keepShown) shownCount = RENDER_STEP;
     var grid = $('promptGrid'), empty = $('emptyState'), countEl = $('resultCount');
@@ -771,6 +771,22 @@
       more.textContent = '加载更多（还有 ' + (list.length - shownCount) + ' 条）';
       more.addEventListener('click', function () { shownCount += RENDER_STEP; renderCards(true); });
       grid.appendChild(more);
+      // 滚动自动加载：哨兵进入视口即自动加载下一批（保留按钮作为手动兜底）
+      var sentinel = document.createElement('div');
+      sentinel.className = 'load-sentinel';
+      grid.appendChild(sentinel);
+      if ('IntersectionObserver' in window) {
+        if (loadIO) loadIO.disconnect();
+        loadIO = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { shownCount += RENDER_STEP; renderCards(true); }
+          });
+        }, { rootMargin: '300px 0px' });
+        loadIO.observe(sentinel);
+      }
+    } else if (loadIO) {
+      loadIO.disconnect();
+      loadIO = null;
     }
 
     if (empty) empty.hidden = list.length !== 0;
