@@ -521,7 +521,17 @@
       b.setAttribute('role', 'tab');
       b.setAttribute('aria-selected', String(c.key === state.cat));
       b.innerHTML = '<i class="fa-solid ' + c.icon + '"></i>' + escapeHtml(c.key);
-      b.addEventListener('click', function () { state.cat = c.key; state.tags.clear(); renderChips(); renderTagCloud(); renderCards(); });
+      b.addEventListener('click', function () {
+        state.cat = c.key;
+        state.tags.clear();
+        // 点「全部」= 显示全部：若搜索框有词也一并清空，避免"点了没用"
+        if (c.key === '全部' && state.q) {
+          state.q = '';
+          var si = $('searchInput'); if (si) si.value = '';
+          var sc = $('searchClear'); if (sc) sc.classList.remove('show');
+        }
+        renderChips(); renderTagCloud(); renderCards();
+      });
       wrap.appendChild(b);
     });
   }
@@ -796,7 +806,19 @@
       if (state.lang !== 'all') label += ' · ' + (LANG_LABEL[state.lang] || state.lang);
       if (state.tags.size) label += ' · 标签 ' + state.tags.size;
       if (state.favOnly) label += ' · 我的收藏';
-      countEl.textContent = label;
+      // 有任一筛选生效时，提供"清除筛选"一键回到全部
+      var hasFilter = !!(state.q.trim() || state.cat !== '全部' || state.lang !== 'all' || state.tags.size || state.favOnly || state.tier !== 'all');
+      countEl.innerHTML = '';
+      countEl.appendChild(document.createTextNode(label));
+      if (hasFilter) {
+        var clr = document.createElement('button');
+        clr.type = 'button';
+        clr.className = 'count-reset';
+        clr.textContent = '清除筛选 ✕';
+        clr.setAttribute('aria-label', '清除所有筛选条件');
+        clr.addEventListener('click', function () { resetFilters(); });
+        countEl.appendChild(clr);
+      }
     }
     // ④ 多语言包上下文提示：切到 fr/de/es/pt/nl 时显示来源说明，化解"仍是中文标题"的困惑
     var intlHint = $('intlHint');
@@ -1024,12 +1046,12 @@
   /* ---------- 空状态引导 ---------- */
   function resetFilters(keepQ) {
     if (!keepQ) state.q = '';
-    state.cat = '全部'; state.lang = 'all'; state.tags.clear(); state.favOnly = false;
+    state.cat = '全部'; state.lang = 'all'; state.tags.clear(); state.favOnly = false; state.tier = 'all';
     var si = $('searchInput'), sc = $('searchClear');
     if (si && !keepQ) si.value = '';
     if (sc) sc.classList.remove('show');
     document.querySelectorAll('.lang-btn').forEach(function (x) { x.classList.toggle('is-active', x.getAttribute('data-lang') === 'all'); });
-    renderChips(); renderTagCloud(); renderCards();
+    renderChips(); renderTierFilter(); renderTagCloud(); renderCards();
   }
   function initEmptyState() {
     var empty = $('emptyState');

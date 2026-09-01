@@ -834,6 +834,15 @@ img { max-width: 100%; display: block; }
   .foot-left .heat-stat { display: none; }
 }
 
+/* —— 「清除筛选」按钮（有筛选时出现在计数行） —— */
+.result-count { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.count-reset {
+  border: none; cursor: pointer; font-size: 12.5px; font-weight: 600;
+  color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent);
+  padding: 5px 12px; border-radius: 999px; transition: background .2s;
+}
+.count-reset:hover { background: color-mix(in srgb, var(--accent) 18%, transparent); }
+
 /* ============================================================
    手机端 P0：降低单卡高度（标签横滑一行 / 来源一行省略 / 隐藏热度）
    手机端 P1：滚动中吸顶区精简（只留行业 chips，停手自动恢复）
