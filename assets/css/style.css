@@ -844,6 +844,57 @@ img { max-width: 100%; display: block; }
 .count-reset:hover { background: color-mix(in srgb, var(--accent) 18%, transparent); }
 
 /* ============================================================
+   移动端：filter-bar 默认只显示行业 chips + 「更多筛选」按钮；
+   点按钮展开 tier + 热门话题（不再"显示全文"）
+   ============================================================ */
+.filter-toggle-mobile {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  width: 100%; padding: 9px 12px; margin-top: 8px;
+  border: 1px dashed var(--line-strong); border-radius: 12px;
+  background: var(--bg); color: var(--ink-soft);
+  font-size: 13px; font-weight: 600; cursor: pointer;
+  transition: color .2s, border-color .2s;
+}
+.filter-toggle-mobile:hover { color: var(--accent); border-color: var(--accent); }
+.filter-toggle-mobile .toggle-chevron { font-size: 10px; transition: transform .2s; margin-left: 2px; }
+.filter-bar.is-mobile-open .filter-toggle-mobile .toggle-chevron { transform: rotate(180deg); }
+
+@media (max-width: 640px) {
+  /* 默认隐藏 tier + 热门话题（不再"显示全文"） */
+  .filter-bar .tier-filter,
+  .filter-bar .subtags-wrap { display: none; }
+  /* 展开后 */
+  .filter-bar.is-mobile-open .tier-filter {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 9px 14px;
+    margin: 8px -14px 0;
+    gap: 6px;
+  }
+  .filter-bar.is-mobile-open .tier-filter::-webkit-scrollbar { display: none; }
+  .filter-bar.is-mobile-open .tier-btn { flex: 0 0 auto; }
+  .filter-bar.is-mobile-open .subtags-wrap {
+    display: block;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+  }
+  /* 滚动 is-compact 始终折叠（不论是否展开） */
+  .filter-bar.is-compact .tier-filter,
+  .filter-bar.is-compact .subtags-wrap { display: none; }
+}
+
+@media (min-width: 641px) {
+  /* 桌面端：隐藏移动端的「更多筛选」按钮 */
+  .filter-toggle-mobile { display: none; }
+}
+
+/* ============================================================
    手机端 P0：降低单卡高度（标签横滑一行 / 来源一行省略 / 隐藏热度）
    手机端 P1：滚动中吸顶区精简（只留行业 chips，停手自动恢复）
    ============================================================ */

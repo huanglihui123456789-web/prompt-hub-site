@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>html{visibility:hidden}</style>
   <meta name="description" content="覆盖编程、教育、写作、营销、商业、法律、医疗、设计、翻译、生活、游戏、科研等行业的 AI 提示词精选库，支持搜索、分类筛选、标签云、收藏点赞与一键复制。" />
   <title>提示词库 · 各行业 AI Prompt 精选</title>
 
@@ -12,17 +13,22 @@
   <meta http-equiv="Expires" content="0" />
 
   <!-- 当前应用版本号：bump 它即可让所有访客下次访问时拿到最新版（绕过 GitHub Pages 10 分钟缓存） -->
-  <meta name="app-version" content="20260901ac" />
+  <meta name="app-version" content="20260901ad" />
   <script>
     (function(){
       try {
         var v = (document.querySelector('meta[name="app-version"]')||{}).content;
-        if (!v) return;
+        if (!v) { document.documentElement.style.visibility=''; return; }
         var host = location.hostname;
-        if (host === 'localhost' || host === '127.0.0.1' || host === '') return;
-        if (new URLSearchParams(location.search).get('v') === v) return;
+        if (host === 'localhost' || host === '127.0.0.1' || host === '') {
+          document.documentElement.style.visibility=''; return;
+        }
+        var cur = new URLSearchParams(location.search).get('v');
+        if (cur === v) { document.documentElement.style.visibility=''; return; }
         location.replace(location.pathname + '?v=' + encodeURIComponent(v));
-      } catch(e) {}
+      } catch(e) {
+        document.documentElement.style.visibility='';
+      }
     })();
   </script>
 
@@ -32,7 +38,7 @@
   <link href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.staticfile.org/tailwindcss/2.2.19/tailwind.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css?v=20260901ac" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260901ad" />
 </head>
 
 <body>
@@ -133,6 +139,7 @@
         <!-- 过滤栏（吸顶） -->
         <div class="filter-bar" id="filterBar">
           <div class="chips" id="categoryChips" role="tablist" aria-label="行业筛选"></div>
+          <button class="filter-toggle-mobile" id="filterToggleMobile" type="button" aria-expanded="false" aria-controls="tierFilter subTagCloud"><i class="fa-solid fa-sliders"></i><span>更多筛选</span><i class="fa-solid fa-chevron-down toggle-chevron"></i></button>
           <div class="tier-filter" id="tierFilter" role="group" aria-label="按来源可信度筛选"></div>
           <div class="result-count" id="resultCount"></div>
           <details class="subtags-wrap">
@@ -286,6 +293,6 @@
 
   <!-- 数据 + 主脚本 -->
   <script src="assets/js/prompts.js?v=20260901w"></script>
-  <script src="assets/js/main.js?v=20260901ac" defer></script>
+  <script src="assets/js/main.js?v=20260901ad" defer></script>
 </body>
 </html>

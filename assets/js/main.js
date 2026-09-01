@@ -1169,6 +1169,18 @@
     }, { passive: true });
   }
 
+  /* ---------- 手机端：默认折叠 tier / 热门话题，点"更多筛选"展开/收起 ---------- */
+  function initFilterMobileToggle() {
+    var fb = $('filterBar'), btn = $('filterToggleMobile');
+    if (!fb || !btn || !window.matchMedia) return;
+    var mq = window.matchMedia('(max-width: 640px)');
+    btn.addEventListener('click', function () {
+      if (!mq.matches) return;
+      var open = fb.classList.toggle('is-mobile-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
   /* ---------- 启动 ---------- */
   function boot() {
     renderChips();
@@ -1185,6 +1197,7 @@
     initEmptyState();
     initScrollUI();
     initFilterCompact();
+    initFilterMobileToggle();
     initReveal();
     initHeroLoad();
     var hm = $('heroMascot'); if (hm) hm.innerHTML = mascotSVG();
