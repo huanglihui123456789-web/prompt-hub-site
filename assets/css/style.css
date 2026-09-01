@@ -186,7 +186,6 @@ img { max-width: 100%; display: block; }
   background: var(--bg-elev); border: 1px solid var(--line);
   border-radius: 18px; padding: 24px 22px 20px; overflow: hidden;
   transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s, border-color .4s;
-}
   perspective: 1000px;
 }
 .card-inner { position: relative; flex: 1; display: flex; flex-direction: column; transform-style: preserve-3d; backface-visibility: hidden; transition: transform .25s cubic-bezier(.2,.8,.2,1); will-change: transform; }
@@ -589,5 +588,86 @@ img { max-width: 100%; display: block; }
 }
 @media (max-width: 640px) {
   .hero-spark { font-size: 34px; }
+}
+
+/* ============================================================
+   手机端专属重排（≤640px / ≤480px）
+   原则：① 首屏更快露出搜索与内容 ② 筛选 / 工具条横滑单行
+         ③ 卡片更紧凑、触控目标更大 ④ 桌面端不受影响
+   ============================================================ */
+@media (max-width: 640px) {
+  /* —— 首屏 Hero 压缩 —— */
+  .hero { padding: 82px 0 40px; }
+  .hero-eyebrow { font-size: 12px; padding: 6px 12px; gap: 7px; margin-bottom: 14px; }
+  .hero-title { font-size: clamp(30px, 9.5vw, 40px); margin-bottom: 12px; }
+  .hero-title::after { width: 72px; margin-top: 14px; }
+  .hero-sub { font-size: 14.5px; line-height: 1.7; margin-bottom: 20px; }
+  .hero-chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; gap: 6px; margin-top: 14px; margin-inline: -16px; padding-inline: 16px; }
+  .hero-chips::-webkit-scrollbar { display: none; }
+  .hero-chip { flex: 0 0 auto; font-size: 12.5px; padding: 7px 13px; }
+  .hero-stats { margin-top: 20px; gap: 10px 16px; }
+  .hero-stats strong { font-size: 22px; }
+  .hero-stats span { font-size: 11.5px; margin-top: 3px; }
+  .hero-masthead { font-size: 76px; }
+  .scroll-cue { display: none; }
+  #searchInput { height: 50px; }
+
+  /* —— 区块 —— */
+  .section { padding: 44px 0; }
+  .section-head { margin-bottom: 22px; }
+  .section-title { font-size: 26px; margin-bottom: 10px; }
+  .section-desc { font-size: 14.5px; line-height: 1.75; }
+
+  /* —— 过滤栏：行业 chips 横滑单行 —— */
+  .filter-bar { top: 60px; padding: 10px 14px; gap: 10px; border-radius: 14px; margin-bottom: 20px; }
+  .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip { flex: 0 0 auto; padding: 9px 15px; font-size: 13.5px; }
+  .tier-filter { display: flex; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
+  .tier-filter::-webkit-scrollbar { display: none; }
+  .tier-btn { flex: 0 0 auto; }
+  .result-count { font-size: 12.5px; }
+  .subtags { display: flex; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-bottom: 4px; }
+  .subtags::-webkit-scrollbar { display: none; }
+  .subtags-label { flex: 0 0 auto; }
+  .tag-chip { flex: 0 0 auto; }
+
+  /* —— 工具栏：横滑单行 —— */
+  .toolbar { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; gap: 8px; padding-bottom: 6px; }
+  .toolbar::-webkit-scrollbar { display: none; }
+  .tool-btn, .sort-box, .attrib-toggle { flex: 0 0 auto; white-space: nowrap; }
+  .lang-filter { width: auto; display: flex; flex-wrap: nowrap; gap: 6px; }
+  .lang-sep { display: none; }
+
+  /* —— 卡片：更紧凑 + 触控优化 —— */
+  .card-grid { gap: 14px; }
+  .prompt-card { padding: 16px 15px 13px; border-radius: 15px; }
+  .card-top { gap: 10px; margin-bottom: 11px; }
+  .card-cat-icon { width: 38px; height: 38px; font-size: 16px; border-radius: 10px; }
+  .card-title { font-size: 17px; }
+  .card-title-zh { font-size: 12px; }
+  .card-tags { margin-bottom: 10px; }
+  .tag-pill { min-height: 30px; padding: 5px 11px; font-size: 12.5px; }
+  .card-source { font-size: 11px; margin-bottom: 10px; }
+  .card-body { margin-top: 0; }
+  .body-text { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+  .btn-expand { font-size: 12.5px; }
+  .btn-zh-ref { min-height: 38px; }
+  .card-foot { gap: 8px; padding-top: 8px; }
+  .btn-icon { width: 42px; height: 42px; }
+  .btn-copy { min-height: 44px; font-size: 14.5px; }
+  .btn-lang { min-height: 42px; }
+  .heat-stat { font-size: 12px; }
+}
+
+/* —— 小屏（≤480px）：进一步收紧 —— */
+@media (max-width: 480px) {
+  .hero { padding: 76px 0 34px; }
+  .hero-title { font-size: 29px; }
+  .hero-stats { gap: 8px 14px; }
+  .card-cat-icon { display: none; }
+  .card-top { gap: 8px; }
+  .card-title { font-size: 16.5px; }
+  .foot-left .heat-stat { display: none; }
 }
 
