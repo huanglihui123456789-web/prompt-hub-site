@@ -26,3 +26,4 @@ _patch*.js
 
 # ===== 原始数据语料（体积大、非运行必需；协作请改 assets/js/prompts.js） =====
 assets/data/
+prompts_dl*.js
