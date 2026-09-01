@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="覆盖编程、教育、写作、营销、商业、法律、医疗、设计、翻译、生活、游戏、科研等行业的 AI 提示词精选库，支持搜索、分类筛选、标签云、收藏点赞与一键复制。" />
+  <title>提示词库 · 各行业 AI Prompt 精选</title>
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.loli.net" />
+  <link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+  <link href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.staticfile.org/tailwindcss/2.2.19/tailwind.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260901w" />
+</head>
+
+<body>
+  <!-- ============ 顶部导航 ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="返回顶部">
+        <span class="brand-mark"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+        <span class="brand-text">PROMPT<small>提示词库</small></span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#library">浏览全部</a>
+        <a href="#library">按行业筛选</a>
+        <a href="#about">关于来源</a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-btn" id="submitBtn" type="button"><i class="fa-solid fa-pen-to-square"></i> 投稿</button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换深色 / 浅色模式" title="切换深色 / 浅色模式">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <span class="hero-masthead" aria-hidden="true">Prompt</span>
+      <span class="hero-side" aria-hidden="true">Prompt Library · 提示词库 · 2026</span>
+      <div class="hero-content">
+        <p class="hero-eyebrow"><i class="fa-solid fa-layer-group"></i> 13 个行业 · 开源精选 · 一键复制</p>
+        <h1 class="hero-title">把好问题，<br />交给 <em>每一个行业</em></h1>
+        <span class="hero-spark" aria-hidden="true">✦</span>
+        <p class="hero-sub">收录 1800+ 条精选中文 / 英文提示词，附法·德·西·葡·荷多语言包；全部来自开源社区（CC0 · MIT · Apache-2.0），保留原文、逐字校准。搜一搜，复制即用。</p>
+
+        <div class="search-wrap">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input id="searchInput" type="search" placeholder="搜关键词或场景：如「Python」「写周报」「法律顾问」「减肥」…" aria-label="搜索提示词" />
+          <button class="search-clear" id="searchClear" type="button" aria-label="清空搜索" title="清空"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="hero-chips" aria-label="热门场景">
+          <span>热门：</span>
+          <button class="hero-chip" type="button" data-q="小红书文案">小红书文案</button>
+          <button class="hero-chip" type="button" data-q="写周报">写周报</button>
+          <button class="hero-chip" type="button" data-q="法律顾问">法律顾问</button>
+          <button class="hero-chip" type="button" data-q="英语老师">英语老师</button>
+          <button class="hero-chip" type="button" data-q="Python">Python</button>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong id="statTotal">0</strong><span>条提示词</span></div>
+          <div><strong>13</strong><span>个行业</span></div>
+          <div><strong>CC0</strong><span>公开领域</span></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#library" aria-label="向下滚动"><span></span></a>
+      <div class="hero-mascot" id="heroMascot" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ 提示词库 ============ -->
+    <section class="section library" id="library">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">提示词库 · PROMPT LIBRARY</span>
+          <h2 class="section-title">按行业浏览，按需复制</h2>
+          <p class="section-desc">点击上方行业分类，下方会联动显示该行业的热门话题子标签，可进一步按话题筛选；也可直接在搜索框输入关键词 / 场景。每张卡片可一键复制（默认带出处署名），支持收藏、点赞、中英文切换。</p>
+        </div>
+
+        <!-- 工具栏 -->
+        <div class="toolbar reveal">
+          <label class="sort-box">
+            <i class="fa-solid fa-arrow-down-wide-short"></i>
+            <select id="sortSelect" aria-label="排序方式">
+              <option value="default">默认排序</option>
+              <option value="heat">按编辑热度</option>
+            </select>
+          </label>
+          <button class="tool-btn" id="favFilterBtn" type="button"><i class="fa-regular fa-star"></i> 我的收藏</button>
+          <span class="lang-filter" role="group" aria-label="按语言筛选">
+            <button class="tool-btn lang-btn is-active" data-lang="all" type="button">全部</button>
+            <button class="tool-btn lang-btn" data-lang="zh" type="button">中文</button>
+            <button class="tool-btn lang-btn" data-lang="en" type="button">EN 原文</button>
+            <span class="lang-sep" aria-hidden="true"></span>
+            <button class="tool-btn lang-btn intl" data-lang="fr" type="button">Français</button>
+            <button class="tool-btn lang-btn intl" data-lang="de" type="button">Deutsch</button>
+            <button class="tool-btn lang-btn intl" data-lang="es" type="button">Español</button>
+            <button class="tool-btn lang-btn intl" data-lang="pt" type="button">Português</button>
+            <button class="tool-btn lang-btn intl" data-lang="nl" type="button">Nederlands</button>
+          </span>
+          <button class="tool-btn" id="loadCommunityBtn" type="button"><i class="fa-solid fa-cloud-arrow-down"></i> 加载社区投稿</button>
+          <label class="attrib-toggle"><input type="checkbox" id="attribChk" checked /> <span>复制带署名</span></label>
+        </div>
+
+        <!-- 过滤栏（吸顶） -->
+        <div class="filter-bar" id="filterBar">
+          <div class="chips" id="categoryChips" role="tablist" aria-label="行业筛选"></div>
+          <div class="tier-filter" id="tierFilter" role="group" aria-label="按来源可信度筛选"></div>
+          <div class="result-count" id="resultCount"></div>
+          <div class="subtags" id="subTagCloud" aria-label="话题子标签"></div>
+        </div>
+
+        <!-- 来源可信度图例（P1 两档徽章） -->
+        <p class="tier-legend" aria-hidden="true">
+          <span><i class="tier-dot dot-green"></i>已校准/精选 · 含经质量筛选的 AI 生成内容</span>
+          <span><i class="tier-dot dot-blue"></i>社区 / 原生 · 未校验</span>
+        </p>
+
+        <!-- 多语言包上下文提示（仅切到 fr/de/es/pt/nl 时显示） -->
+        <p class="intl-hint" id="intlHint" hidden></p>
+
+        <!-- 卡片网格 -->
+        <div class="card-grid" id="promptGrid"></div>
+
+        <p class="empty-state" id="emptyState" hidden>
+          <span class="empty-mascot" id="emptyMascot" aria-hidden="true"></span>
+          <span>没有匹配的提示词，换个关键词试试？</span>
+          <button class="btn-ghost empty-clear" type="button">清除全部筛选</button>
+          <span class="empty-chips-label">或者挑个热门场景：</span>
+          <span class="empty-chips">
+            <button class="empty-chip" type="button" data-q="周报">周报</button>
+            <button class="empty-chip" type="button" data-q="文案">文案</button>
+            <button class="empty-chip" type="button" data-q="简历">简历</button>
+            <button class="empty-chip" type="button" data-q="翻译">翻译</button>
+            <button class="empty-chip" type="button" data-q="代码">代码</button>
+            <button class="empty-chip" type="button" data-q="设计">设计</button>
+            <button class="empty-chip" type="button" data-q="法律顾问">法律顾问</button>
+            <button class="empty-chip" type="button" data-q="健身">健身</button>
+            <button class="empty-chip" type="button" data-q="小红书文案">小红书</button>
+            <button class="empty-chip" type="button" data-q="小说">小说</button>
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 关于来源 ============ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">关于 · ABOUT</span>
+          <h2 class="section-title">内容来自哪里</h2>
+        </div>
+        <div class="about-text reveal">
+          <p>本站的精选提示词整理自开源项目 <strong>prompts.chat</strong>（原 <em>Awesome ChatGPT Prompts</em>，GitHub 143k+ Stars），以 <strong>CC0 1.0 公开领域</strong>发布，可自由使用、改编与再分发。中文译文为紧贴英文的直译。</p>
+          <p>「社区投稿」由网友通过 GitHub 直接提交（需填写你自己的 Token），仅在你本地浏览器留存并可推送到公开仓库。投稿内容不代表本站立场，请自行甄别。</p>
+          <ul class="source-list">
+            <li><i class="fa-solid fa-link"></i> 原始仓库：github.com/f/prompts.chat（CC0）</li>
+            <li><i class="fa-solid fa-file-lines"></i> 数据文件：PROMPTS.md</li>
+            <li><i class="fa-solid fa-code"></i> 技术：原生 HTML / CSS / JavaScript，无构建步骤，可部署 GitHub Pages</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 页脚 ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+        <div>
+          <strong>PROMPT · 提示词库</strong>
+          <p>覆盖各行业的 AI 提示词精选。精选内容基于 prompts.chat（CC0 公开领域）整理，社区投稿由用户自行提交，仅供学习交流。</p>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="页脚导航">
+        <a href="#library">浏览全部</a>
+        <a href="#about">关于来源</a>
+        <a href="#home">回到顶部</a>
+      </nav>
+    </div>
+    <p class="footer-copy">© 2026 PROMPT 提示词库 · 好问题，是答案的一半。</p>
+  </footer>
+
+  <button class="back-top" id="backTop" type="button" aria-label="回到顶部" title="回到顶部"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- ============ 投稿弹窗 ============ -->
+  <div class="modal-backdrop" id="submitModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="submitTitle">
+      <button class="modal-close" id="submitClose" type="button" aria-label="关闭"><i class="fa-solid fa-xmark"></i></button>
+      <h3 class="modal-title" id="submitTitle"><i class="fa-solid fa-pen-to-square"></i> 投稿一条提示词</h3>
+      <p class="modal-sub">提交后先存入你的浏览器；若填写了 GitHub Token，会直接推送到仓库的 <code>submissions/</code> 目录。</p>
+      <form id="submitForm" class="submit-form">
+        <label>标题（中文）<span class="req">*</span>
+          <input type="text" name="title" required placeholder="如：周报生成器" />
+        </label>
+        <label>英文标题（可选）
+          <input type="text" name="titleEn" placeholder="如：Weekly Report Generator" />
+        </label>
+        <label>所属行业<span class="req">*</span>
+          <select name="cat" id="submitCat"></select>
+        </label>
+        <label>标签（逗号分隔，可选）
+          <input type="text" name="tags" placeholder="如：周报, 写作, 职场" />
+        </label>
+        <label>提示词（中文）<span class="req">*</span>
+          <textarea name="prompt" rows="5" required placeholder="粘贴或撰写中文提示词…"></textarea>
+        </label>
+        <label>英文原文（可选）
+          <textarea name="promptEn" rows="3" placeholder="如有英文原文可粘贴，便于对照"></textarea>
+        </label>
+        <label>来源署名（可选）
+          <input type="text" name="source" placeholder="默认：社区投稿" />
+        </label>
+
+        <details class="gh-settings">
+          <summary><i class="fa-solid fa-key"></i> GitHub 直提交设置（可选）</summary>
+          <p class="gh-note">用于把投稿直接推送到你的仓库。Token 仅存于本机浏览器，请使用<strong>仅有 contents 写权限</strong>的 Fine-grained Token，切勿使用全权限 Token。</p>
+          <label>仓库 owner / name
+            <input type="text" id="ghRepo" placeholder="your-name / prompt-hub-site" />
+          </label>
+          <label>GitHub Token
+            <input type="password" id="ghToken" placeholder="github_pat_xxx" autocomplete="off" />
+          </label>
+        </details>
+
+        <div class="form-actions">
+          <button type="button" class="btn-ghost" id="submitCancel">取消</button>
+          <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> 提交投稿</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============ 占位符填充弹窗 ============ -->
+  <div class="modal-backdrop" id="fillModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="fillTitle">
+      <button class="modal-close" id="fillClose" type="button" aria-label="关闭"><i class="fa-solid fa-xmark"></i></button>
+      <h3 class="modal-title" id="fillTitle"><i class="fa-solid fa-wand-magic-sparkles"></i> 填充占位符 · 生成可用提示词</h3>
+      <p class="modal-sub">把每条提示词里的 <code>占位符</code> 替换成你的具体内容，一键复制成可直接发给 AI 的成品。</p>
+      <div class="fill-rows" id="fillRows"></div>
+      <div class="fill-preview-wrap">
+        <div class="fill-preview-label">实时预览</div>
+        <div class="fill-preview" id="fillPreview"></div>
+      </div>
+      <div class="form-actions">
+        <button type="button" class="btn-ghost" id="fillCancel">取消</button>
+        <button type="button" class="btn-primary" id="fillCopy"><i class="fa-solid fa-copy"></i> 复制成品</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" hidden></div>
+
+  <!-- 数据 + 主脚本 -->
+  <script src="assets/js/prompts.js?v=20260901w"></script>
+  <script src="assets/js/main.js?v=20260901x" defer></script>
+</body>
+</html>

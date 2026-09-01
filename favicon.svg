@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b07d2b"/>
+      <stop offset="1" stop-color="#2f6f5e"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0e1012"/>
+  <!-- 魔法棒 -->
+  <rect x="14" y="40" width="30" height="5" rx="2.5" transform="rotate(-45 29 42)" fill="url(#g)"/>
+  <circle cx="44" cy="18" r="4" fill="#d8b365"/>
+  <!-- 星光 -->
+  <path d="M44 8 L46 16 L54 18 L46 20 L44 28 L42 20 L34 18 L42 16 Z" fill="#d8b365"/>
+  <path d="M20 12 L21 16 L25 17 L21 18 L20 22 L19 18 L15 17 L19 16 Z" fill="#4fa08a"/>
+</svg>

@@ -1,0 +1,28 @@
+# ===== 系统 / 编辑器文件 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+._*
+
+# ===== 日志 =====
+*.log
+
+# ===== 临时 / 构建产物（本仓库为纯静态零构建，以下仅为防御性排除） =====
+node_modules/
+dist/
+.tmp/
+.cache/
+
+# ===== 本地环境变量 =====
+.env
+.env.local
+
+# ===== 误留的临时脚本 =====
+_patch*.js
+
+# ===== 原始数据语料（体积大、非运行必需；协作请改 assets/js/prompts.js） =====
+assets/data/
