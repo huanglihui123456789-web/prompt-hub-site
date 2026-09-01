@@ -671,3 +671,34 @@ img { max-width: 100%; display: block; }
   .foot-left .heat-stat { display: none; }
 }
 
+/* —— 热门话题移动端折叠（HTML <details>，零 JS，桌面端始终展开） —— */
+.subtags-wrap > summary::-webkit-details-marker { display: none; }
+@media (max-width: 640px) {
+  /* 横滑首尾留白，避免首项贴边截断 + 触摸更友好 */
+  .chips, .subtags { padding-left: 4px; padding-right: 32px; }
+  .subtags-wrap > summary {
+    display: flex; align-items: center; gap: 6px;
+    cursor: pointer; font-size: 13px; font-weight: 600;
+    color: var(--ink-soft); padding: 8px 0 6px; letter-spacing: .04em;
+    user-select: none; list-style: none;
+  }
+  .subtags-wrap > summary::before {
+    content: "▾"; font-size: 11px; color: var(--accent);
+    transition: transform .2s; display: inline-block;
+  }
+  .subtags-wrap[open] > summary::before { transform: rotate(-180deg); }
+  .subtags-wrap:not([open]) .subtags { display: none; }
+  .subtags-wrap[open] .subtags {
+    flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; padding-top: 4px;
+  }
+  .subtags-wrap[open] .subtags::-webkit-scrollbar { display: none; }
+}
+@media (min-width: 641px) {
+  /* 桌面端：summary 永远隐藏，subtags 永远展开（覆盖默认折叠） */
+  .subtags-wrap > summary { display: none; }
+  .subtags-wrap:not([open]) .subtags {
+    display: flex !important; flex-wrap: wrap; overflow: visible; padding-bottom: 0;
+  }
+}
+
