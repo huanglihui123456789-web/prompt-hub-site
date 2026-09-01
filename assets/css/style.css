@@ -834,3 +834,43 @@ img { max-width: 100%; display: block; }
   .foot-left .heat-stat { display: none; }
 }
 
+/* ============================================================
+   手机端 P0：降低单卡高度（标签横滑一行 / 来源一行省略 / 隐藏热度）
+   手机端 P1：滚动中吸顶区精简（只留行业 chips，停手自动恢复）
+   ============================================================ */
+@media (max-width: 640px) {
+  /* —— P0：卡片瘦身 —— */
+  .prompt-card { padding: 16px 15px 14px; }
+  .card-top { margin-bottom: 10px; }
+  .card-title { font-size: 17px; }
+  /* 标签：横滑一行（保留全部标签可点，省 2~3 行高度） */
+  .card-tags {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    gap: 6px;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+  }
+  .card-tags::-webkit-scrollbar { display: none; }
+  .tag-pill { flex: 0 0 auto; min-height: 30px; padding: 4px 11px; font-size: 12.5px; }
+  /* 来源：一行省略，不再折行 */
+  .card-source {
+    font-size: 10.5px;
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .card-source a, .card-source .badge { overflow: hidden; text-overflow: ellipsis; max-width: 62%; }
+  /* 热度：手机端隐藏（占位置且信息价值低） */
+  .foot-left .heat-stat { display: none; }
+
+  /* —— P1：滚动中只留行业 chips（.is-compact 由 main.js 滚动时添加） —— */
+  .filter-bar.is-compact { padding-bottom: 10px; }
+  .filter-bar.is-compact .tier-filter,
+  .filter-bar.is-compact .result-count,
+  .filter-bar.is-compact .subtags-wrap { display: none; }
+}
+

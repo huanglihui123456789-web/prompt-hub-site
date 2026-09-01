@@ -1133,6 +1133,20 @@
     });
   }
 
+  /* ---------- 手机端：滚动中吸顶筛选区精简（只留行业 chips），停手 0.5s 恢复 ---------- */
+  function initFilterCompact() {
+    var fb = $('filterBar');
+    if (!fb || !window.matchMedia) return;
+    var timer = null;
+    var mq = window.matchMedia('(max-width: 640px)');
+    window.addEventListener('scroll', function () {
+      if (!mq.matches) return;              // 仅手机端生效
+      fb.classList.add('is-compact');
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(function () { fb.classList.remove('is-compact'); }, 500);
+    }, { passive: true });
+  }
+
   /* ---------- 启动 ---------- */
   function boot() {
     renderChips();
@@ -1148,6 +1162,7 @@
     initFillModal();
     initEmptyState();
     initScrollUI();
+    initFilterCompact();
     initReveal();
     initHeroLoad();
     var hm = $('heroMascot'); if (hm) hm.innerHTML = mascotSVG();
