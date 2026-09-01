@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>html{visibility:hidden}</style>
   <meta name="description" content="覆盖编程、教育、写作、营销、商业、法律、医疗、设计、翻译、生活、游戏、科研等行业的 AI 提示词精选库，支持搜索、分类筛选、标签云、收藏点赞与一键复制。" />
   <title>提示词库 · 各行业 AI Prompt 精选</title>
 
@@ -13,22 +12,18 @@
   <meta http-equiv="Expires" content="0" />
 
   <!-- 当前应用版本号：bump 它即可让所有访客下次访问时拿到最新版（绕过 GitHub Pages 10 分钟缓存） -->
-  <meta name="app-version" content="20260901ae" />
+  <meta name="app-version" content="20260901af" />
   <script>
     (function(){
       try {
         var v = (document.querySelector('meta[name="app-version"]')||{}).content;
-        if (!v) { document.documentElement.style.visibility=''; return; }
+        if (!v) return;
         var host = location.hostname;
-        if (host === 'localhost' || host === '127.0.0.1' || host === '') {
-          document.documentElement.style.visibility=''; return;
-        }
+        if (host === 'localhost' || host === '127.0.0.1' || host === '') return;
         var cur = new URLSearchParams(location.search).get('v');
-        if (cur === v) { document.documentElement.style.visibility=''; return; }
+        if (cur === v) return;
         location.replace(location.pathname + '?v=' + encodeURIComponent(v));
-      } catch(e) {
-        document.documentElement.style.visibility='';
-      }
+      } catch(e) {}
     })();
   </script>
 
