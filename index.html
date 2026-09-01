@@ -11,6 +11,21 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
 
+  <!-- 当前应用版本号：bump 它即可让所有访客下次访问时拿到最新版（绕过 GitHub Pages 10 分钟缓存） -->
+  <meta name="app-version" content="20260901y" />
+  <script>
+    (function(){
+      try {
+        var v = (document.querySelector('meta[name="app-version"]')||{}).content;
+        if (!v) return;
+        var host = location.hostname;
+        if (host === 'localhost' || host === '127.0.0.1' || host === '') return;
+        if (new URLSearchParams(location.search).get('v') === v) return;
+        location.replace(location.pathname + '?v=' + encodeURIComponent(v));
+      } catch(e) {}
+    })();
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.loli.net" />
   <link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
