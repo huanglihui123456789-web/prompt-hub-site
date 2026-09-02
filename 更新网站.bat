@@ -24,12 +24,20 @@ git add -A
 git commit -m "网站更新 %date% %time%"
 
 echo.
-echo [3/3] 推送到 GitHub...
-git push
+echo [3/4] 推送到 GitHub（国际线）...
+git push origin
+
+echo.
+echo [4/4] 推送到 Gitee（国内线）...
+git push gitee
 
 echo.
 echo ============ 完成！============
-echo 网站 1-3 分钟后自动更新：
-echo https://huanglihui123456789-web.github.io/prompt-hub-site/
+echo GitHub 站（国际）1-3 分钟后自动更新：
+echo   https://huanglihui123456789-web.github.io/prompt-hub-site/
+echo.
+echo Gitee 站（国内）推送后需手动更新 Pages：
+echo   Gitee 仓库页 → 服务 → Gitee Pages → 更新
+echo   https://h1549520007.gitee.io/prompt-hub-site/
 echo.
 pause
