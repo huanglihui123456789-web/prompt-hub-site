@@ -4,6 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="覆盖编程、教育、写作、营销、商业、法律、医疗、设计、翻译、生活、游戏、科研等行业的 AI 提示词精选库，支持搜索、分类筛选、标签云、收藏点赞与一键复制。" />
+
+  <!-- 社交分享卡片（微信/QQ/微博/Twitter 抓取） -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PROMPT 提示词库" />
+  <meta property="og:title" content="PROMPT 提示词库 · 各行业 AI Prompt 精选" />
+  <meta property="og:description" content="收录 1770 条精选中文 / 英文提示词，覆盖 13 个行业，支持搜索、分类筛选、收藏点赞与一键复制。" />
+  <meta property="og:url" content="https://huanglihui123456789-web.github.io/prompt-hub-site/" />
+  <meta property="og:image" content="https://huanglihui123456789-web.github.io/prompt-hub-site/assets/img/og-cover.jpg" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PROMPT 提示词库 · 各行业 AI Prompt 精选" />
+  <meta name="twitter:description" content="收录 1770 条精选中文 / 英文提示词，一键复制即用。" />
+  <meta name="twitter:image" content="https://huanglihui123456789-web.github.io/prompt-hub-site/assets/img/og-cover.jpg" />
+
+  <!-- 结构化数据：帮助搜索引擎理解站点内容规模 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "PROMPT 提示词库",
+    "alternateName": "PROMPT · 各行业 AI Prompt 精选",
+    "url": "https://huanglihui123456789-web.github.io/prompt-hub-site/",
+    "description": "收录 1770 条精选中文 / 英文 AI 提示词，覆盖编程、教育、写作、营销、商业、法律、医疗、设计、翻译、生活、游戏、科研等行业，支持搜索、分类筛选、收藏点赞与一键复制。",
+    "inLanguage": "zh-CN",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://huanglihui123456789-web.github.io/prompt-hub-site/#q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <title>提示词库 · 各行业 AI Prompt 精选</title>
 
   <!-- 尽力避免入口页被浏览器缓存，确保更新后能尽快拿到新版本号资源 -->
@@ -12,7 +45,7 @@
   <meta http-equiv="Expires" content="0" />
 
   <!-- 当前应用版本号：bump 它即可让所有访客下次访问时拿到最新版（绕过 GitHub Pages 10 分钟缓存） -->
-  <meta name="app-version" content="20260904d" />
+  <meta name="app-version" content="20260904e" />
   <script>
     (function(){
       try {
@@ -32,8 +65,11 @@
   <link rel="preconnect" href="https://fonts.loli.net" />
   <link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
   <link href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css?v=20260904d" />
-  <link rel="stylesheet" href="assets/css/style.css?v=20260904d" />
+  <!-- 预加载图标字体，降低首屏字体交换（FOUT）抖动 -->
+  <link rel="preload" href="assets/vendor/fontawesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/vendor/fontawesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css?v=20260904e" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260904e" />
 </head>
 
 <body>
@@ -158,8 +194,15 @@
         <!-- 多语言包上下文提示（仅切到 fr/de/es/pt/nl 时显示） -->
         <p class="intl-hint" id="intlHint" hidden></p>
 
-        <!-- 卡片网格 -->
-        <div class="card-grid" id="promptGrid"></div>
+        <!-- 卡片网格（内置骨架屏占位，数据就绪后被真实卡片替换） -->
+        <div class="card-grid" id="promptGrid" aria-busy="true">
+          <div class="sk-card" aria-hidden="true"><div class="sk-top"><span class="sk sk-icon"></span><span class="sk sk-line" style="width:55%"></span></div><span class="sk sk-tag"></span><span class="sk sk-tag" style="width:70px"></span><span class="sk sk-tag" style="width:92px"></span><span class="sk sk-line" style="width:90%"></span><span class="sk sk-line" style="width:70%"></span><span class="sk sk-line" style="width:82%"></span><span class="sk sk-foot"></span></div>
+          <div class="sk-card" aria-hidden="true"><div class="sk-top"><span class="sk sk-icon"></span><span class="sk sk-line" style="width:48%"></span></div><span class="sk sk-tag"></span><span class="sk sk-tag" style="width:82px"></span><span class="sk sk-tag" style="width:64px"></span><span class="sk sk-line" style="width:86%"></span><span class="sk sk-line" style="width:74%"></span><span class="sk sk-line" style="width:64%"></span><span class="sk sk-foot"></span></div>
+          <div class="sk-card" aria-hidden="true"><div class="sk-top"><span class="sk sk-icon"></span><span class="sk sk-line" style="width:60%"></span></div><span class="sk sk-tag"></span><span class="sk sk-tag" style="width:74px"></span><span class="sk sk-tag" style="width:90px"></span><span class="sk sk-line" style="width:92%"></span><span class="sk sk-line" style="width:68%"></span><span class="sk sk-line" style="width:78%"></span><span class="sk sk-foot"></span></div>
+          <div class="sk-card" aria-hidden="true"><div class="sk-top"><span class="sk sk-icon"></span><span class="sk sk-line" style="width:52%"></span></div><span class="sk sk-tag"></span><span class="sk sk-tag" style="width:86px"></span><span class="sk sk-tag" style="width:70px"></span><span class="sk sk-line" style="width:88%"></span><span class="sk sk-line" style="width:76%"></span><span class="sk sk-line" style="width:66%"></span><span class="sk sk-foot"></span></div>
+          <div class="sk-card" aria-hidden="true"><div class="sk-top"><span class="sk sk-icon"></span><span class="sk sk-line" style="width:58%"></span></div><span class="sk sk-tag"></span><span class="sk sk-tag" style="width:78px"></span><span class="sk sk-tag" style="width:94px"></span><span class="sk sk-line" style="width:91%"></span><span class="sk sk-line" style="width:72%"></span><span class="sk sk-line" style="width:80%"></span><span class="sk sk-foot"></span></div>
+          <div class="sk-card" aria-hidden="true"><div class="sk-top"><span class="sk sk-icon"></span><span class="sk sk-line" style="width:50%"></span></div><span class="sk sk-tag"></span><span class="sk sk-tag" style="width:84px"></span><span class="sk sk-tag" style="width:68px"></span><span class="sk sk-line" style="width:84%"></span><span class="sk sk-line" style="width:78%"></span><span class="sk sk-line" style="width:70%"></span><span class="sk sk-foot"></span></div>
+        </div>
 
         <p class="empty-state" id="emptyState" hidden>
           <span class="empty-mascot" id="emptyMascot" aria-hidden="true"></span>
@@ -293,12 +336,8 @@
   <!-- Toast -->
   <div class="toast" id="toast" hidden></div>
 
-  <!-- 数据 + 主脚本 -->
-  <script src="assets/js/data/chunk-1.js?v=20260904d" defer></script>
-  <script src="assets/js/data/chunk-2.js?v=20260904d" defer></script>
-  <script src="assets/js/data/chunk-3.js?v=20260904d" defer></script>
-  <script src="assets/js/data/chunk-4.js?v=20260904d" defer></script>
-  <script src="assets/js/data/chunk-5.js?v=20260904d" defer></script>
-  <script src="assets/js/main.js?v=20260904d" defer></script>
+  <!-- 数据 + 主脚本：首屏仅同步 chunk-1（约 465KB），chunk-2~5 由 main.js 动态懒加载，加快首屏出卡 -->
+  <script src="assets/js/data/chunk-1.js?v=20260904e" defer></script>
+  <script src="assets/js/main.js?v=20260904e" defer></script>
 </body>
 </html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>页面未找到 · PROMPT 提示词库</title>
+  <style>
+    :root { --accent: #C2601B; --accent-2: #8A4A2A; --ink: #22190F; --ink-soft: #6B5A45; --bg: #FBF7F0; --line: #E7DCCB; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      background: radial-gradient(1200px 600px at 50% -10%, #F4E6D2, var(--bg));
+      color: var(--ink); min-height: 100vh; display: grid; place-items: center; padding: 24px;
+    }
+    .card {
+      text-align: center; max-width: 520px; width: 100%;
+      background: rgba(255,255,255,.72); border: 1px solid var(--line);
+      border-radius: 24px; padding: 48px 36px; box-shadow: 0 24px 60px -30px rgba(140,90,40,.35);
+      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    }
+    .code { font-size: 64px; font-weight: 800; line-height: 1; background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    h1 { font-size: 20px; margin: 16px 0 8px; }
+    p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.7; margin-bottom: 24px; }
+    form { display: flex; gap: 8px; }
+    input {
+      flex: 1; padding: 12px 16px; border-radius: 999px; border: 1px solid var(--line);
+      background: #fff; font-size: 14px; color: var(--ink); outline: none;
+    }
+    input:focus { border-color: var(--accent); }
+    button {
+      padding: 12px 20px; border-radius: 999px; border: none; cursor: pointer;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap;
+    }
+    .back { display: inline-block; margin-top: 20px; font-size: 13.5px; color: var(--accent); text-decoration: none; font-weight: 600; }
+    .back:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="code">404</div>
+    <h1>这个页面走丢了</h1>
+    <p>你访问的链接可能已失效或拼写有误。不过没关系，1770 条提示词都在等你——试试搜一下想找的场景。</p>
+    <form id="f" role="search" aria-label="搜索提示词">
+      <input id="q" type="search" placeholder="搜「周报」「小红书」「法律顾问」…" aria-label="搜索关键词" autofocus />
+      <button type="submit">去搜索</button>
+    </form>
+    <a class="back" href="./">← 回到首页</a>
+  </main>
+  <script>
+    var f = document.getElementById('f'), q = document.getElementById('q');
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var kw = (q.value || '').trim();
+      if (kw) { location.href = './#q=' + encodeURIComponent(kw); }
+      else { location.href = './'; }
+    });
+  </script>
+</body>
+</html>

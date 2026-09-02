@@ -182,6 +182,20 @@ img { max-width: 100%; display: block; }
 
 /* ---------- 提示词卡片 ---------- */
 .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 20px; }
+/* 首屏骨架屏（弱网/首帧防白屏，数据就绪后被真实卡片替换） */
+.sk-card {
+  background: var(--bg-elev); border: 1px solid var(--line); border-radius: 18px;
+  padding: 24px 22px 20px; display: flex; flex-direction: column; gap: 13px; overflow: hidden;
+}
+.sk { display: block; border-radius: 6px; background-color: var(--line); position: relative; overflow: hidden; }
+.sk::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.5), transparent); transform: translateX(-100%); animation: skShimmer 1.3s ease-in-out infinite; }
+@keyframes skShimmer { 100% { transform: translateX(100%); } }
+.sk-top { display: flex; align-items: center; gap: 12px; }
+.sk-icon { width: 42px; height: 42px; border-radius: 12px; flex: none; }
+.sk-line { height: 13px; }
+.sk-tag { height: 24px; width: 90px; border-radius: 999px; }
+.sk-foot { height: 36px; width: 58%; border-radius: 999px; margin-top: 3px; }
+@media (prefers-reduced-motion: reduce) { .sk::after { animation: none; display: none; } }
 .prompt-card {
   position: relative; display: flex; flex-direction: column;
   background: var(--bg-elev); border: 1px solid var(--line);

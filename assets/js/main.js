@@ -297,7 +297,7 @@
     if (intlLoading[lang]) return;
     intlLoading[lang] = true;
     var s = document.createElement('script');
-    s.src = 'assets/js/prompts-intl-' + lang + '.js?v=20260904b';
+    s.src = 'assets/js/prompts-intl-' + lang + '.js?v=' + VER;
     s.onload = function () { intlLoading[lang] = false; flushIntlWaiters(lang); };
     s.onerror = function () {
       intlLoading[lang] = false;
@@ -315,6 +315,95 @@
       return base.concat((window.PROMPTS_INTL || {})[state.lang] || []);
     }
     return base;
+  }
+
+  /* ---------- 主库分片懒加载（首屏加速） ----------
+     首屏仅同步 chunk-1（约 465KB）；chunk-2~5 由这里动态注入，
+     避免首屏等待约 1.8MB 数据全部下载后才出卡 */
+  var VER = '20260904e';
+  var mainChunksLeft = [2, 3, 4, 5];
+  var dataReadyCbs = [];
+  function mainDataReady() { return mainChunksLeft.length === 0; }
+  function onMainDataReady(cb) {
+    if (mainDataReady()) { try { cb(); } catch (e) {} return; }
+    dataReadyCbs.push(cb);
+  }
+  function loadNextMainChunk() {
+    if (!mainChunksLeft.length) {
+      var cbs = dataReadyCbs.splice(0, dataReadyCbs.length);
+      cbs.forEach(function (f) { try { f(); } catch (e) {} });
+      return;
+    }
+    var n = mainChunksLeft.shift();
+    var s = document.createElement('script');
+    s.src = 'assets/js/data/chunk-' + n + '.js?v=' + VER;
+    s.onload = loadNextMainChunk;
+    s.onerror = function () { if (!s._r) { s._r = true; mainChunksLeft.unshift(n); } loadNextMainChunk(); };
+    document.head.appendChild(s);
+  }
+
+  /* ---------- 可分享的筛选状态（hash） ----------
+     #q=..&cat=..&tags=..&sort=..&view=..&lang=..&tier=..&fav=1 可分享/收藏/回退；
+     兼容旧永久链接 #id（不含 = 视为单条定位，逻辑不变） */
+  var hashRestoring = false;
+  function parseHash() {
+    var h = decodeURIComponent((location.hash || '').replace(/^#/, ''));
+    if (!h) return null;
+    if (h.indexOf('=') === -1) return { id: h };
+    var st = {};
+    h.split('&').forEach(function (kv) {
+      var i = kv.indexOf('='); if (i === -1) return;
+      var k = kv.slice(0, i), v = kv.slice(i + 1); if (!v) return;
+      if (k === 'q') st.q = v;
+      else if (k === 'cat') st.cat = v;
+      else if (k === 'tags') st.tags = v.split(',').filter(Boolean);
+      else if (k === 'sort') st.sort = v;
+      else if (k === 'view') st.view = v;
+      else if (k === 'lang') st.lang = v;
+      else if (k === 'tier') st.tier = v;
+      else if (k === 'fav') st.favOnly = v === '1';
+    });
+    return st;
+  }
+  function applyHashState(st) {
+    hashRestoring = true;
+    var si = $('searchInput'), sc = $('searchClear');
+    if (st.q != null) { state.q = st.q; if (si) si.value = st.q; if (sc) sc.classList.toggle('show', st.q.length > 0); }
+    else { state.q = ''; if (si) si.value = ''; if (sc) sc.classList.remove('show'); }
+    if (st.cat) state.cat = st.cat;
+    state.tags = st.tags ? new Set(st.tags) : new Set();
+    if (st.sort && ['default', 'heat', 'views', 'score'].indexOf(st.sort) !== -1) state.sort = st.sort;
+    var sel = $('sortSelect'); if (sel) sel.value = state.sort;
+    if (st.view && ['all', 'hot'].indexOf(st.view) !== -1) state.view = st.view;
+    document.querySelectorAll('.view-tab').forEach(function (t) {
+      var a = t.getAttribute('data-view') === state.view;
+      t.classList.toggle('is-active', a); t.setAttribute('aria-selected', a ? 'true' : 'false');
+    });
+    if (st.lang) state.lang = st.lang;
+    document.querySelectorAll('.lang-btn').forEach(function (x) { x.classList.toggle('is-active', x.getAttribute('data-lang') === state.lang); });
+    if (st.tier) state.tier = st.tier;
+    if (st.favOnly != null) state.favOnly = st.favOnly;
+    var favBtn = $('favFilterBtn'); if (favBtn) favBtn.classList.toggle('is-active', !!state.favOnly);
+    renderChips(); renderTierFilter(); renderTagCloud(); renderCards();
+    hashRestoring = false;
+  }
+  function updateHash() {
+    if (hashRestoring) return;
+    var cur = (location.hash || '').replace(/^#/, '');
+    if (cur && cur.indexOf('=') === -1) return; // 旧 #id 永久链接不覆盖
+    var parts = [];
+    if (state.q) parts.push('q=' + encodeURIComponent(state.q));
+    if (state.cat && state.cat !== '全部') parts.push('cat=' + encodeURIComponent(state.cat));
+    if (state.tags && state.tags.size) parts.push('tags=' + encodeURIComponent(Array.from(state.tags).join(',')));
+    if (state.sort && state.sort !== 'default') parts.push('sort=' + state.sort);
+    if (state.view && state.view !== 'all') parts.push('view=' + state.view);
+    if (state.lang && state.lang !== 'all') parts.push('lang=' + state.lang);
+    if (state.tier && state.tier !== 'all') parts.push('tier=' + state.tier);
+    if (state.favOnly) parts.push('fav=1');
+    var target = parts.length ? '#' + parts.join('&') : '';
+    if ((location.hash || '') !== target) {
+      try { history.replaceState(null, '', location.pathname + location.search + target); } catch (e) {}
+    }
   }
 
   /* ---------- 轻量检索引擎（同义词 clique + CJK 复合词拆解 + 字段加权打分） ---------- */
@@ -885,38 +974,47 @@
         intlHint.hidden = true;
       }
     }
+    updateHash();
   }
 
-  /* ---------- 永久链接：启动时按 #id 定位 + hashchange 跟随 ---------- */
+  /* ---------- 永久链接 / 可分享筛选状态：启动恢复 + hashchange 跟随 ---------- */
   function applyHash() {
-    var id = decodeURIComponent((location.hash || '').replace(/^#/, ''));
-    if (!id) return;
-    var list = filterPrompts();
-    var idx = -1;
-    for (var i = 0; i < list.length; i++) { if (list[i].id === id) { idx = i; break; } }
-    if (idx === -1) return; // 不在当前筛选范围内
-    if (idx >= shownCount) { shownCount = idx + 1; renderCards(true); } // 目标在后续批次，先渲染足量
-    var grid = $('promptGrid');
-    if (!grid) return;
-    var el = null, cards = grid.querySelectorAll('.prompt-card');
-    cards.forEach(function (c) { if (c.dataset.pid === id) el = c; });
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      el.classList.add('flash');
-      setTimeout(function () { el.classList.remove('flash'); }, 1800);
+    var st = parseHash();
+    if (!st) return;
+    if (st.id) { // 旧永久链接：#id 定位单条
+      var id = st.id;
+      var list = filterPrompts();
+      var idx = -1;
+      for (var i = 0; i < list.length; i++) { if (list[i].id === id) { idx = i; break; } }
+      if (idx === -1) return; // 不在当前筛选范围内
+      if (idx >= shownCount) { shownCount = idx + 1; renderCards(true); } // 目标在后续批次，先渲染足量
+      var grid = $('promptGrid');
+      if (!grid) return;
+      var el = null, cards = grid.querySelectorAll('.prompt-card');
+      cards.forEach(function (c) { if (c.dataset.pid === id) el = c; });
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.add('flash');
+        setTimeout(function () { el.classList.remove('flash'); }, 1800);
+      }
+      return;
     }
+    applyHashState(st); // 可分享筛选状态：#q=&cat=&…
   }
 
-  /* ---------- 搜索 ---------- */
+  /* ---------- 搜索（防抖：避免每次按键重建列表） ---------- */
+  var searchTimer = null;
   function initSearch() {
     var input = $('searchInput'), clear = $('searchClear');
     if (!input) return;
     input.addEventListener('input', function () {
       state.q = input.value;
       if (clear) clear.classList.toggle('show', input.value.length > 0);
-      renderCards();
+      if (searchTimer) clearTimeout(searchTimer);
+      searchTimer = setTimeout(renderCards, 120);
     });
     if (clear) clear.addEventListener('click', function () {
+      if (searchTimer) clearTimeout(searchTimer);
       input.value = ''; state.q = ''; clear.classList.remove('show'); renderCards(); input.focus();
     });
   }
@@ -1324,6 +1422,18 @@
     });
   }
 
+  /* ---------- 键盘快捷键：按 / 聚焦搜索（输入控件内不拦截） ---------- */
+  function initShortcuts() {
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+      var t = e.target;
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable)) return;
+      e.preventDefault();
+      var inp = $('searchInput');
+      if (inp) { inp.focus(); inp.select(); }
+    });
+  }
+
   /* ---------- 启动 ---------- */
   function boot() {
     renderChips();
@@ -1344,10 +1454,20 @@
     initFilterMobileToggle();
     initReveal();
     initHeroLoad();
+    initShortcuts();
     var hm = $('heroMascot'); if (hm) hm.innerHTML = mascotSVG();
     var em = $('emptyMascot'); if (em) em.innerHTML = mascotSVG();
+    // 数据就绪后：移出骨架屏占位（renderCards 已替换 grid 内容）、显示准确总数
+    var grid = $('promptGrid'); if (grid) grid.removeAttribute('aria-busy');
     var total = $('statTotal');
     if (total) total.textContent = allPrompts().length;
+    // 懒加载剩余主库分片（首屏只同步 chunk-1）；全部就绪后刷新统计/标签/定位
+    loadNextMainChunk();
+    onMainDataReady(function () {
+      if (total) total.textContent = allPrompts().length;
+      renderTagCloud(); renderCards();
+      applyHash(); // 数据补全后重新定位（单条可能落在 chunk-1 之外）
+    });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();

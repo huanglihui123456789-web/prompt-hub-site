@@ -24,8 +24,13 @@ async function waitFor(fn, timeout, step) {
   const $ = s => document.querySelector(s);
   const $$ = s => document.querySelectorAll(s);
 
-  const booted = await waitFor(() => $('#statTotal') && $('#statTotal').textContent.trim() !== '0', 15000);
-  console.log('1) boot 完成:', booted ? 'OK' : 'FAIL');
+  // 首屏加速：仅同步 chunk-1，chunk-2~5 动态懒加载；等全量 1770 就绪
+  const booted = await waitFor(() => $('#statTotal') && $('#statTotal').textContent.trim() === '1770', 30000);
+  console.log('1) boot 完成（懒加载后全量 1770 就绪）:', booted ? 'OK' : 'FAIL');
+
+  // 骨架屏：真实卡片渲染后占位应已被替换移除
+  const skRemoved = !$('#promptGrid .sk-card') && $('#promptGrid .prompt-card');
+  console.log('1.5) 骨架屏已移除且卡片渲染:', skRemoved ? 'OK' : 'FAIL');
 
   // 图例存在且两档齐全（绿=已校准/精选，蓝=社区/原生；无黄标）
   const legend = $('.tier-legend');
@@ -101,8 +106,14 @@ async function waitFor(fn, timeout, step) {
   console.log('8) 切 Français →', num(), '条 | 期望 200:', nFr ? 'OK' : 'FAIL',
     '| 渲染卡', frCards.length, '| 徽章全绿:', frBadgeOk ? 'OK' : 'FAIL');
 
-  const pass = booted && has2 && dataOk && badgeOk && nVer === 1222 &&
-    nNat === 548 && nAll === 1770 && allActive && !hasSynBtn && nFr && frBadgeOk;
-  console.log(pass ? '\n=== 来源两档徽章 + 多语言包测试全部 PASS ===' : '\n=== 存在 FAIL ===');
+  // 9) 快捷键：按 / 聚焦搜索（输入控件外）
+  document.body.focus();
+  document.dispatchEvent(new window.KeyboardEvent('keydown', { key: '/', bubbles: true }));
+  const slashFocus = document.activeElement === $('#searchInput');
+  console.log('9) 按 / 聚焦搜索:', slashFocus ? 'OK' : 'FAIL');
+
+  const pass = booted && skRemoved && has2 && dataOk && badgeOk && nVer === 1222 &&
+    nNat === 548 && nAll === 1770 && allActive && !hasSynBtn && nFr && frBadgeOk && slashFocus;
+  console.log(pass ? '\n=== 来源两档徽章 + 多语言包 + 骨架屏 + 快捷键测试全部 PASS ===' : '\n=== 存在 FAIL ===');
   process.exit(pass ? 0 : 1);
 })().catch(e => { console.error('测试异常:', e.message); process.exit(2); });

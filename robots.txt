@@ -1,0 +1,9 @@
+# PROMPT 提示词库 robots.txt
+# 站点为纯静态内容站，全站可收录；仅排除避免重复的 404 页
+User-agent: *
+Allow: /
+
+# 404 页无需收录
+Disallow: /404.html
+
+Sitemap: https://huanglihui123456789-web.github.io/prompt-hub-site/sitemap.xml
