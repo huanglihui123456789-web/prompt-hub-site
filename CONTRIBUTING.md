@@ -11,7 +11,7 @@ AI 提示词精选库 · 纯静态站：**零构建、无依赖**，`index.html`
 | `index.html` | 页面骨架；底部引用脚本并带 `?v=` 缓存版本号 |
 | `assets/css/style.css` | 全部样式（暖色杂志风、明暗双主题、响应式、3D 卡片） |
 | `assets/js/main.js` | 全部交互逻辑：搜索 / 行业筛选 / 子标签 / 复制 / 收藏 / 点赞 / 投稿 / 主题 / 占位填充 / 分享 |
-| `assets/js/prompts.js` | **主提示词库**（`window.PROMPTS`，当前 1749 条） |
+| `assets/js/prompts.js` | **主提示词库**（`window.PROMPTS`，当前 1652 条） |
 | `assets/js/prompts-intl-{fr,de,es,pt,nl}.js` | 多语言包（各 200 条，懒加载） |
 | `assets/data/` | 原始数据语料（**不纳入版本控制**，勿提交） |
 | `e2e_regression_test.js` | 回归测试脚本 |
