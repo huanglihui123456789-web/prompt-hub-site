@@ -320,7 +320,7 @@
   /* ---------- 主库分片懒加载（首屏加速） ----------
      首屏仅同步 chunk-1（约 465KB）；chunk-2~5 由这里动态注入，
      避免首屏等待约 1.8MB 数据全部下载后才出卡 */
-  var VER = '20260904e';
+  var VER = '20260904f';
   var mainChunksLeft = [2, 3, 4, 5];
   var dataReadyCbs = [];
   function mainDataReady() { return mainChunksLeft.length === 0; }
@@ -1434,6 +1434,62 @@
     });
   }
 
+  /* ---------- 强调色换肤（5 套主题色，localStorage 持久化） ---------- */
+  var ACCENT_KEY = 'prompt-accent';
+  function initAccentPicker() {
+    var dots = document.querySelectorAll('.acc-dot');
+    if (!dots.length) return;
+    var saved = lsGet(ACCENT_KEY, '');
+    if (saved && saved !== 'default') {
+      document.documentElement.setAttribute('data-accent', saved);
+      dots.forEach(function (d) { d.classList.toggle('is-active', d.getAttribute('data-accent') === saved); });
+    }
+    dots.forEach(function (d) {
+      d.addEventListener('click', function () {
+        var v = d.getAttribute('data-accent') || 'default';
+        if (v === 'default') document.documentElement.removeAttribute('data-accent');
+        else document.documentElement.setAttribute('data-accent', v);
+        dots.forEach(function (x) { x.classList.toggle('is-active', x === d); });
+        lsSet(ACCENT_KEY, v);
+      });
+    });
+  }
+
+  /* ---------- 特色：随机逛一条（🎲 随机定位 + 高亮） ---------- */
+  function initSurprise() {
+    var btn = $('surpriseBtn');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var list = allPrompts();
+      if (!list.length) return;
+      var pick = list[Math.floor(Math.random() * list.length)];
+      // 若当前筛选结果里没有它，先回到「全部」再定位
+      var inList = filterPrompts().some(function (p) { return p.id === pick.id; });
+      if (!inList) resetFilters();
+      var cur = filterPrompts(), idx = -1;
+      for (var i = 0; i < cur.length; i++) { if (cur[i].id === pick.id) { idx = i; break; } }
+      if (idx === -1) return;
+      if (idx >= shownCount) { shownCount = idx + 1; renderCards(true); }
+      var grid = $('promptGrid'); if (!grid) return;
+      var el = null; grid.querySelectorAll('.prompt-card').forEach(function (c) { if (c.dataset.pid === pick.id) el = c; });
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.add('flash');
+        setTimeout(function () { el.classList.remove('flash'); }, 1800);
+      }
+      toast('🎲 随机逛到：' + (pick.title || pick.id), 'fa-dice');
+    });
+  }
+
+  /* ---------- Service Worker 注册（PWA：离线 + 二次访问秒开） ---------- */
+  function initSW() {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('./sw.js').catch(function () {});
+      });
+    }
+  }
+
   /* ---------- 启动 ---------- */
   function boot() {
     renderChips();
@@ -1455,6 +1511,9 @@
     initReveal();
     initHeroLoad();
     initShortcuts();
+    initAccentPicker();
+    initSurprise();
+    initSW();
     var hm = $('heroMascot'); if (hm) hm.innerHTML = mascotSVG();
     var em = $('emptyMascot'); if (em) em.innerHTML = mascotSVG();
     // 数据就绪后：移出骨架屏占位（renderCards 已替换 grid 内容）、显示准确总数

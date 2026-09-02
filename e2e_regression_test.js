@@ -112,8 +112,16 @@ async function waitFor(fn, timeout, step) {
   const slashFocus = document.activeElement === $('#searchInput');
   console.log('9) 按 / 聚焦搜索:', slashFocus ? 'OK' : 'FAIL');
 
+  // 10) 特色功能：强调色换肤 + 随机逛一条按钮
+  const navyDot = document.querySelector('.acc-dot[data-accent="navy"]');
+  let accentOk = false;
+  if (navyDot) { navyDot.click(); accentOk = document.documentElement.getAttribute('data-accent') === 'navy'; }
+  const surpriseOk = !!$('#surpriseBtn');
+  console.log('10) 强调色换肤(黛蓝):', accentOk ? 'OK' : 'FAIL', '| 随机一条按钮:', surpriseOk ? 'OK' : 'FAIL');
+
   const pass = booted && skRemoved && has2 && dataOk && badgeOk && nVer === 1222 &&
-    nNat === 548 && nAll === 1770 && allActive && !hasSynBtn && nFr && frBadgeOk && slashFocus;
-  console.log(pass ? '\n=== 来源两档徽章 + 多语言包 + 骨架屏 + 快捷键测试全部 PASS ===' : '\n=== 存在 FAIL ===');
+    nNat === 548 && nAll === 1770 && allActive && !hasSynBtn && nFr && frBadgeOk && slashFocus &&
+    accentOk && surpriseOk;
+  console.log(pass ? '\n=== 来源两档徽章 + 多语言包 + 骨架屏 + 快捷键 + 换肤/随机 测试全部 PASS ===' : '\n=== 存在 FAIL ===');
   process.exit(pass ? 0 : 1);
 })().catch(e => { console.error('测试异常:', e.message); process.exit(2); });

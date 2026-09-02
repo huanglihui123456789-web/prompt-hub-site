@@ -1,0 +1,33 @@
+{
+  "name": "PROMPT 提示词库 · 各行业 AI Prompt 精选",
+  "short_name": "PROMPT 提示词库",
+  "description": "收录 1770 条精选中文 / 英文 AI 提示词，覆盖 13 个行业，支持搜索、分类筛选、收藏点赞与一键复制。",
+  "lang": "zh-CN",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FBF7F0",
+  "theme_color": "#b07d2b",
+  "categories": ["productivity", "education", "utilities"],
+  "icons": [
+    {
+      "src": "assets/img/app-icon-512.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/app-icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/app-icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    }
+  ]
+}
