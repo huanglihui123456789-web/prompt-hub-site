@@ -180,6 +180,8 @@
   // 复制成功撒花：在按钮处喷发品牌色粒子（WAAPI 驱动，reduced-motion 跳过）
   function burstConfetti(btn) {
     if (REDUCED_MOTION) return;
+    // 旧浏览器不支持 Element.animate()：静默跳过动画，绝不因兼容问题中断复制结果
+    if (typeof Element === 'undefined' || !Element.prototype.animate) return;
     var colors = ['#b07d2b', '#2f6f5e', '#d9533b', '#e6c878', '#ffffff'];
     var r = btn ? btn.getBoundingClientRect() : { left: innerWidth / 2, top: innerHeight / 2, width: 0, height: 0 };
     var cx = r.left + r.width / 2, cy = r.top + r.height / 2, N = 22;
@@ -195,10 +197,15 @@
       var ang = Math.random() * Math.PI * 2, dist = 60 + Math.random() * 120;
       var dx = Math.cos(ang) * dist, dy = Math.sin(ang) * dist - 46;
       var rot = Math.random() * 720 - 360;
-      s.animate([
-        { transform: 'translate(-50%,-50%) translate(0,0) rotate(0deg)', opacity: 1 },
-        { transform: 'translate(-50%,-50%) translate(' + dx + 'px,' + dy + 'px) rotate(' + rot + 'deg)', opacity: 0 }
-      ], { duration: 700 + Math.random() * 520, easing: 'cubic-bezier(.2,.7,.2,1)' }).onfinish = (function (el) { return function () { el.remove(); }; })(s);
+      try {
+        s.animate([
+          { transform: 'translate(-50%,-50%) translate(0,0) rotate(0deg)', opacity: 1 },
+          { transform: 'translate(-50%,-50%) translate(' + dx + 'px,' + dy + 'px) rotate(' + rot + 'deg)', opacity: 0 }
+        ], { duration: 700 + Math.random() * 520, easing: 'cubic-bezier(.2,.7,.2,1)' }).onfinish = (function (el) { return function () { el.remove(); }; })(s);
+      } catch (e) {
+        // 动画失败（老引擎）：立即回收粒子，避免 DOM 泄漏
+        setTimeout(function () { s.remove(); }, 1400);
+      }
     }
   }
 
@@ -209,20 +216,27 @@
     var glare = card.querySelector('.card-glare');
     if (!inner) return;
     var MAX = 8;
+    // rAF 节流：避免 mousemove 每帧重复 getBoundingClientRect + 写 style
+    var raf = null;
     card.addEventListener('mouseenter', function () {
       inner.style.transition = 'transform .25s cubic-bezier(.2,.8,.2,1)';
     });
     card.addEventListener('mousemove', function (e) {
-      var b = card.getBoundingClientRect();
-      var px = (e.clientX - b.left) / b.width - 0.5;
-      var py = (e.clientY - b.top) / b.height - 0.5;
-      inner.style.transform = 'rotateX(' + (-py * MAX).toFixed(2) + 'deg) rotateY(' + (px * MAX).toFixed(2) + 'deg)';
-      if (glare) {
-        glare.style.setProperty('--mx', ((px + 0.5) * 100).toFixed(1) + '%');
-        glare.style.setProperty('--my', ((py + 0.5) * 100).toFixed(1) + '%');
-      }
+      if (raf) return; // 上一帧未完成，跳过本次
+      raf = requestAnimationFrame(function () {
+        raf = null;
+        var b = card.getBoundingClientRect();
+        var px = (e.clientX - b.left) / b.width - 0.5;
+        var py = (e.clientY - b.top) / b.height - 0.5;
+        inner.style.transform = 'rotateX(' + (-py * MAX).toFixed(2) + 'deg) rotateY(' + (px * MAX).toFixed(2) + 'deg)';
+        if (glare) {
+          glare.style.setProperty('--mx', ((px + 0.5) * 100).toFixed(1) + '%');
+          glare.style.setProperty('--my', ((py + 0.5) * 100).toFixed(1) + '%');
+        }
+      });
     });
     card.addEventListener('mouseleave', function () {
+      if (raf) { cancelAnimationFrame(raf); raf = null; }
       inner.style.transition = 'transform .6s cubic-bezier(.2,.8,.2,1)';
       inner.style.transform = '';
       if (glare) glare.style.opacity = '0';
@@ -283,7 +297,7 @@
     if (intlLoading[lang]) return;
     intlLoading[lang] = true;
     var s = document.createElement('script');
-    s.src = 'assets/js/prompts-intl-' + lang + '.js?v=20260903a';
+    s.src = 'assets/js/prompts-intl-' + lang + '.js?v=20260903b';
     s.onload = function () { intlLoading[lang] = false; flushIntlWaiters(lang); };
     s.onerror = function () {
       intlLoading[lang] = false;
