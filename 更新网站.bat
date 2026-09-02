@@ -15,11 +15,11 @@ if errorlevel 1 (
     exit /b 1
 )
 
-echo [1/3] 自动更新版本号，绕过浏览器缓存...
+echo [1/4] 自动更新版本号，绕过浏览器缓存...
 powershell -NoProfile -ExecutionPolicy Bypass -Command "$f='index.html';$p=(Resolve-Path $f).Path;$s=[IO.File]::ReadAllText($p,[Text.Encoding]::UTF8);$ts=Get-Date -Format 'yyyyMMddHHmm';$s=[regex]::Replace($s,'\?v=[0-9a-z]+','?v='+$ts);[IO.File]::WriteAllText($p,$s,(New-Object Text.UTF8Encoding $false));Write-Host '   版本号已更新'"
 
 echo.
-echo [2/3] 提交改动...
+echo [2/4] 提交改动...
 git add -A
 git commit -m "网站更新 %date% %time%"
 
