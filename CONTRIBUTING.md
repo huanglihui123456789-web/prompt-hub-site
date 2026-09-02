@@ -76,15 +76,16 @@ git push origin feat/你的改动描述
 **13 个行业（`cat` 合法值）**：
 `编程/技术`、`前端开发`、`写作/内容`、`教育`、`娱乐/游戏`、`商业/金融`、`效率/生活`、`科研/科学`、`营销/自媒体`、`医疗健康`、`设计`、`翻译/语言`、`法律`
 
-### ⚠️ 改完必须同步版本号（容易忘）
+### ⚠️ 改完必须重新分片 + 同步版本号（容易忘）
 `index.html` 底部引用脚本带 `?v=`：
 
 ```html
-<script src="assets/js/prompts.js?v=20260901x"></script>
-<script src="assets/js/main.js?v=20260901x" defer></script>
+<script src="assets/js/data/chunk-1.js?v=20260901aj" defer></script>
+<!-- chunk-2..5 同理 -->
+<script src="assets/js/main.js?v=20260901aj" defer></script>
 ```
 
-改动了哪个文件，就把对应的 `v=` **递增一位**（如 `x → y`）。否则协作者浏览器会用旧缓存，**看不到你的改动**。CSS 同理。
+**改了 `prompts.js` 数据后，先运行 `node split-prompts.js` 重新生成分片**（网站加载的是分片，不是 prompts.js 本身），再把对应 `v=` 递增一位。改了哪个文件就 bump 哪个，否则浏览器用旧缓存，**看不到你的改动**。CSS 同理。用「更新网站.bat」则会自动 bump 全部版本号。
 
 ---
 

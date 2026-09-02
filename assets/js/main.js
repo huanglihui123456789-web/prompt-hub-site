@@ -522,8 +522,7 @@
     window.PROMPT_CATEGORIES.forEach(function (c) {
       var b = document.createElement('button');
       b.className = 'chip' + (c.key === state.cat ? ' is-active' : '');
-      b.setAttribute('role', 'tab');
-      b.setAttribute('aria-selected', String(c.key === state.cat));
+      b.setAttribute('aria-pressed', String(c.key === state.cat));
       b.innerHTML = '<i class="fa-solid ' + c.icon + '"></i>' + escapeHtml(c.key);
       b.addEventListener('click', function () {
         state.cat = c.key;

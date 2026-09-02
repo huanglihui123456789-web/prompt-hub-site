@@ -12,7 +12,7 @@
   <meta http-equiv="Expires" content="0" />
 
   <!-- 当前应用版本号：bump 它即可让所有访客下次访问时拿到最新版（绕过 GitHub Pages 10 分钟缓存） -->
-  <meta name="app-version" content="20260901ai" />
+  <meta name="app-version" content="20260901aj" />
   <script>
     (function(){
       try {
@@ -133,10 +133,10 @@
 
         <!-- 过滤栏（吸顶） -->
         <div class="filter-bar" id="filterBar">
-          <div class="chips" id="categoryChips" role="tablist" aria-label="行业筛选"></div>
+          <div class="chips" id="categoryChips" role="group" aria-label="行业筛选"></div>
           <button class="filter-toggle-mobile" id="filterToggleMobile" type="button" aria-expanded="false" aria-controls="tierFilter subTagCloud"><i class="fa-solid fa-sliders"></i><span>更多筛选</span><i class="fa-solid fa-chevron-down toggle-chevron"></i></button>
           <div class="tier-filter" id="tierFilter" role="group" aria-label="按来源可信度筛选"></div>
-          <div class="result-count" id="resultCount"></div>
+          <div class="result-count" id="resultCount" aria-live="polite"></div>
           <details class="subtags-wrap">
             <summary>热门话题</summary>
             <div class="subtags" id="subTagCloud" aria-label="话题子标签"></div>
@@ -279,7 +279,11 @@
   <div class="toast" id="toast" hidden></div>
 
   <!-- 数据 + 主脚本 -->
-  <script src="assets/js/prompts.js?v=20260901w"></script>
-  <script src="assets/js/main.js?v=20260901ai" defer></script>
+  <script src="assets/js/data/chunk-1.js?v=20260901aj" defer></script>
+  <script src="assets/js/data/chunk-2.js?v=20260901aj" defer></script>
+  <script src="assets/js/data/chunk-3.js?v=20260901aj" defer></script>
+  <script src="assets/js/data/chunk-4.js?v=20260901aj" defer></script>
+  <script src="assets/js/data/chunk-5.js?v=20260901aj" defer></script>
+  <script src="assets/js/main.js?v=20260901aj" defer></script>
 </body>
 </html>
