@@ -24,9 +24,9 @@ async function waitFor(fn, timeout, step) {
   const $ = s => document.querySelector(s);
   const $$ = s => document.querySelectorAll(s);
 
-  // 首屏加速：仅同步 chunk-1，chunk-2~5 动态懒加载；等全量 1785 就绪
-  const booted = await waitFor(() => $('#statTotal') && $('#statTotal').textContent.trim() === '1785', 30000);
-  console.log('1) boot 完成（懒加载后全量 1785 就绪）:', booted ? 'OK' : 'FAIL');
+  // 首屏加速：仅同步 chunk-1，chunk-2~5 动态懒加载；等全量 2000 就绪
+  const booted = await waitFor(() => $('#statTotal') && $('#statTotal').textContent.trim() === '2000', 30000);
+  console.log('1) boot 完成（懒加载后全量 2000 就绪）:', booted ? 'OK' : 'FAIL');
 
   // 骨架屏：真实卡片渲染后占位应已被替换移除
   const skRemoved = !$('#promptGrid .sk-card') && $('#promptGrid .prompt-card');
@@ -49,9 +49,9 @@ async function waitFor(fn, timeout, step) {
   }
   const tc = { verified: 0, synthetic: 0, community: 0, native: 0 };
   P.forEach(p => tc[tier(p)]++);
-  const dataOk = tc.verified === 1237 && tc.synthetic === 0 && tc.native === 548 && tc.community === 0;
+  const dataOk = tc.verified === 1452 && tc.synthetic === 0 && tc.native === 548 && tc.community === 0;
   console.log('3) 数据 tier 分布:', JSON.stringify(tc),
-    '| 期望 1237/0/548/0:', dataOk ? 'OK' : 'FAIL');
+    '| 期望 1452/0/548/0:', dataOk ? 'OK' : 'FAIL');
 
   // 每张已渲染卡片都有合法两档徽章（green 或 blue，无 amber）
   const cards = $$('#promptGrid .prompt-card');
@@ -65,7 +65,7 @@ async function waitFor(fn, timeout, step) {
   console.log('4) 渲染卡片数:', cards.length, '| 每张含合法两档徽章:', badgeOk ? 'OK' : 'FAIL',
     '| 徽章色分布:', JSON.stringify(seen));
 
-  // 来源筛选：点「已校准/精选」→ 共 1237 条
+  // 来源筛选：点「已校准/精选」→ 共 1452 条
   function clickTier(label) {
     const btn = Array.from($$('#tierFilter .tier-btn')).find(b => b.textContent.trim() === label);
     if (btn) btn.click();
@@ -74,19 +74,19 @@ async function waitFor(fn, timeout, step) {
 
   clickTier('已校准/精选'); await sleep(250);
   const nVer = num();
-  console.log('5) 点「已校准/精选」→ 共', nVer, '条 | 期望 1237:', nVer === 1237 ? 'OK' : 'FAIL');
+  console.log('5) 点「已校准/精选」→ 共', nVer, '条 | 期望 1452:', nVer === 1452 ? 'OK' : 'FAIL');
 
   clickTier('社区/原生'); await sleep(250);
   const nNat = num();
   console.log('6) 点「社区/原生」→ 共', nNat, '条 | 期望 548:', nNat === 548 ? 'OK' : 'FAIL');
 
-  // 回到「全部」→ 1785，且 active 态正确；确认不存在「机器生成」按钮
+  // 回到「全部」→ 2000，且 active 态正确；确认不存在「机器生成」按钮
   const hasSynBtn = Array.from($$('#tierFilter .tier-btn')).some(b => b.textContent.trim() === '机器生成');
   clickTier('全部'); await sleep(250);
   const nAll = num();
   const allActive = $('#tierFilter .tier-btn.is-active') &&
     $('#tierFilter .tier-btn.is-active').textContent.trim() === '全部';
-  console.log('7) 点「全部」→ 共', nAll, '条 | 期望 1785:', nAll === 1785 ? 'OK' : 'FAIL',
+  console.log('7) 点「全部」→ 共', nAll, '条 | 期望 2000:', nAll === 2000 ? 'OK' : 'FAIL',
     '| 全部按钮 active:', allActive ? 'OK' : 'FAIL', '| 无「机器生成」按钮:', hasSynBtn ? 'FAIL' : 'OK');
 
   // 8) 多语言包：切 Français → 200 条，渲染卡徽章全绿（intl 已翻 verified）
@@ -119,8 +119,8 @@ async function waitFor(fn, timeout, step) {
   const surpriseOk = !!$('#surpriseBtn');
   console.log('10) 强调色换肤(黛蓝):', accentOk ? 'OK' : 'FAIL', '| 随机一条按钮:', surpriseOk ? 'OK' : 'FAIL');
 
-  const pass = booted && skRemoved && has2 && dataOk && badgeOk && nVer === 1237 &&
-    nNat === 548 && nAll === 1785 && allActive && !hasSynBtn && nFr && frBadgeOk && slashFocus &&
+  const pass = booted && skRemoved && has2 && dataOk && badgeOk && nVer === 1452 &&
+    nNat === 548 && nAll === 2000 && allActive && !hasSynBtn && nFr && frBadgeOk && slashFocus &&
     accentOk && surpriseOk;
   console.log(pass ? '\n=== 来源两档徽章 + 多语言包 + 骨架屏 + 快捷键 + 换肤/随机 测试全部 PASS ===' : '\n=== 存在 FAIL ===');
   process.exit(pass ? 0 : 1);
