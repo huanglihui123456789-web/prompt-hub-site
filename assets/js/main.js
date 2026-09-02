@@ -21,7 +21,11 @@
   /* ---------- 工具 ---------- */
   function $(id) { return document.getElementById(id); }
   function escapeHtml(s) {
-    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    // 注意：必须转义引号 —— 本函数也用于 HTML 属性（data-tag / href / title），
+    // 缺失引号转义会导致属性闭合注入（如 onerror=...）的 XSS。
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
   /* ---------- 占位符高亮（高精度，避免误标嵌入代码） ----------
      规则：括号片段 {{x}}/[[x]]/<<x>>/[x]/<x> 仅当内部为「纯字母/数字/下划线/空格」
@@ -615,12 +619,18 @@
         '<i class="tier-dot"></i>' + escapeHtml(tm.label) + '</span>';
 
       var srcHtml = '';
+      // URL 协议白名单：仅放行 http/https，阻断 javascript: / data: 等可执行协议（防 XSS）
+      var rawUrl = p.sourceUrl || '';
+      var safeUrl = /^https?:\/\//i.test(rawUrl) ? rawUrl : '';
       if (p.community) {
         srcHtml = '<div class="card-source"><i class="fa-solid fa-circle-info"></i> 来源：' +
           (p.source ? escapeHtml(p.source) : '网友投稿') + '</div>';
+      } else if (safeUrl) {
+        srcHtml = '<div class="card-source"><i class="fa-solid fa-circle-info"></i> 来源：' +
+          '<a href="' + escapeHtml(safeUrl) + '" target="_blank" rel="noopener">' + escapeHtml(p.source || safeUrl) + '</a></div>';
       } else {
         srcHtml = '<div class="card-source"><i class="fa-solid fa-circle-info"></i> 来源：' +
-          (p.sourceUrl ? '<a href="' + escapeHtml(p.sourceUrl) + '" target="_blank" rel="noopener">' + escapeHtml(p.source || p.sourceUrl) + '</a>' : escapeHtml(p.source || '未知')) + '</div>';
+          escapeHtml(p.source || '未知') + '</div>';
       }
 
       // 编辑热度：0–9 站内编辑评分（非真实使用量），仅在有分时展示
@@ -959,39 +969,17 @@
       // 存入本地
       community.push(entry); lsSetArr(K.community, community);
       renderTagCloud(); renderCards();
-      // GitHub 直提交（可选）
-      var token = $('ghToken').value.trim(), repo = $('ghRepo').value.trim();
-      if (token) {
-        if (repo) lsSet(K.repo, repo);
-        lsSet(K.token, token);
-        ghSubmit(entry, repo || lsGet(K.repo, REPO_DEFAULT)).then(function (r) {
-          if (r.ok) toast('已保存到本地并推送到 GitHub', 'fa-circle-check');
-          else toast('已保存到本地；GitHub 推送失败（' + (r.reason || r.status) + '）', 'fa-triangle-exclamation');
-        });
-      } else {
-        toast('已保存到本地浏览器', 'fa-circle-check');
-      }
+      // 安全加固：不再索取用户的 GitHub Token（原 ghToken / ghRepo 输入与 ghSubmit 直推逻辑已移除）
+      // 投稿仅保存到本机浏览器，避免高权限凭证被索取、明文存储或被 XSS 窃取。
+      toast('已保存到本地浏览器', 'fa-circle-check');
       form.reset();
       close();
     });
   }
 
-  function ghSubmit(entry, repo) {
-    return new Promise(function (resolve) {
-      var token = lsGet(K.token, '');
-      if (!token || !repo || repo.indexOf('/') === -1) { resolve({ ok: false, reason: 'no-token-or-repo' }); return; }
-      var parts = repo.split('/');
-      var path = SUBMISSIONS_DIR + '/' + entry.id + '.json';
-      var content = btoa(unescape(encodeURIComponent(JSON.stringify(entry, null, 2))));
-      var url = 'https://api.github.com/repos/' + parts[0] + '/' + parts[1] + '/contents/' + path;
-      fetch(url, {
-        method: 'PUT',
-        headers: { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github+json' },
-        body: JSON.stringify({ message: 'Add prompt: ' + entry.title, content: content })
-      }).then(function (res) { resolve({ ok: res.ok, status: res.status }); })
-        .catch(function () { resolve({ ok: false, reason: 'network' }); });
-    });
-  }
+  /* 安全加固：ghSubmit（用用户 Token 直推 GitHub）已移除 ——
+     不再在前端索取 / 存储 GitHub 凭证。公开投稿的读取（loadCommunity）保留，
+     它读的是仓库的公开 submissions/ 目录，无需任何凭证。 */
 
   function loadCommunity() {
     var repo = lsGet(K.repo, REPO_DEFAULT);

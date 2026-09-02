@@ -12,7 +12,7 @@
   <meta http-equiv="Expires" content="0" />
 
   <!-- 当前应用版本号：bump 它即可让所有访客下次访问时拿到最新版（绕过 GitHub Pages 10 分钟缓存） -->
-  <meta name="app-version" content="20260901ag" />
+  <meta name="app-version" content="20260901ah" />
   <script>
     (function(){
       try {
@@ -22,7 +22,8 @@
         if (host === 'localhost' || host === '127.0.0.1' || host === '') return;
         var cur = new URLSearchParams(location.search).get('v');
         if (cur === v) return;
-        location.replace(location.pathname + '?v=' + encodeURIComponent(v));
+        // 保留 hash：分享的永久链接（#id 定位到某条提示词）不能因跳转丢失
+        location.replace(location.pathname + '?v=' + encodeURIComponent(v) + (location.hash || ''));
       } catch(e) {}
     })();
   </script>
@@ -33,7 +34,7 @@
   <link href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.staticfile.org/tailwindcss/2.2.19/tailwind.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css?v=20260901af" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260901ah" />
 </head>
 
 <body>
@@ -246,16 +247,8 @@
           <input type="text" name="source" placeholder="默认：社区投稿" />
         </label>
 
-        <details class="gh-settings">
-          <summary><i class="fa-solid fa-key"></i> GitHub 直提交设置（可选）</summary>
-          <p class="gh-note">用于把投稿直接推送到你的仓库。Token 仅存于本机浏览器，请使用<strong>仅有 contents 写权限</strong>的 Fine-grained Token，切勿使用全权限 Token。</p>
-          <label>仓库 owner / name
-            <input type="text" id="ghRepo" placeholder="your-name / prompt-hub-site" />
-          </label>
-          <label>GitHub Token
-            <input type="password" id="ghToken" placeholder="github_pat_xxx" autocomplete="off" />
-          </label>
-        </details>
+        <!-- 安全加固：已移除 GitHub Token 输入框，避免引导用户把高权限凭证填进网页 -->
+        <p class="gh-note"><i class="fa-solid fa-circle-info"></i> 投稿会保存在<strong>你的浏览器本地</strong>（仅自己可见）。若希望公开展示，请将内容发送给站长审核后合并上线。</p>
 
         <div class="form-actions">
           <button type="button" class="btn-ghost" id="submitCancel">取消</button>
@@ -288,6 +281,6 @@
 
   <!-- 数据 + 主脚本 -->
   <script src="assets/js/prompts.js?v=20260901w"></script>
-  <script src="assets/js/main.js?v=20260901af" defer></script>
+  <script src="assets/js/main.js?v=20260901ah" defer></script>
 </body>
 </html>
