@@ -44,9 +44,9 @@ async function waitFor(fn, timeout, step) {
   }
   const tc = { verified: 0, synthetic: 0, community: 0, native: 0 };
   P.forEach(p => tc[tier(p)]++);
-  const dataOk = tc.verified === 1097 && tc.synthetic === 0 && tc.native === 555 && tc.community === 0;
+  const dataOk = tc.verified === 1092 && tc.synthetic === 0 && tc.native === 550 && tc.community === 0;
   console.log('3) 数据 tier 分布:', JSON.stringify(tc),
-    '| 期望 1097/0/555/0:', dataOk ? 'OK' : 'FAIL');
+    '| 期望 1092/0/550/0:', dataOk ? 'OK' : 'FAIL');
 
   // 每张已渲染卡片都有合法两档徽章（green 或 blue，无 amber）
   const cards = $$('#promptGrid .prompt-card');
@@ -60,7 +60,7 @@ async function waitFor(fn, timeout, step) {
   console.log('4) 渲染卡片数:', cards.length, '| 每张含合法两档徽章:', badgeOk ? 'OK' : 'FAIL',
     '| 徽章色分布:', JSON.stringify(seen));
 
-  // 来源筛选：点「已校准/精选」→ 共 1097 条
+  // 来源筛选：点「已校准/精选」→ 共 1092 条
   function clickTier(label) {
     const btn = Array.from($$('#tierFilter .tier-btn')).find(b => b.textContent.trim() === label);
     if (btn) btn.click();
@@ -69,19 +69,19 @@ async function waitFor(fn, timeout, step) {
 
   clickTier('已校准/精选'); await sleep(250);
   const nVer = num();
-  console.log('5) 点「已校准/精选」→ 共', nVer, '条 | 期望 1097:', nVer === 1097 ? 'OK' : 'FAIL');
+  console.log('5) 点「已校准/精选」→ 共', nVer, '条 | 期望 1092:', nVer === 1092 ? 'OK' : 'FAIL');
 
   clickTier('社区/原生'); await sleep(250);
   const nNat = num();
-  console.log('6) 点「社区/原生」→ 共', nNat, '条 | 期望 555:', nNat === 555 ? 'OK' : 'FAIL');
+  console.log('6) 点「社区/原生」→ 共', nNat, '条 | 期望 550:', nNat === 550 ? 'OK' : 'FAIL');
 
-  // 回到「全部」→ 1652，且 active 态正确；确认不存在「机器生成」按钮
+  // 回到「全部」→ 1642，且 active 态正确；确认不存在「机器生成」按钮
   const hasSynBtn = Array.from($$('#tierFilter .tier-btn')).some(b => b.textContent.trim() === '机器生成');
   clickTier('全部'); await sleep(250);
   const nAll = num();
   const allActive = $('#tierFilter .tier-btn.is-active') &&
     $('#tierFilter .tier-btn.is-active').textContent.trim() === '全部';
-  console.log('7) 点「全部」→ 共', nAll, '条 | 期望 1652:', nAll === 1652 ? 'OK' : 'FAIL',
+  console.log('7) 点「全部」→ 共', nAll, '条 | 期望 1642:', nAll === 1642 ? 'OK' : 'FAIL',
     '| 全部按钮 active:', allActive ? 'OK' : 'FAIL', '| 无「机器生成」按钮:', hasSynBtn ? 'FAIL' : 'OK');
 
   // 8) 多语言包：切 Français → 200 条，渲染卡徽章全绿（intl 已翻 verified）
@@ -101,8 +101,8 @@ async function waitFor(fn, timeout, step) {
   console.log('8) 切 Français →', num(), '条 | 期望 200:', nFr ? 'OK' : 'FAIL',
     '| 渲染卡', frCards.length, '| 徽章全绿:', frBadgeOk ? 'OK' : 'FAIL');
 
-  const pass = booted && has2 && dataOk && badgeOk && nVer === 1097 &&
-    nNat === 555 && nAll === 1652 && allActive && !hasSynBtn && nFr && frBadgeOk;
+  const pass = booted && has2 && dataOk && badgeOk && nVer === 1092 &&
+    nNat === 550 && nAll === 1642 && allActive && !hasSynBtn && nFr && frBadgeOk;
   console.log(pass ? '\n=== 来源两档徽章 + 多语言包测试全部 PASS ===' : '\n=== 存在 FAIL ===');
   process.exit(pass ? 0 : 1);
 })().catch(e => { console.error('测试异常:', e.message); process.exit(2); });

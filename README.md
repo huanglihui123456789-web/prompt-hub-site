@@ -1,6 +1,6 @@
 # PROMPT · 提示词库
 
-一个覆盖 **13 个行业**、收录 **1652 条精选中英提示词**、并附 **1000 条精选多语言包（法 / 德 / 西 / 葡 / 荷，每语种 200 条，按需懒加载）** 的免费公开网站：支持关键词 / 场景搜索、行业与热门话题筛选、热度排序、收藏点赞、一键复制（可带出处署名）、滚动自动加载。杂志风视觉、深色 / 浅色可切换、移动端深度适配。纯静态、零构建。
+一个覆盖 **13 个行业**、收录 **1642 条精选中英提示词**、并附 **1000 条精选多语言包（法 / 德 / 西 / 葡 / 荷，每语种 200 条，按需懒加载）** 的免费公开网站：支持关键词 / 场景搜索、行业与热门话题筛选、热度排序、收藏点赞、一键复制（可带出处署名）、滚动自动加载。杂志风视觉、深色 / 浅色可切换、移动端深度适配。纯静态、零构建。
 
 > **收录原则：保留原文语言，不做翻译。** 英文源的提示词就是英文，中文社区的就是中文，卡片上标注源语言。英文条目下方附一行中文小字标签，仅为辅助扫读与中文搜索，**正文一字不改**。
 
@@ -15,7 +15,7 @@
 
 | 来源 | 条数 | 协议 | 说明 |
 |---|---|---|---|
-| [prompts.chat](https://github.com/f/prompts.chat)（CC0） | 150（已剔除损坏条目） | CC0 1.0 | 英文原文，逐字搬运 |
+| [prompts.chat](https://github.com/f/prompts.chat)（CC0） | 150（已剔除损坏条目 + 重复变体） | CC0 1.0 | 英文原文，逐字搬运 |
 | [mattnigh/ChatGPT3-Free-Prompt-List](https://github.com/mattnigh/ChatGPT3-Free-Prompt-List) | 225 | MIT | 英文原文，逐字搬运 |
 | [PlexPt/awesome-chatgpt-prompts-zh](https://github.com/PlexPt/awesome-chatgpt-prompts-zh) | 150 | —（社区整理） | 中文原文，社区原样 |
 | [motionsites-prompt-collection](https://github.com/nomaan5541/motionsites-prompt-collection) | 249（「前端开发」分类） | MIT | 英文原文；已过滤品牌侵权风险条目 |
@@ -25,7 +25,7 @@
 | [langgptai/LangGPT](https://github.com/langgptai/LangGPT)（云中江树） | 21 | Apache-2.0 | **中文原生**结构化提示词 |
 | [ai-prompt-armory](https://github.com/maliksandra838-lgtm/ai-prompt-armory) | 18 | MIT | **中文原生**电商/自媒体实战模板 |
 
-**可信度两档徽章**：🟢 已校准/精选 1097 条（站内审核收录，其中 gretelai 部分为经质量筛选的 AI 生成内容，卡片 tooltip 已注明）/ 🔵 社区·原生 555 条（未逐条校验）。
+**可信度两档徽章**：🟢 已校准/精选 1092 条（站内审核收录，其中 gretelai 部分为经质量筛选的 AI 生成内容，卡片 tooltip 已注明）/ 🔵 社区·原生 550 条（未逐条校验）。
 
 - 每条数据带 `lang` 字段（`en/zh/fr/de/es/pt/nl`），正文即源头语言原文。
 - 复制时可勾选「带出处署名」，自动追加来源；商用请保留署名。
@@ -79,7 +79,7 @@ prompt-hub-site/
 │   ├── css/style.css           # 全部样式与主题变量
 │   ├── js/
 │   │   ├── main.js             # 渲染 / 搜索 / 筛选 / 排序 / 收藏 / 主题
-│   │   ├── prompts.js          # 主库数据源（编辑这份！1652 条）
+│   │   ├── prompts.js          # 主库数据源（编辑这份！1642 条）
 │   │   ├── data/               # 分片输出（由 split-prompts.js 生成，勿手改）
 │   │   │   └── chunk-1..5.js
 │   │   └── prompts-intl-*.js   # 多语言分包（懒加载）
