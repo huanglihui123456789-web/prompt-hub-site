@@ -396,9 +396,12 @@ img { max-width: 100%; display: block; }
 .card-foot { display: flex; align-items: center; gap: 8px; margin-top: auto; }
 .card-foot .foot-left { display: flex; gap: 6px; }
 .card-foot .foot-right { display: flex; gap: 8px; margin-left: auto; }
-/* 编辑热度：紧凑文字徽标，非按钮；hover 提示口径 */
-.heat-stat { display: inline-flex; align-items: center; gap: 3px; font-size: 12.5px; font-weight: 600; color: var(--muted); padding: 0 6px 0 2px; white-space: nowrap; cursor: help; user-select: none; }
-.heat-stat .flame { font-size: 12px; line-height: 1; filter: saturate(1.15); }
+/* 数据指标：浏览 / 复制 / 评分（紧凑文字徽标，非按钮） */
+.card-stats { display: inline-flex; align-items: center; gap: 10px; font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+.card-stats .stat { display: inline-flex; align-items: center; gap: 4px; cursor: help; user-select: none; }
+.card-stats .stat i { font-size: 12px; opacity: .85; }
+.card-stats .stat-score { color: var(--accent); }
+.card-stats .stat-score i { color: var(--accent); }
 /* 分享按钮：复用 .btn-icon，hover/已复制态用 accent-2 强调 */
 .btn-share:hover { color: var(--accent-2); border-color: var(--accent-2); }
 .btn-share.copied { color: #fff; background: var(--accent-2); border-color: transparent; }
@@ -472,6 +475,34 @@ img { max-width: 100%; display: block; }
 .btn-ghost:hover { color: var(--ink); border-color: var(--accent); }
 .btn-primary { height: 44px; padding: 0 22px; border-radius: 999px; border: none; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; font-size: 14px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: var(--shadow-sm); transition: transform .2s, box-shadow .3s; }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+/* ---------- 视图切换：全部 / 热榜 ---------- */
+.view-tabs { display: inline-flex; align-items: center; gap: 4px; background: var(--bg-sunk); border-radius: 999px; padding: 3px; }
+.view-tab { height: 34px; padding: 0 16px; border: none; border-radius: 999px; background: transparent; color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; transition: color .25s, background .25s, box-shadow .25s; white-space: nowrap; }
+.view-tab:hover { color: var(--ink); }
+.view-tab.is-active { background: var(--bg-elev); color: var(--ink); box-shadow: var(--shadow-sm); }
+
+/* ---------- 提示词详情弹层 ---------- */
+.modal.modal-detail { width: min(720px, 96vw); }
+.detail-body { display: grid; gap: 14px; }
+.detail-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.detail-head .detail-cat { font-size: 12.5px; font-weight: 600; color: var(--accent); letter-spacing: .03em; }
+.detail-head .detail-lang { font-size: 12px; color: var(--muted); background: var(--bg-sunk); padding: 2px 9px; border-radius: 999px; }
+.detail-title { font-family: "Noto Serif SC", serif; font-size: clamp(20px, 3.4vw, 28px); margin: 0; line-height: 1.3; }
+.detail-title-zh { font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+.detail-stats { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); padding: 10px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.detail-stats .stat { display: inline-flex; align-items: center; gap: 5px; }
+.detail-stats .stat i { color: var(--accent-2); }
+.detail-stats .stat-score i { color: var(--accent); }
+.detail-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.detail-source { font-size: 12.5px; color: var(--muted); }
+.detail-source a { color: var(--accent-2); text-decoration: underline; text-underline-offset: 2px; }
+.detail-prompt { font-size: 14px; line-height: 1.85; color: var(--ink-soft); white-space: pre-wrap; word-break: break-word; background: var(--bg-sunk); border-radius: 14px; padding: 16px 18px; }
+.detail-zh { margin-top: 2px; }
+.detail-zh .zh-ref-label { font-size: 12px; font-weight: 600; color: var(--muted); display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+.detail-zh .zh-ref-text { font-size: 13.5px; line-height: 1.8; color: var(--ink-soft); background: var(--bg-sunk); border-radius: 12px; padding: 12px 14px; white-space: pre-wrap; word-break: break-word; }
+.detail-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 14px; }
+.detail-actions .btn-copy { margin-left: auto; }
 
 /* ---------- Toast ---------- */
 .toast {
@@ -661,7 +692,7 @@ img { max-width: 100%; display: block; }
   .btn-icon { width: 42px; height: 42px; }
   .btn-copy { min-height: 44px; font-size: 14.5px; }
   .btn-lang { min-height: 42px; }
-  .heat-stat { font-size: 12px; }
+  .card-stats { font-size: 12px; gap: 8px; }
 }
 
 /* —— 小屏（≤480px）：进一步收紧 —— */
@@ -672,7 +703,7 @@ img { max-width: 100%; display: block; }
   .card-cat-icon { display: none; }
   .card-top { gap: 8px; }
   .card-title { font-size: 16.5px; }
-  .foot-left .heat-stat { display: none; }
+  .foot-left .card-stats { display: none; }
 }
 
 /* —— 热门话题移动端折叠（HTML <details>，零 JS，桌面端始终展开） —— */
@@ -821,7 +852,7 @@ img { max-width: 100%; display: block; }
   .btn-icon { width: 44px; height: 44px; font-size: 15px; }
   .btn-copy { min-height: 46px; font-size: 14.5px; padding: 0 18px; }
   .btn-lang { min-height: 44px; }
-  .heat-stat { font-size: 12px; }
+  .card-stats { font-size: 12px; gap: 8px; }
 }
 
 /* —— 小屏（≤480px） —— */
@@ -832,7 +863,7 @@ img { max-width: 100%; display: block; }
   .card-cat-icon { display: none; }
   .card-top { gap: 8px; }
   .card-title { font-size: 17px; }
-  .foot-left .heat-stat { display: none; }
+  .foot-left .card-stats { display: none; }
 }
 
 /* —— 「清除筛选」按钮（有筛选时出现在计数行） —— */
@@ -923,6 +954,6 @@ img { max-width: 100%; display: block; }
   }
   .card-source a, .card-source .badge { overflow: hidden; text-overflow: ellipsis; max-width: 62%; }
   /* 热度：手机端隐藏（占位置且信息价值低） */
-  .foot-left .heat-stat { display: none; }
+  .foot-left .card-stats { display: none; }
 }
 

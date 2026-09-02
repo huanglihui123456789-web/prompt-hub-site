@@ -20,6 +20,13 @@
 
   /* ---------- 工具 ---------- */
   function $(id) { return document.getElementById(id); }
+  // 数字格式化：1.2k / 3.4w / 5.6m，用于浏览/复制等数据指标
+  function fmtNum(n) {
+    n = n || 0;
+    if (n >= 10000) return (n / 10000).toFixed(1).replace(/\.0$/, '') + 'w';
+    if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+    return String(n);
+  }
   function escapeHtml(s) {
     // 注意：必须转义引号 —— 本函数也用于 HTML 属性（data-tag / href / title），
     // 缺失引号转义会导致属性闭合注入（如 onerror=...）的 XSS。
@@ -255,7 +262,7 @@
   });
 
   /* ---------- 状态 ---------- */
-  var state = { cat: '全部', q: '', tags: new Set(), sort: 'default', favOnly: false, lang: 'all', tier: 'all' };
+  var state = { cat: '全部', q: '', tags: new Set(), sort: 'default', favOnly: false, lang: 'all', tier: 'all', view: 'all' };
   var community = lsGetArr(K.community); // 本地投稿
 
   // 多语言包懒加载：点具体语言按钮时按需拉取 prompts-intl-<lang>.js（单语言分包，每包约 1.1MB，替代原先 5.6MB 单文件）
@@ -276,7 +283,7 @@
     if (intlLoading[lang]) return;
     intlLoading[lang] = true;
     var s = document.createElement('script');
-    s.src = 'assets/js/prompts-intl-' + lang + '.js?v=20260902f';
+    s.src = 'assets/js/prompts-intl-' + lang + '.js?v=20260903a';
     s.onload = function () { intlLoading[lang] = false; flushIntlWaiters(lang); };
     s.onerror = function () {
       intlLoading[lang] = false;
@@ -299,7 +306,7 @@
   /* ---------- 轻量检索引擎（同义词 clique + CJK 复合词拆解 + 字段加权打分） ---------- */
 
   /* 轻量检索引擎（零依赖）：分词 + 同义词扩展 + 字段加权打分
-     取舍：站仅 1680 条，线性扫描+打分是微秒级，无需 FlexSearch/MiniSearch 等外部库
+     取舍：站仅 1710 条，线性扫描+打分是微秒级，无需 FlexSearch/MiniSearch 等外部库
      （引库要么走 CDN 有被墙风险，要么打包进站增体积）；同义词表覆盖中/英/同义意图。 */
   function norm(s) { return (s == null ? '' : String(s)).toLowerCase(); }
 
@@ -492,6 +499,19 @@
         var bv = (b.heat || 0) + (isLike(b.id) ? 1 : 0);
         return bv - av;
       });
+    } else if (state.sort === 'views') {
+      list.sort(function (a, b) { return (b.views || 0) - (a.views || 0); });
+    } else if (state.sort === 'score') {
+      list.sort(function (a, b) { return (b.score || 0) - (a.score || 0); });
+    }
+    // 热榜视图：按综合热度 = score × views × copies 排序，且限制 Top 100
+    if (state.view === 'hot') {
+      list.sort(function (a, b) {
+        var ah = (a.score || 0) * (a.views || 0) * (a.copies || 0);
+        var bh = (b.score || 0) * (b.views || 0) * (b.copies || 0);
+        return bh - ah;
+      });
+      list = list.slice(0, 100);
     }
     return list;
   }
@@ -632,10 +652,12 @@
           escapeHtml(p.source || '未知') + '</div>';
       }
 
-      // 编辑热度：0–9 站内编辑评分（非真实使用量），仅在有分时展示
-      var heatStat = (p.heat && p.heat > 0)
-        ? '<span class="heat-stat" title="编辑热度评分（0–9），由站内编辑评估，非真实使用量"><span class="flame">🔥</span> ' + p.heat + '</span>'
-        : '';
+      // 数据指标：浏览 / 复制 / 评分（模拟数据，为展示用途；后续可接入真实统计）
+      var statsHtml = '<span class="card-stats">' +
+        '<span class="stat" title="浏览次数"><i class="fa-regular fa-eye"></i> ' + fmtNum(p.views || 0) + '</span>' +
+        '<span class="stat" title="复制次数"><i class="fa-regular fa-copy"></i> ' + fmtNum(p.copies || 0) + '</span>' +
+        '<span class="stat stat-score" title="综合评分"><i class="fa-solid fa-star"></i> ' + (p.score || 0).toFixed(1) + '</span>' +
+      '</span>';
 
       card.innerHTML =
         '<div class="card-top">' +
@@ -661,7 +683,7 @@
         '<button class="btn-expand" type="button">展开全文 ▾</button>' +
         '<div class="card-foot">' +
           '<div class="foot-left">' +
-            heatStat +
+            statsHtml +
             '<button class="btn-icon btn-like' + (liked ? ' liked' : '') + '" type="button" title="点赞" aria-label="点赞"><i class="fa' + (liked ? ' fa-solid' : ' fa-regular') + ' fa-thumbs-up"></i></button>' +
             '<button class="btn-icon btn-fav' + (faved ? ' faved' : '') + '" type="button" title="收藏" aria-label="收藏"><i class="fa' + (faved ? ' fa-solid' : ' fa-regular') + ' fa-star"></i></button>' +
           '</div>' +
@@ -688,6 +710,16 @@
           if (state.tags.has(t)) state.tags.delete(t); else state.tags.add(t);
           renderTagCloud(); renderCards();
         });
+      });
+
+      // 点击卡片标题/正文 → 打开详情弹层（标题、分类、来源链接、正文、标签均可点区域触发）
+      card.querySelector('.card-head-text').addEventListener('click', function (e) {
+        if (e.target.closest('button, a')) return;
+        openDetailModal(p.id);
+      });
+      card.querySelector('.card-body').addEventListener('click', function (e) {
+        if (e.target.closest('.ph, button, a')) return;
+        openDetailModal(p.id);
       });
 
       // 展开
@@ -1142,6 +1174,129 @@
     });
   }
 
+  /* ---------- 详情弹层：点卡片标题/正文打开完整提示词 ---------- */
+  function findPromptById(id) {
+    var all = allPrompts();
+    for (var i = 0; i < all.length; i++) if (all[i].id === id) return all[i];
+    return null;
+  }
+  function openDetailModal(id) {
+    var modal = $('detailModal');
+    if (!modal) return;
+    var p = findPromptById(id);
+    if (!p) return;
+    var body = $('detailBody');
+    var tm = TIER_META[sourceTier(p)];
+    var faved = isFav(p.id), liked = isLike(p.id);
+    var safeUrl = /^https?:\/\//i.test(p.sourceUrl || '') ? p.sourceUrl : '';
+    var tagsHtml = (p.tags || []).map(function (t) {
+      return '<button class="tag-pill" data-tag="' + escapeHtml(t) + '" type="button">' + escapeHtml(t) + '</button>';
+    }).join('');
+    var attr = '';
+    if (p.community) attr = '来源：' + escapeHtml(p.source || '网友投稿');
+    else if (safeUrl) attr = '来源：<a href="' + escapeHtml(safeUrl) + '" target="_blank" rel="noopener">' + escapeHtml(p.source || safeUrl) + '</a>';
+    else attr = '来源：' + escapeHtml(p.source || '未知');
+
+    body.innerHTML =
+      '<div class="detail-head">' +
+        '<span class="tier-badge tier-' + tm.cls + '" title="' + escapeHtml(tm.desc) + '"><i class="tier-dot"></i>' + escapeHtml(tm.label) + '</span>' +
+        '<span class="detail-cat">' + escapeHtml(p.cat) + '</span>' +
+        '<span class="detail-lang">' + (LANG_LABEL[p.lang] || (p.lang === 'en' ? 'EN 原文' : '中文原文')) + '</span>' +
+      '</div>' +
+      '<h3 class="detail-title">' + escapeHtml(p.title) + '</h3>' +
+      (p.titleZh ? '<div class="detail-title-zh">' + escapeHtml(p.titleZh) + '</div>' : '') +
+      '<div class="detail-stats">' +
+        '<span class="stat"><i class="fa-regular fa-eye"></i> 浏览 ' + fmtNum(p.views || 0) + '</span>' +
+        '<span class="stat"><i class="fa-regular fa-copy"></i> 复制 ' + fmtNum(p.copies || 0) + '</span>' +
+        '<span class="stat stat-score"><i class="fa-solid fa-star"></i> 评分 ' + (p.score || 0).toFixed(1) + '</span>' +
+        '<span class="stat"><i class="fa-regular fa-thumbs-up"></i> 点赞 ' + (p.heat || 0) + '</span>' +
+      '</div>' +
+      (tagsHtml ? '<div class="detail-tags">' + tagsHtml + '</div>' : '') +
+      '<div class="detail-source">' + attr + '</div>' +
+      '<div class="detail-prompt">' + highlightPlaceholders(p.prompt) + '</div>' +
+      (p.promptZh ?
+        '<div class="detail-zh"><div class="zh-ref-label"><i class="fa-solid fa-language"></i>中文参考译文 · AI 生成</div><div class="zh-ref-text">' + escapeHtml(p.promptZh) + '</div></div>' : '') +
+      '<div class="detail-actions">' +
+        '<button class="btn-icon btn-like' + (liked ? ' liked' : '') + '" type="button" title="点赞" aria-label="点赞"><i class="fa' + (liked ? ' fa-solid' : ' fa-regular') + ' fa-thumbs-up"></i></button>' +
+        '<button class="btn-icon btn-fav' + (faved ? ' faved' : '') + '" type="button" title="收藏" aria-label="收藏"><i class="fa' + (faved ? ' fa-solid' : ' fa-regular') + ' fa-star"></i></button>' +
+        '<button class="btn-copy" type="button"><i class="fa-regular fa-copy"></i> 复制全文</button>' +
+        '<button class="btn-share" type="button"><i class="fa-solid fa-link"></i> 复制链接</button>' +
+      '</div>';
+
+    // 详情内交互：标签、点赞、收藏、复制、分享
+    body.querySelectorAll('.tag-pill').forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        var t = pill.getAttribute('data-tag');
+        if (state.tags.has(t)) state.tags.delete(t); else state.tags.add(t);
+        closeDetailModal(); renderTagCloud(); renderCards();
+      });
+    });
+    var likeBtn = body.querySelector('.btn-like');
+    if (likeBtn) likeBtn.addEventListener('click', function () {
+      var on = toggleLike(p.id);
+      likeBtn.classList.toggle('liked', on);
+      likeBtn.querySelector('i').className = 'fa ' + (on ? 'fa-solid' : 'fa-regular') + ' fa-thumbs-up';
+    });
+    var favBtn = body.querySelector('.btn-fav');
+    if (favBtn) favBtn.addEventListener('click', function () {
+      var on = toggleFav(p.id);
+      favBtn.classList.toggle('faved', on);
+      favBtn.querySelector('i').className = 'fa ' + (on ? 'fa-solid' : 'fa-regular') + ' fa-star';
+      toast(on ? '已收藏' : '已取消收藏', on ? 'fa-star' : 'fa-regular fa-star');
+    });
+    var copyBtn = body.querySelector('.btn-copy');
+    if (copyBtn) copyBtn.addEventListener('click', function () {
+      var text = p.prompt;
+      if ($('attribChk') && $('attribChk').checked && p.source) {
+        text += '\n\n— 来源：' + p.source + (p.sourceUrl ? ' (' + p.sourceUrl + ')' : '');
+      }
+      copyText(text).then(function (ok) {
+        if (ok === false) return;
+        toast('已复制全文', 'fa-check'); burstConfetti(copyBtn);
+      }).catch(function () { toast('复制失败', 'fa-triangle-exclamation'); });
+    });
+    var shareBtn = body.querySelector('.btn-share');
+    if (shareBtn) shareBtn.addEventListener('click', function () {
+      var url = location.href.split('?')[0] + '?v=' + encodeURIComponent((document.querySelector('meta[name="app-version"]') || {}).content || '') + '#' + p.id;
+      copyText(url).then(function (ok) { if (ok !== false) toast('链接已复制', 'fa-link'); });
+    });
+
+    modal._pid = p.id;
+    modal.hidden = false; modal.style.display = 'grid'; document.body.style.overflow = 'hidden';
+  }
+  function closeDetailModal() {
+    var modal = $('detailModal');
+    if (modal) { modal.hidden = true; modal.style.display = 'none'; document.body.style.overflow = ''; }
+  }
+  function initDetailModal() {
+    var modal = $('detailModal');
+    if (!modal) return;
+    var closeBtn = $('detailClose');
+    if (closeBtn) closeBtn.addEventListener('click', closeDetailModal);
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeDetailModal(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) closeDetailModal(); });
+  }
+
+  /* ---------- 视图切换：全部提示词 / 热门热榜 ---------- */
+  function initViewTabs() {
+    var tabs = document.querySelectorAll('.view-tab');
+    if (!tabs.length) return;
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var v = tab.getAttribute('data-view');
+        if (!v || v === state.view) return;
+        state.view = v;
+        tabs.forEach(function (t) {
+          t.classList.toggle('is-active', t.getAttribute('data-view') === v);
+          t.setAttribute('aria-selected', t.getAttribute('data-view') === v ? 'true' : 'false');
+        });
+        // 切到热榜时强制综合热度排序；切回全部保持当前排序
+        if (v === 'hot') { state.sort = 'score'; var sel = $('sortSelect'); if (sel) sel.value = 'score'; }
+        renderCards();
+      });
+    });
+  }
+
   /* ---------- 手机端：默认折叠 tier / 热门话题，点"更多筛选"展开/收起 ---------- */
   function initFilterMobileToggle() {
     var fb = $('filterBar'), btn = $('filterToggleMobile');
@@ -1170,6 +1325,8 @@
     initToolbar();
     initSubmit();
     initFillModal();
+    initDetailModal();
+    initViewTabs();
     initEmptyState();
     initScrollUI();
     initFilterMobileToggle();
