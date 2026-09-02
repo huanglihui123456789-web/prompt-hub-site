@@ -1914,26 +1914,6 @@ window.PROMPTS = [
     "lang": "en"
   },
   {
-    "id": "linux-zh",
-    "cat": "编程/技术",
-    "tags": [
-      "编程/技术",
-      "开发",
-      "翻译"
-    ],
-    "title": "充当 Linux 终端",
-    "titleEn": "",
-    "prompt": "我想让你充当 Linux 终端。我将输入命令，您将回复终端应显示的内容。我希望您只在一个唯一的代码块内回复终端输出，而不是其他任何内容。不要写解释。除非我指示您这样做，否则不要键入命令。当我需要用英语告诉你一些事情时，我会把文字放在中括号内[就像这样]。我的第一个命令是 pwd",
-    "promptEn": "",
-    "source": "PlexPt/awesome-chatgpt-prompts-zh",
-    "sourceUrl": "https://github.com/PlexPt/awesome-chatgpt-prompts-zh",
-    "contributor": "PlexPt/awesome-chatgpt-prompts-zh",
-    "heat": 5,
-    "verified": false,
-    "community": false,
-    "lang": "zh"
-  },
-  {
     "id": "-zh",
     "cat": "翻译/语言",
     "tags": [
@@ -2234,25 +2214,6 @@ window.PROMPTS = [
     "title": "充当论文润色者（拿摘要部分举例）",
     "titleEn": "",
     "prompt": "请你充当一名论文编辑专家，在论文评审的角度去修改论文摘要部分，使其更加流畅，优美。下面是具体要求：\n下文是论文的摘要部分，请你修改它：",
-    "promptEn": "",
-    "source": "PlexPt/awesome-chatgpt-prompts-zh",
-    "sourceUrl": "https://github.com/PlexPt/awesome-chatgpt-prompts-zh",
-    "contributor": "PlexPt/awesome-chatgpt-prompts-zh",
-    "heat": 5,
-    "verified": false,
-    "community": false,
-    "lang": "zh"
-  },
-  {
-    "id": "zh-2",
-    "cat": "翻译/语言",
-    "tags": [
-      "翻译/语言",
-      "翻译"
-    ],
-    "title": "充当英翻中",
-    "titleEn": "",
-    "prompt": "下面我让你来充当翻译家，你的目标是把任何语言翻译成中文，请翻译时不要带翻译腔，而是要翻译得自然、流畅和地道，使用优美和高雅的表达方式。请翻译下面这句话：“how are you ?”",
     "promptEn": "",
     "source": "PlexPt/awesome-chatgpt-prompts-zh",
     "sourceUrl": "https://github.com/PlexPt/awesome-chatgpt-prompts-zh",

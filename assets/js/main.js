@@ -276,7 +276,7 @@
     if (intlLoading[lang]) return;
     intlLoading[lang] = true;
     var s = document.createElement('script');
-    s.src = 'assets/js/prompts-intl-' + lang + '.js?v=20260902c';
+    s.src = 'assets/js/prompts-intl-' + lang + '.js?v=20260902d';
     s.onload = function () { intlLoading[lang] = false; flushIntlWaiters(lang); };
     s.onerror = function () {
       intlLoading[lang] = false;
@@ -299,7 +299,7 @@
   /* ---------- 轻量检索引擎（同义词 clique + CJK 复合词拆解 + 字段加权打分） ---------- */
 
   /* 轻量检索引擎（零依赖）：分词 + 同义词扩展 + 字段加权打分
-     取舍：站仅 1642 条，线性扫描+打分是微秒级，无需 FlexSearch/MiniSearch 等外部库
+     取舍：站仅 1640 条，线性扫描+打分是微秒级，无需 FlexSearch/MiniSearch 等外部库
      （引库要么走 CDN 有被墙风险，要么打包进站增体积）；同义词表覆盖中/英/同义意图。 */
   function norm(s) { return (s == null ? '' : String(s)).toLowerCase(); }
 
