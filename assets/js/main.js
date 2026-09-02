@@ -679,7 +679,8 @@
           '<div class="card-head-text"><div class="card-cat">' + escapeHtml(p.cat) + '</div>' +
           '<h3 class="card-title">' + escapeHtml(p.title) + '</h3>' +
           (p.titleZh ? '<div class="card-title-zh">' + escapeHtml(p.titleZh) + '</div>' : '') + '</div>' +
-          tierBadge +
+           tierBadge +
+          (p.promptEn ? '<button class="btn-lang" type="button" title="切换中文 / 英文" aria-label="切换中英文">EN</button>' : '') +
         '</div>' +
         (tagsHtml ? '<div class="card-tags">' + tagsHtml + '</div>' : '') +
         srcHtml +
@@ -696,13 +697,10 @@
           '<button class="btn-zh-ref" type="button"><i class="fa-regular fa-eye"></i> 查看中文参考</button>' : '') +
         '<button class="btn-expand" type="button">展开全文 ▾</button>' +
         '<div class="card-foot">' +
-          '<div class="foot-left">' +
-            statsHtml +
+          '<div class="foot-stats">' + statsHtml + '</div>' +
+          '<div class="foot-actions">' +
             '<button class="btn-icon btn-like' + (liked ? ' liked' : '') + '" type="button" title="点赞" aria-label="点赞"><i class="fa' + (liked ? ' fa-solid' : ' fa-regular') + ' fa-thumbs-up"></i></button>' +
             '<button class="btn-icon btn-fav' + (faved ? ' faved' : '') + '" type="button" title="收藏" aria-label="收藏"><i class="fa' + (faved ? ' fa-solid' : ' fa-regular') + ' fa-star"></i></button>' +
-          '</div>' +
-          '<div class="foot-right">' +
-            (p.promptEn ? '<button class="btn-lang" type="button" title="切换中文 / 英文">EN</button>' : '') +
             '<button class="btn-icon btn-share" type="button" title="复制链接" aria-label="复制链接"><i class="fa-solid fa-link"></i></button>' +
             '<button class="btn-copy" type="button"><i class="fa-regular fa-copy"></i> 复制</button>' +
           '</div>' +

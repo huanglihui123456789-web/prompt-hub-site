@@ -234,12 +234,14 @@ img { max-width: 100%; display: block; }
 }
 .btn-copy:hover { border-color: var(--accent); color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); transform: translateY(-2px); }
 .btn-copy.copied { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; border-color: transparent; }
+/* 顶部语言切换按钮：紧凑胶囊，放在卡片标题栏右侧 */
 .btn-lang {
-  width: 44px; height: 44px; border-radius: 999px; border: 1px solid var(--line-strong);
-  background: var(--bg); color: var(--ink-soft); font-size: 13px; font-weight: 600; cursor: pointer;
-  transition: color .25s, border-color .25s, transform .2s;
+  align-self: flex-start; flex: 0 0 auto; border-radius: 999px; border: 1px solid var(--line-strong);
+  background: var(--bg); color: var(--ink-soft); font-size: 11px; font-weight: 700; letter-spacing: .04em;
+  padding: 5px 11px; cursor: pointer; line-height: 1;
+  transition: color .25s, border-color .25s, background .25s, transform .2s;
 }
-.btn-lang:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
+.btn-lang:hover { color: var(--accent); border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); transform: translateY(-2px); }
 .btn-expand { background: none; border: none; color: var(--accent); font-size: 13px; cursor: pointer; padding: 3px 10px; margin: 4px 0 0 -10px; border-radius: 999px; align-self: flex-start; transition: background .2s, color .2s; }
 .btn-expand:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); text-decoration: none; }
 
@@ -394,9 +396,10 @@ img { max-width: 100%; display: block; }
 .tier-dot.dot-green { background: #3B6D11; }
 .tier-dot.dot-blue  { background: #185FA5; }
 
-.card-foot { display: flex; align-items: center; gap: 8px; margin-top: auto; flex-wrap: wrap; }
-.card-foot .foot-left { display: flex; gap: 6px; align-items: center; }
-.card-foot .foot-right { display: flex; gap: 8px; margin-left: auto; align-items: center; }
+.card-foot { display: grid; gap: 12px; margin-top: auto; }
+.card-foot .foot-stats { display: flex; align-items: center; justify-content: flex-start; }
+.card-foot .foot-actions { display: flex; align-items: center; gap: 8px; }
+.card-foot .foot-actions .btn-copy { flex: 1; }
 /* 数据指标：浏览 / 复制 / 评分（紧凑文字徽标，非按钮） */
 .card-stats { display: inline-flex; align-items: center; gap: 10px; font-size: 12.5px; color: var(--muted); white-space: nowrap; }
 .card-stats .stat { display: inline-flex; align-items: center; gap: 4px; cursor: help; user-select: none; }
@@ -689,11 +692,11 @@ img { max-width: 100%; display: block; }
   .body-text { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
   .btn-expand { font-size: 12.5px; }
   .btn-zh-ref { min-height: 38px; }
-  .card-foot { gap: 6px; padding-top: 8px; }
+  .card-foot { gap: 10px; padding-top: 8px; }
   .btn-icon { width: 36px; height: 36px; font-size: 13px; }
   .btn-copy { min-height: 38px; font-size: 13px; padding: 0 14px; }
-  .btn-lang { min-height: 36px; width: 36px; font-size: 12px; }
   .card-stats { font-size: 11.5px; gap: 6px; }
+  .card-foot .foot-actions { gap: 6px; }
 }
 
 /* —— 小屏（≤480px）：进一步收紧 —— */
@@ -704,8 +707,8 @@ img { max-width: 100%; display: block; }
   .card-cat-icon { display: none; }
   .card-top { gap: 8px; }
   .card-title { font-size: 16.5px; }
-  .foot-left .card-stats { display: none; }
-  .card-foot .foot-right { margin-left: 0; width: 100%; justify-content: flex-end; }
+  .foot-stats .card-stats { display: none; }
+  .card-foot .foot-actions { gap: 5px; }
 }
 
 /* —— 热门话题移动端折叠（HTML <details>，零 JS，桌面端始终展开） —— */
@@ -850,11 +853,11 @@ img { max-width: 100%; display: block; }
   .body-text { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; font-size: 14px; line-height: 1.65; }
   .btn-expand { font-size: 13px; }
   .btn-zh-ref { min-height: 38px; }
-  .card-foot { gap: 6px; padding-top: 10px; }
+  .card-foot { gap: 10px; padding-top: 10px; }
   .btn-icon { width: 38px; height: 38px; font-size: 14px; }
   .btn-copy { min-height: 40px; font-size: 13.5px; padding: 0 16px; }
-  .btn-lang { min-height: 38px; width: 38px; font-size: 12.5px; }
   .card-stats { font-size: 11.5px; gap: 6px; }
+  .card-foot .foot-actions { gap: 6px; }
 }
 
 /* —— 小屏（≤480px） —— */
@@ -865,8 +868,8 @@ img { max-width: 100%; display: block; }
   .card-cat-icon { display: none; }
   .card-top { gap: 8px; }
   .card-title { font-size: 17px; }
-  .foot-left .card-stats { display: none; }
-  .card-foot .foot-right { margin-left: 0; width: 100%; justify-content: flex-end; }
+  .foot-stats .card-stats { display: none; }
+  .card-foot .foot-actions { gap: 5px; }
 }
 
 /* —— 「清除筛选」按钮（有筛选时出现在计数行） —— */
