@@ -276,7 +276,7 @@
     if (intlLoading[lang]) return;
     intlLoading[lang] = true;
     var s = document.createElement('script');
-    s.src = 'assets/js/prompts-intl-' + lang + '.js?v=20260902e';
+    s.src = 'assets/js/prompts-intl-' + lang + '.js?v=20260902f';
     s.onload = function () { intlLoading[lang] = false; flushIntlWaiters(lang); };
     s.onerror = function () {
       intlLoading[lang] = false;
