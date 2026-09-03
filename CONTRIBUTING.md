@@ -87,6 +87,20 @@ git push origin feat/你的改动描述
 
 **改了 `prompts.js` 数据后，先运行 `node split-prompts.js` 重新生成分片**（网站加载的是分片，不是 prompts.js 本身），再把对应 `v=` 递增一位。改了哪个文件就 bump 哪个，否则浏览器用旧缓存，**看不到你的改动**。CSS 同理。用「更新网站.bat」则会自动 bump 全部版本号。
 
+#### 🚨 已启用 PWA：版本号要同步 **3 处**，漏一处用户几天都看不到更新
+
+站点有 Service Worker（离线可用 + 可安装）。SW 会缓存 app shell 与 chunk，且**缓存键里写死了版本号**——只有版本号变了它才清理旧缓存。所以每次发版必须同时改：
+
+| # | 位置 | 内容 |
+|---|---|---|
+| 1 | `index.html` | 各资源的 `?v=`（chunk-1..5、main.js、style.css、vendor css） |
+| 2 | `index.html` | `<meta name="app-version" content="...">` |
+| 3 | **`sw.js`** | 顶部 `const CACHE = 'prompt-hub-v<版本>'` **和** `PRECACHE` 数组里硬编码的 `?v=<版本>` |
+
+**只改 1、2 而漏掉 3 的后果**：SW 继续用旧缓存喂用户旧数据，这比 GitHub Pages 那 10 分钟缓存顽固得多（SW 缓存不会自行失效），用户可能好几天刷到的还是旧内容、旧提示词条数。
+
+> 排查口诀：线上"改了没生效" → 先看 `sw.js` 的 CACHE 名和 PRECACHE 的 `?v=` 跟上没跟上。
+
 ---
 
 ## 五、约定与注意事项
