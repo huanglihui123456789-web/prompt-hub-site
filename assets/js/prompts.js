@@ -45840,5 +45840,32 @@ window.PROMPTS = [
   "views": 1070,
   "copies": 102,
   "score": 7
+ },
+ {
+  "id": "douyin-paomian-nolan-ancient-warrior-horse",
+  "cat": "设计",
+  "tags": [
+   "设计",
+   "Midjourney",
+   "电影美学",
+   "诺兰",
+   "史诗",
+   "AI绘画"
+  ],
+  "title": "Ancient Warrior on White Horse at Golden Sunset",
+  "titleZh": "诺兰·落日白马上的古代战士",
+  "prompt": "Christopher Nolan epic historical IMAX 70mm film still, ancient warrior rides white horse along desert shore beach at golden sunset, grand solemn pre-war atmosphere, vertical wide landscape composition, rider-horse on left foreground, massive sunset sky with large negative space, long distant line of troops, low golden sunset backlight, long soft ground shadows, sun low near horizon, warm honey-gold and sand-beige palette, wet reflective shore sand, desert dune texture, hazy distant army silhouettes, photorealistic, ultra fine detail, 70mm IMAX film grain --ar 9:16 --style raw",
+  "titleEn": "",
+  "promptEn": "",
+  "source": "泡面AIGC（抖音《审美积累》合集第34集：诺兰电影美学下）",
+  "sourceUrl": "https://v.douyin.com/tsMVeTiMDAc/",
+  "contributor": "@泡面AIGC",
+  "heat": 4,
+  "verified": false,
+  "community": true,
+  "lang": "en",
+  "views": 1070,
+  "copies": 102,
+  "score": 7
  }
 ];
