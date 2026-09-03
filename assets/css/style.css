@@ -249,6 +249,8 @@ img { max-width: 100%; display: block; }
    展开按钮只切 .card-body 的 .expanded（解除 max-height），不解除 line-clamp →
    手机端「展开全文」失效。此规则特异性更高，统一解除 clamp（桌面端无此 clamp，无害）。 */
 .card-body.expanded .body-text { display: block; -webkit-line-clamp: unset; line-clamp: unset; }
+/* 保留提示词原文的换行（数据存的是真换行 U+000A）；长串强制折行防溢出 */
+.body-text { white-space: pre-wrap; word-break: break-word; }
 .card-body::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 36px; background: linear-gradient(transparent, var(--bg-sunk)); opacity: 1; transition: opacity .3s; pointer-events: none; }
 .card-body.expanded::after { opacity: 0; }
 /* 语言标签：徽章化 */
