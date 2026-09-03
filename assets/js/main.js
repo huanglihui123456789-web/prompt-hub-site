@@ -320,7 +320,7 @@
   /* ---------- 主库分片懒加载（首屏加速） ----------
      首屏仅同步 chunk-1（约 465KB）；chunk-2~5 由这里动态注入，
      避免首屏等待约 1.8MB 数据全部下载后才出卡 */
-  var VER = '20260905j';
+  var VER = '20260905k';
   var mainChunksLeft = [2, 3, 4, 5];
   var dataReadyCbs = [];
   function mainDataReady() { return mainChunksLeft.length === 0; }
