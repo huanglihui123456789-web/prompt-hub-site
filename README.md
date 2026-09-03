@@ -80,7 +80,7 @@ prompt-hub-site/
 │   ├── css/style.css           # 全部样式与主题变量
 │   ├── js/
 │   │   ├── main.js             # 渲染 / 搜索 / 筛选 / 排序 / 收藏 / 主题
-│   │   ├── prompts.js          # 主库数据源（编辑这份！2026 条）
+│   │   ├── prompts.js          # 主库数据源（编辑这份！2032 条）
 │   │   ├── data/               # 分片输出（由 split-prompts.js 生成，勿手改）
 │   │   │   └── chunk-1..5.js
 │   │   └── prompts-intl-*.js   # 多语言分包（懒加载）

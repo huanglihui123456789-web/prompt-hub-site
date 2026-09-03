@@ -1,0 +1,5 @@
+﻿[
+ {"command":"set","path":"/slide[3]/shape[@id=100025]","props":{"width":"9.55cm"}},
+ {"command":"set","path":"/slide[3]/shape[@id=100028]","props":{"width":"9.55cm"}},
+ {"command":"set","path":"/slide[4]/shape[@id=100043]","props":{"width":"9.0cm"}}
+]
