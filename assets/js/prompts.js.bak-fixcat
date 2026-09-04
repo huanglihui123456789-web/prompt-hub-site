@@ -10449,7 +10449,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-language-policy-analyst",
-  "cat": "翻译/语言",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -10512,7 +10512,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-culinary-recipe-platform",
-  "cat": "效率/生活",
+  "cat": "医疗健康",
   "tags": [
    "医疗健康"
   ],
@@ -10575,7 +10575,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-it-architect",
-  "cat": "编程/技术",
+  "cat": "设计",
   "tags": [
    "设计"
   ],
@@ -10638,7 +10638,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-philosophical-educator",
-  "cat": "教育",
+  "cat": "科研/科学",
   "tags": [
    "科研"
   ],
@@ -10785,7 +10785,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-branding-strategist",
-  "cat": "营销/自媒体",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -11079,7 +11079,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-fashion-expert",
-  "cat": "设计",
+  "cat": "营销/自媒体",
   "tags": [
    "营销"
   ],
@@ -11184,7 +11184,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-home-design-advisor",
-  "cat": "设计",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -11205,7 +11205,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-infographic-designer",
-  "cat": "设计",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -11247,7 +11247,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-language-translator-for-scientific-papers",
-  "cat": "翻译/语言",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -11352,7 +11352,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-medical-doctor",
-  "cat": "医疗健康",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -11457,7 +11457,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-pet-advisor",
-  "cat": "效率/生活",
+  "cat": "医疗健康",
   "tags": [
    "医疗健康"
   ],
@@ -11478,7 +11478,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-pet-behaviorist",
-  "cat": "效率/生活",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -11562,7 +11562,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-real-estate-agent",
-  "cat": "商业/金融",
+  "cat": "营销/自媒体",
   "tags": [
    "营销"
   ],
@@ -11604,7 +11604,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-social-media-guide",
-  "cat": "营销/自媒体",
+  "cat": "科研/科学",
   "tags": [
    "科研"
   ],
@@ -11688,7 +11688,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-sports-analyst",
-  "cat": "娱乐/游戏",
+  "cat": "科研/科学",
   "tags": [
    "科研"
   ],
@@ -11751,7 +11751,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-tourism-and-travel-service-provider",
-  "cat": "效率/生活",
+  "cat": "娱乐/游戏",
   "tags": [
    "娱乐"
   ],
@@ -11793,7 +11793,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-ai-assisted-doctor",
-  "cat": "医疗健康",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -11835,7 +11835,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-brand-identity-agent",
-  "cat": "营销/自媒体",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -11856,7 +11856,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-business-consultant",
-  "cat": "商业/金融",
+  "cat": "营销/自媒体",
   "tags": [
    "营销"
   ],
@@ -11877,7 +11877,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-business-document-translator",
-  "cat": "翻译/语言",
+  "cat": "营销/自媒体",
   "tags": [
    "营销"
   ],
@@ -12024,7 +12024,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-cloud-infrastructure-manager",
-  "cat": "编程/技术",
+  "cat": "商业/金融",
   "tags": [
    "商业"
   ],
@@ -12045,7 +12045,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-cloud-operations-analyst",
-  "cat": "编程/技术",
+  "cat": "营销/自媒体",
   "tags": [
    "营销"
   ],
@@ -12129,7 +12129,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-cooking-instruction-agent",
-  "cat": "效率/生活",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -12150,7 +12150,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-creative-game-designer",
-  "cat": "设计",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -12234,7 +12234,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-cyber-security-trainer",
-  "cat": "编程/技术",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -12780,7 +12780,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-literary-editor",
-  "cat": "写作/内容",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -12843,7 +12843,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-mathematical-researcher",
-  "cat": "科研/科学",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -12864,7 +12864,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-medical-diagnosis-platform",
-  "cat": "医疗健康",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -12927,7 +12927,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-music-composer",
-  "cat": "娱乐/游戏",
+  "cat": "效率/生活",
   "tags": [
    "效率"
   ],
@@ -12990,7 +12990,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-network-configuration-specialist",
-  "cat": "编程/技术",
+  "cat": "商业/金融",
   "tags": [
    "商业"
   ],
@@ -13011,7 +13011,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-network-solutions-architect",
-  "cat": "编程/技术",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -13095,7 +13095,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-personal-shopping-specialist",
-  "cat": "效率/生活",
+  "cat": "营销/自媒体",
   "tags": [
    "营销"
   ],
@@ -13347,7 +13347,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-robotics-researcher",
-  "cat": "科研/科学",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -13389,7 +13389,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-seo-specialist",
-  "cat": "营销/自媒体",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -13410,7 +13410,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-social-media-guru",
-  "cat": "营销/自媒体",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -13767,7 +13767,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-artistic-character-developer",
-  "cat": "编程/技术",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -13935,7 +13935,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-business-innovator",
-  "cat": "商业/金融",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -14019,7 +14019,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-cloud-engineer",
-  "cat": "编程/技术",
+  "cat": "商业/金融",
   "tags": [
    "商业"
   ],
@@ -14166,7 +14166,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-cyber-security-platform",
-  "cat": "编程/技术",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -14460,7 +14460,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-emoji-interpreter",
-  "cat": "翻译/语言",
+  "cat": "效率/生活",
   "tags": [
    "效率"
   ],
@@ -14607,7 +14607,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-floral-design-platform",
-  "cat": "设计",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -14628,7 +14628,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-game-analyst",
-  "cat": "娱乐/游戏",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -14670,7 +14670,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-health-consultant",
-  "cat": "医疗健康",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -14796,7 +14796,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-it-architecture-guide",
-  "cat": "编程/技术",
+  "cat": "设计",
   "tags": [
    "设计"
   ],
@@ -14817,7 +14817,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-language-learning-platform-instructor",
-  "cat": "翻译/语言",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -14838,7 +14838,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-legal-aid",
-  "cat": "法律",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -14901,7 +14901,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-linguistic-etymologist",
-  "cat": "翻译/语言",
+  "cat": "科研/科学",
   "tags": [
    "科研"
   ],
@@ -15258,7 +15258,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-real-estate-market-agent",
-  "cat": "营销/自媒体",
+  "cat": "商业/金融",
   "tags": [
    "商业"
   ],
@@ -15279,7 +15279,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-relationship-analyst",
-  "cat": "效率/生活",
+  "cat": "娱乐/游戏",
   "tags": [
    "娱乐"
   ],
@@ -15363,7 +15363,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-sales-trainer",
-  "cat": "营销/自媒体",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -15405,7 +15405,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-science-communicator",
-  "cat": "科研/科学",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -15489,7 +15489,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-seo-optimization-system",
-  "cat": "营销/自媒体",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -15573,7 +15573,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-sports-broadcasting-expert",
-  "cat": "娱乐/游戏",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -15846,7 +15846,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-travel-planner",
-  "cat": "效率/生活",
+  "cat": "娱乐/游戏",
   "tags": [
    "娱乐"
   ],
@@ -16119,7 +16119,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-business-mentor",
-  "cat": "商业/金融",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -16266,7 +16266,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-cloud-computing-engineer",
-  "cat": "编程/技术",
+  "cat": "设计",
   "tags": [
    "设计"
   ],
@@ -16287,7 +16287,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-cloud-specialist",
-  "cat": "编程/技术",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -16560,7 +16560,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-debate-tutor",
-  "cat": "教育",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -16602,7 +16602,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-design-advisor",
-  "cat": "设计",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -16623,7 +16623,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-design-specialist",
-  "cat": "设计",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -16686,7 +16686,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-digital-systems-cybersecurity-advisor",
-  "cat": "编程/技术",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -16749,7 +16749,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-e-commerce-strategy-consultant",
-  "cat": "营销/自媒体",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -16791,7 +16791,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-essay-integrity-checker",
-  "cat": "写作/内容",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -16959,7 +16959,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-game-design-assistant",
-  "cat": "设计",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -17022,7 +17022,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-graphic-designer",
-  "cat": "设计",
+  "cat": "营销/自媒体",
   "tags": [
    "营销"
   ],
@@ -17064,7 +17064,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-health-educator",
-  "cat": "医疗健康",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -17358,7 +17358,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-language-learning-app-designer",
-  "cat": "翻译/语言",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -17505,7 +17505,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-legal-defender",
-  "cat": "法律",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -17631,7 +17631,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-marketing-director",
-  "cat": "营销/自媒体",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -17904,7 +17904,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-network-security-engineer",
-  "cat": "编程/技术",
+  "cat": "设计",
   "tags": [
    "设计"
   ],
@@ -18114,7 +18114,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-public-relations-specialist",
-  "cat": "营销/自媒体",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -18135,7 +18135,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-r-programming-interpreter",
-  "cat": "翻译/语言",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -18198,7 +18198,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-robotics-designer",
-  "cat": "设计",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -18240,7 +18240,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-science-classroom-leader",
-  "cat": "科研/科学",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -18303,7 +18303,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-supply-chain-logistician",
-  "cat": "商业/金融",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -18408,7 +18408,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-text-editing-software",
-  "cat": "编程/技术",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -18450,7 +18450,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-time-travel-guide",
-  "cat": "效率/生活",
+  "cat": "科研/科学",
   "tags": [
    "科研"
   ],
@@ -18471,7 +18471,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-virtual-reality-designer",
-  "cat": "设计",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -18492,7 +18492,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-visual-design-consultant",
-  "cat": "设计",
+  "cat": "营销/自媒体",
   "tags": [
    "营销"
   ],
@@ -18513,7 +18513,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-vr-content-developer",
-  "cat": "编程/技术",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -18639,7 +18639,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-writing-tutor",
-  "cat": "教育",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -18681,7 +18681,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-web-navigator",
-  "cat": "编程/技术",
+  "cat": "效率/生活",
   "tags": [
    "效率"
   ],
@@ -18702,7 +18702,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-agent-design-assistant",
-  "cat": "设计",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -18807,7 +18807,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-automation-designer",
-  "cat": "设计",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -18912,7 +18912,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-chef-training-assistant",
-  "cat": "教育",
+  "cat": "效率/生活",
   "tags": [
    "效率"
   ],
@@ -18954,7 +18954,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-cloud-computing-expert",
-  "cat": "编程/技术",
+  "cat": "法律",
   "tags": [
    "法律"
   ],
@@ -18975,7 +18975,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-code-tutor",
-  "cat": "教育",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -19017,7 +19017,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-corporate-travel-advisor",
-  "cat": "效率/生活",
+  "cat": "商业/金融",
   "tags": [
    "商业"
   ],
@@ -19185,7 +19185,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-developer-community-engagement-specialist",
-  "cat": "编程/技术",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -19311,7 +19311,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-e-learning-developer",
-  "cat": "编程/技术",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -19395,7 +19395,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-entertainment-translator",
-  "cat": "翻译/语言",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -19416,7 +19416,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-environmental-design-agent",
-  "cat": "科研/科学",
+  "cat": "设计",
   "tags": [
    "设计"
   ],
@@ -19542,7 +19542,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-fictional-character-developer",
-  "cat": "编程/技术",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -19605,7 +19605,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-financial-strategist",
-  "cat": "商业/金融",
+  "cat": "娱乐/游戏",
   "tags": [
    "娱乐"
   ],
@@ -19647,7 +19647,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-flower-guide",
-  "cat": "效率/生活",
+  "cat": "医疗健康",
   "tags": [
    "医疗健康"
   ],
@@ -19752,7 +19752,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-game-narrator",
-  "cat": "娱乐/游戏",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -19878,7 +19878,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-interior-design-consultant",
-  "cat": "设计",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -19962,7 +19962,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-lyric-tutor",
-  "cat": "教育",
+  "cat": "娱乐/游戏",
   "tags": [
    "娱乐"
   ],
@@ -20004,7 +20004,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-marketing-analyst",
-  "cat": "营销/自媒体",
+  "cat": "科研/科学",
   "tags": [
    "科研"
   ],
@@ -20025,7 +20025,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-mathematical-educator",
-  "cat": "科研/科学",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -20046,7 +20046,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-medical-language-translator",
-  "cat": "翻译/语言",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -20130,7 +20130,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-nature-designer",
-  "cat": "设计",
+  "cat": "商业/金融",
   "tags": [
    "商业"
   ],
@@ -20319,7 +20319,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-pet-consultant",
-  "cat": "效率/生活",
+  "cat": "医疗健康",
   "tags": [
    "医疗健康"
   ],
@@ -20634,7 +20634,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-relations-advisor",
-  "cat": "效率/生活",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -20655,7 +20655,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-relationship-counselor",
-  "cat": "效率/生活",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -20781,7 +20781,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-screenwriting-tutor",
-  "cat": "教育",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -20865,7 +20865,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-social-media-influencer",
-  "cat": "营销/自媒体",
+  "cat": "效率/生活",
   "tags": [
    "效率"
   ],
@@ -20949,7 +20949,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-supply-chain-optimization-specialist",
-  "cat": "商业/金融",
+  "cat": "营销/自媒体",
   "tags": [
    "营销"
   ],
@@ -20970,7 +20970,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-synonym-researcher",
-  "cat": "科研/科学",
+  "cat": "翻译/语言",
   "tags": [
    "翻译"
   ],
@@ -21033,7 +21033,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-transportation-advisor",
-  "cat": "娱乐/游戏",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -21138,7 +21138,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-video-game-designer",
-  "cat": "设计",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -21222,7 +21222,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-academic-translator",
-  "cat": "翻译/语言",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -21411,7 +21411,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-blog-posts-language-translator",
-  "cat": "翻译/语言",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -21432,7 +21432,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-brand-development-strategist",
-  "cat": "营销/自媒体",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -21852,7 +21852,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-data-engineer",
-  "cat": "编程/技术",
+  "cat": "商业/金融",
   "tags": [
    "商业"
   ],
@@ -21978,7 +21978,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-digital-marketing-expert",
-  "cat": "营销/自媒体",
+  "cat": "商业/金融",
   "tags": [
    "商业"
   ],
@@ -22125,7 +22125,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-film-director",
-  "cat": "娱乐/游戏",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -22230,7 +22230,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-florist-and-event-planner",
-  "cat": "效率/生活",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -22251,7 +22251,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-florist-gardener",
-  "cat": "效率/生活",
+  "cat": "医疗健康",
   "tags": [
    "医疗健康"
   ],
@@ -22293,7 +22293,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-garden-guide",
-  "cat": "效率/生活",
+  "cat": "医疗健康",
   "tags": [
    "医疗健康"
   ],
@@ -22440,7 +22440,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-interactive-storyteller",
-  "cat": "写作/内容",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -22524,7 +22524,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-law-scholar",
-  "cat": "法律",
+  "cat": "科研/科学",
   "tags": [
    "科研"
   ],
@@ -22545,7 +22545,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-linguistic-historian",
-  "cat": "翻译/语言",
+  "cat": "科研/科学",
   "tags": [
    "科研"
   ],
@@ -22629,7 +22629,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-magic-tutor",
-  "cat": "教育",
+  "cat": "科研/科学",
   "tags": [
    "科研"
   ],
@@ -22650,7 +22650,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-manufacturing-engineer",
-  "cat": "编程/技术",
+  "cat": "娱乐/游戏",
   "tags": [
    "娱乐"
   ],
@@ -22692,7 +22692,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-marketing-performance-analyst",
-  "cat": "营销/自媒体",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -22713,7 +22713,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-narrative-developer",
-  "cat": "编程/技术",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -22797,7 +22797,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-oral-health-adviser",
-  "cat": "医疗健康",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -22923,7 +22923,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-product-researcher",
-  "cat": "科研/科学",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -23049,7 +23049,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-real-estate-logistician",
-  "cat": "商业/金融",
+  "cat": "营销/自媒体",
   "tags": [
    "营销"
   ],
@@ -23133,7 +23133,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-social-media-analyst",
-  "cat": "营销/自媒体",
+  "cat": "科研/科学",
   "tags": [
    "科研"
   ],
@@ -23154,7 +23154,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-social-media-content-curator",
-  "cat": "营销/自媒体",
+  "cat": "写作/内容",
   "tags": [
    "写作"
   ],
@@ -23175,7 +23175,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-social-media-strategist",
-  "cat": "营销/自媒体",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -23217,7 +23217,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-songwriter-mentor",
-  "cat": "写作/内容",
+  "cat": "娱乐/游戏",
   "tags": [
    "娱乐"
   ],
@@ -23301,7 +23301,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-technology-visionary-it-architect",
-  "cat": "编程/技术",
+  "cat": "设计",
   "tags": [
    "设计"
   ],
@@ -23322,7 +23322,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-technology-writer",
-  "cat": "写作/内容",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -23469,7 +23469,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-ai-ethics-researcher",
-  "cat": "科研/科学",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -23637,7 +23637,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-cloud-infrastructure-consultant",
-  "cat": "编程/技术",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -23700,7 +23700,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-content-marketing-expert",
-  "cat": "营销/自媒体",
+  "cat": "商业/金融",
   "tags": [
    "商业"
   ],
@@ -23721,7 +23721,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-copywriter",
-  "cat": "写作/内容",
+  "cat": "营销/自媒体",
   "tags": [
    "营销"
   ],
@@ -24372,7 +24372,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-infrastructure-engineer",
-  "cat": "编程/技术",
+  "cat": "设计",
   "tags": [
    "设计"
   ],
@@ -24624,7 +24624,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-movie-character-developer",
-  "cat": "编程/技术",
+  "cat": "娱乐/游戏",
   "tags": [
    "娱乐"
   ],
@@ -24792,7 +24792,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-screenplay-consultant",
-  "cat": "写作/内容",
+  "cat": "娱乐/游戏",
   "tags": [
    "娱乐"
   ],
@@ -24813,7 +24813,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-skill-developer",
-  "cat": "编程/技术",
+  "cat": "教育",
   "tags": [
    "教育"
   ],
@@ -24939,7 +24939,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-accessibility-designer",
-  "cat": "设计",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
@@ -25149,7 +25149,7 @@ window.PROMPTS = [
  },
  {
   "id": "gretel-ai-healthcare-expert",
-  "cat": "医疗健康",
+  "cat": "编程/技术",
   "tags": [
    "编程"
   ],
