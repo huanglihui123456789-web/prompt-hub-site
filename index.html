@@ -45,7 +45,7 @@
   <meta http-equiv="Expires" content="0" />
 
   <!-- 当前应用版本号：bump 它即可让所有访客下次访问时拿到最新版（绕过 GitHub Pages 10 分钟缓存） -->
-  <meta name="app-version" content="20260905p" />
+  <meta name="app-version" content="20260905q" />
   <script>
     (function(){
       try {
@@ -512,17 +512,17 @@ footer{background:var(--bg-sunk);border-top:1px solid var(--line);padding:clamp(
 <div class="toast" id="toast">已复制到剪贴板</div>
 
 <!-- 数据：首屏仅同步 chunk-1（约 465KB），chunk-2~5 由浏览器顺序执行补全，全部就绪后再初始化界面 -->
-<script src="assets/js/data/chunk-1.js?v=20260905p" defer></script>
-<script src="assets/js/data/chunk-2.js?v=20260905p" defer></script>
-<script src="assets/js/data/chunk-3.js?v=20260905p" defer></script>
-<script src="assets/js/data/chunk-4.js?v=20260905p" defer></script>
-<script src="assets/js/data/chunk-5.js?v=20260905p" defer></script>
+<script src="assets/js/data/chunk-1.js?v=20260905q" defer></script>
+<script src="assets/js/data/chunk-2.js?v=20260905q" defer></script>
+<script src="assets/js/data/chunk-3.js?v=20260905q" defer></script>
+<script src="assets/js/data/chunk-4.js?v=20260905q" defer></script>
+<script src="assets/js/data/chunk-5.js?v=20260905q" defer></script>
 <script>
 window.addEventListener('DOMContentLoaded', function(){
 /* ═══ 数据源：优先真实生产库（chunk-1~5 → window.PROMPTS，2202 条），缺失时显示提示 ═══ */
 const RAW = (window.PROMPTS && window.PROMPTS.length) ? window.PROMPTS : [];
 const IS_FULL = !!RAW.length;
-const VER = '20260905p';
+const VER = '20260905q';
 
 function normalize(p, i){
   return Object.assign({}, p, {

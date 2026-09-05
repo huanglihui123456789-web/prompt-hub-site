@@ -24,6 +24,9 @@ dist/
 # ===== 误留的临时脚本 =====
 _patch*.js
 
+# ===== 母本备份文件（改数据前手动 cp 产生的，只留本地） =====
+assets/js/*.bak-*
+
 # ===== 原始数据语料（体积大、非运行必需；协作请改 assets/js/prompts.js） =====
 assets/data/
 prompts_dl*.js
