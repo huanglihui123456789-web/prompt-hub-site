@@ -171,7 +171,7 @@ for (const series of SERIES) {
         sourceUrl: '',
         contributor,
         heat: 4,
-        verified: false,
+        verified: true,
         community: true,
         lang: 'zh',
         views: 500,

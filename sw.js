@@ -4,18 +4,18 @@
    - 其他同源/跨域资源：stale-while-revalidate（缓存优先 + 后台更新）
    - 缓存键含版本号，升级时旧缓存自动清理
    版本号请与 index.html 的 app-version 保持一致。 */
-const CACHE = 'prompt-hub-v20260905v';
+const CACHE = 'prompt-hub-v20260905w';
 const PRECACHE = [
   './',
   './index.html',
   './404.html',
   './manifest.json',
   './favicon.svg',
-  './assets/js/data/chunk-1.js?v=20260905v',
-  './assets/js/data/chunk-2.js?v=20260905v',
-  './assets/js/data/chunk-3.js?v=20260905v',
-  './assets/js/data/chunk-4.js?v=20260905v',
-  './assets/js/data/chunk-5.js?v=20260905v',
+  './assets/js/data/chunk-1.js?v=20260905w',
+  './assets/js/data/chunk-2.js?v=20260905w',
+  './assets/js/data/chunk-3.js?v=20260905w',
+  './assets/js/data/chunk-4.js?v=20260905w',
+  './assets/js/data/chunk-5.js?v=20260905w',
   './assets/img/og-cover.jpg',
   './assets/img/app-icon-512.jpg'
 ];

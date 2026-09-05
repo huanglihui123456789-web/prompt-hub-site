@@ -49,7 +49,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.loli.net; font-src https://gstatic.loli.net; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" />
 
   <!-- 当前应用版本号：bump 它即可让所有访客下次访问时拿到最新版（绕过 GitHub Pages 10 分钟缓存） -->
-  <meta name="app-version" content="20260905v" />
+  <meta name="app-version" content="20260905w" />
   <script>
     (function(){
       try {
@@ -305,6 +305,10 @@ svg{display:block}
 .drawer__title{font-family:var(--serif);font-weight:700;font-size:clamp(1.15rem,2.5vw,1.55rem);line-height:1.25;letter-spacing:-.015em;margin:.5rem 0 0}
 .drawer__body{flex:1;overflow-y:auto;padding:1.5rem}
 .drawer__prompt{font-family:var(--sans);font-size:.875rem;line-height:1.75;white-space:pre-wrap;word-break:break-word;background:var(--bg);border:1px solid var(--line);padding:1rem 1.1rem;margin:0;color:var(--ink)}
+.d-zh{margin-top:1rem;border:1px dashed var(--line-strong);border-radius:12px;background:var(--bg);padding:.35rem .95rem}
+.d-zh summary{cursor:pointer;font-size:.8rem;font-weight:600;color:var(--accent);padding:.55rem 0}
+.d-zh summary::marker{color:var(--accent)}
+.d-zh__text{white-space:pre-wrap;word-break:break-word;font-size:.85rem;line-height:1.85;color:var(--ink-soft);padding:.15rem 0 .8rem}
 .drawer__foot{padding:1rem 1.5rem;border-top:1px solid var(--line);display:flex;gap:.75rem;align-items:center}
 .btn{padding:.6rem 1.1rem;border:1px solid var(--ink);border-radius:999px;font-size:.8125rem;font-weight:700;letter-spacing:.04em;transition:all .2s var(--ease);display:inline-flex;align-items:center;gap:.45rem}
 .btn--solid{background:var(--ink);color:var(--bg)}
@@ -580,6 +584,25 @@ html[data-accent="wine"][data-theme="dark"]{--accent:#c06a5c;--accent-soft:#dd9a
     </div>
     <div class="footer-brand"><div><strong>界面 v3 · 栏目分层</strong><p>档案编号 · 5 大栏目归并 · 编辑式排布，基于现有设计增量升级。</p></div></div>
   </div>
+  <div class="container" style="margin-top:26px;padding-top:18px;border-top:1px dashed var(--line)">
+    <span class="label">内容索引 · 分类全集（静态页，供搜索收录）</span>
+    <nav style="display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:10px;font-size:13px">
+      <a style="color:var(--accent);text-decoration:none" href="category/programming.html">编程/技术</a>
+      <a style="color:var(--accent);text-decoration:none" href="category/frontend.html">前端开发</a>
+      <a style="color:var(--accent);text-decoration:none" href="category/education.html">教育</a>
+      <a style="color:var(--accent);text-decoration:none" href="category/productivity-life.html">效率/生活</a>
+      <a style="color:var(--accent);text-decoration:none" href="category/science.html">科研/科学</a>
+      <a style="color:var(--accent);text-decoration:none" href="category/health.html">医疗健康</a>
+      <a style="color:var(--accent);text-decoration:none" href="category/legal.html">法律</a>
+      <a style="color:var(--accent);text-decoration:none" href="category/design.html">设计</a>
+      <a style="color:var(--accent);text-decoration:none" href="category/ai-art.html">AI绘画</a>
+      <a style="color:var(--accent);text-decoration:none" href="category/entertainment.html">娱乐/游戏</a>
+      <a style="color:var(--accent);text-decoration:none" href="category/writing.html">写作/内容</a>
+      <a style="color:var(--accent);text-decoration:none" href="category/marketing.html">营销/自媒体</a>
+      <a style="color:var(--accent);text-decoration:none" href="category/translation.html">翻译/语言</a>
+      <a style="color:var(--accent);text-decoration:none" href="category/business.html">商业/金融</a>
+    </nav>
+  </div>
 </footer>
 
 <!-- ══ 详情抽屉 ══ -->
@@ -598,6 +621,10 @@ html[data-accent="wine"][data-theme="dark"]{--accent:#c06a5c;--accent-soft:#dd9a
   <div class="drawer__body">
     <p class="label" style="margin-bottom:.5rem">提示词全文</p>
     <pre class="drawer__prompt" id="dPrompt"></pre>
+    <details class="d-zh" id="dZhBox" hidden>
+      <summary>中文参考译文 · AI 生成（仅供理解，非收录正文）</summary>
+      <div class="d-zh__text" id="dZhText"></div>
+    </details>
     <dl class="hero__meta" id="dMeta" style="margin-top:1.25rem"></dl>
   </div>
   <div class="drawer__foot">
@@ -652,17 +679,17 @@ html[data-accent="wine"][data-theme="dark"]{--accent:#c06a5c;--accent-soft:#dd9a
 </div>
 
 <!-- 数据：首屏仅同步 chunk-1（约 465KB），chunk-2~5 由浏览器顺序执行补全，全部就绪后再初始化界面 -->
-<script src="assets/js/data/chunk-1.js?v=20260905v" defer></script>
-<script src="assets/js/data/chunk-2.js?v=20260905v" defer></script>
-<script src="assets/js/data/chunk-3.js?v=20260905v" defer></script>
-<script src="assets/js/data/chunk-4.js?v=20260905v" defer></script>
-<script src="assets/js/data/chunk-5.js?v=20260905v" defer></script>
+<script src="assets/js/data/chunk-1.js?v=20260905w" defer></script>
+<script src="assets/js/data/chunk-2.js?v=20260905w" defer></script>
+<script src="assets/js/data/chunk-3.js?v=20260905w" defer></script>
+<script src="assets/js/data/chunk-4.js?v=20260905w" defer></script>
+<script src="assets/js/data/chunk-5.js?v=20260905w" defer></script>
 <script>
 window.addEventListener('DOMContentLoaded', function(){
 /* ═══ 数据源：优先真实生产库（chunk-1~5 → window.PROMPTS，2202 条），缺失时显示提示 ═══ */
 const RAW = (window.PROMPTS && window.PROMPTS.length) ? window.PROMPTS : [];
 const IS_FULL = !!RAW.length;
-const VER = '20260905v';
+const VER = '20260905w';
 
 function normalize(p, i){
   return Object.assign({}, p, {
@@ -1038,6 +1065,12 @@ function openDrawer(id){
   while ((mm = re.exec(p.prompt || ''))) { if (isPlaceholder(mm[0].slice(1, -1))) { hasPh = true; break; } }
   const fb = $('#dFill'); fb.hidden = !hasPh;
   if (hasPh) fb.onclick = () => openFillModal(p.prompt || '');
+  /* 中文参考译文（多语言包自带 promptZh；仅展示辅助，正文仍为零翻译原文） */
+  const zhRef = (p.promptZh && String(p.promptZh).trim() && String(p.promptZh).trim() !== String(p.prompt || '').trim()) ? String(p.promptZh).trim() : '';
+  const zhBox = $('#dZhBox');
+  zhBox.hidden = !zhRef;
+  zhBox.open = false;
+  if (zhRef) $('#dZhText').textContent = zhRef;
   $('#dMeta').innerHTML = `
     <div class="meta-row"><dt>编号</dt><dd>No.${esc(p.no)}</dd></div>
     <div class="meta-row"><dt>分类</dt><dd>${esc(p.cat)}</dd></div>

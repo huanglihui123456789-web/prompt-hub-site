@@ -104,7 +104,7 @@ for (const file of files) {
       sourceUrl: '',
       contributor,
       heat: 4,
-      verified: false,
+      verified: true,
       community: true,
       lang: 'en',
       views: 500,
