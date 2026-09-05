@@ -49,7 +49,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.loli.net; font-src https://gstatic.loli.net; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" />
 
   <!-- 当前应用版本号：bump 它即可让所有访客下次访问时拿到最新版（绕过 GitHub Pages 10 分钟缓存） -->
-  <meta name="app-version" content="20260905u" />
+  <meta name="app-version" content="20260905v" />
   <script>
     (function(){
       try {
@@ -652,17 +652,17 @@ html[data-accent="wine"][data-theme="dark"]{--accent:#c06a5c;--accent-soft:#dd9a
 </div>
 
 <!-- 数据：首屏仅同步 chunk-1（约 465KB），chunk-2~5 由浏览器顺序执行补全，全部就绪后再初始化界面 -->
-<script src="assets/js/data/chunk-1.js?v=20260905u" defer></script>
-<script src="assets/js/data/chunk-2.js?v=20260905u" defer></script>
-<script src="assets/js/data/chunk-3.js?v=20260905u" defer></script>
-<script src="assets/js/data/chunk-4.js?v=20260905u" defer></script>
-<script src="assets/js/data/chunk-5.js?v=20260905u" defer></script>
+<script src="assets/js/data/chunk-1.js?v=20260905v" defer></script>
+<script src="assets/js/data/chunk-2.js?v=20260905v" defer></script>
+<script src="assets/js/data/chunk-3.js?v=20260905v" defer></script>
+<script src="assets/js/data/chunk-4.js?v=20260905v" defer></script>
+<script src="assets/js/data/chunk-5.js?v=20260905v" defer></script>
 <script>
 window.addEventListener('DOMContentLoaded', function(){
 /* ═══ 数据源：优先真实生产库（chunk-1~5 → window.PROMPTS，2202 条），缺失时显示提示 ═══ */
 const RAW = (window.PROMPTS && window.PROMPTS.length) ? window.PROMPTS : [];
 const IS_FULL = !!RAW.length;
-const VER = '20260905u';
+const VER = '20260905v';
 
 function normalize(p, i){
   return Object.assign({}, p, {
@@ -713,6 +713,7 @@ function rebuild(){
   DATA.forEach(p => REAL_COUNTS[p.cat] = (REAL_COUNTS[p.cat] || 0) + 1);
   TOTAL = DATA.length;
   EXPANDED_COUNT = DATA.filter(p => EXPANDED_RE.test(p.source || '')).length;
+  const ec = $('#expandCount'); if (ec) ec.textContent = '+' + EXPANDED_COUNT;
   $('#statTotal').textContent = TOTAL;
   const at = $('#aboutTotal'); if (at) at.textContent = TOTAL + ' 条';
   const ac = $('#aboutCats'); if (ac) ac.textContent = new Set(DATA.map(p => p.cat)).size;
@@ -1064,7 +1065,12 @@ document.querySelectorAll('[data-tier]').forEach(b=>b.onclick=()=>{
 document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('[data-lang]').forEach(x=>x.classList.remove('is-active'));
   b.classList.add('is-active'); state.lang=b.dataset.lang;
-  if (INTL_LANGS.includes(state.lang)) ensureIntl(state.lang, ()=>render());
+  if (INTL_LANGS.includes(state.lang)){
+    // 多语言包内容全部属于扩充层：选中即自动展开，避免「选了语言却 0 条」的死路
+    state.expanded = true;
+    const eb = $('#expandBtn'); eb.classList.add('is-active'); eb.setAttribute('aria-pressed','true');
+    ensureIntl(state.lang, ()=>render());
+  }
   else render();
 });
 document.querySelectorAll('.hero-chip').forEach(b=>b.onclick=()=>{state.q=b.dataset.q;$('#searchInput').value=b.dataset.q;render();document.querySelector('#library').scrollIntoView({behavior:'smooth'})});
