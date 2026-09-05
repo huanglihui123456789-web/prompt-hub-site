@@ -1,0 +1,71 @@
+name: ✍ 提示词投稿
+description: 向公开提示词库投稿（可配合站内投稿弹窗的「生成投稿文本」）
+title: "[投稿] 新提示词"
+labels: ["投稿"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢投稿！收录原则：
+        - **零翻译**：提示词正文保留源语言原文、逐字收录，不做机器翻译
+        - **来源可信**：请注明原作者、数据集名称（含协议），原创则注明「原创」
+        - 站内投稿弹窗的「生成投稿文本」可直接粘贴到下方「提示词全文」
+  - type: input
+    id: title
+    attributes:
+      label: 标题
+      description: 简短的角色 / 场景名
+      placeholder: "如：小红书爆款文案写手"
+    validations:
+      required: true
+  - type: dropdown
+    id: cat
+    attributes:
+      label: 行业分类
+      options:
+        - 编程/技术
+        - 前端开发
+        - 教育
+        - 效率/生活
+        - 科研/科学
+        - 医疗健康
+        - 法律
+        - 设计
+        - AI绘画
+        - 娱乐/游戏
+        - 写作/内容
+        - 营销/自媒体
+        - 翻译/语言
+        - 商业/金融
+        - 其他（在正文补充说明）
+    validations:
+      required: true
+  - type: input
+    id: tags
+    attributes:
+      label: 标签
+      description: 逗号分隔，建议 2~6 个
+      placeholder: "写作, 自媒体"
+  - type: input
+    id: source
+    attributes:
+      label: 来源 / 署名
+      description: 原作者、数据集名称（含协议），或写「原创」
+      placeholder: "如：@someone (MIT)，或：原创"
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 收录确认
+      options:
+        - label: 我确认此内容可公开发布（原创或有权转载），同意正文以零翻译原则逐字收录并署名来源
+          required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: 提示词全文
+      description: 保留原文、勿翻译；可先在站内投稿弹窗点「生成投稿文本」再粘贴到这里
+      placeholder: 粘贴完整提示词…
+    validations:
+      required: true

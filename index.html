@@ -44,8 +44,12 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
 
+  <!-- CSP：全站零外部脚本（script 仅 self + 内联）；第三方只允许字体镜像的样式与字体源（源站钉死，替代不可行的 SRI）；
+       评估记录：字体自托管需 707 个分片约 20MB，仓库体积不划算，改用 CSP 限定源站收敛风险 -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.loli.net; font-src https://gstatic.loli.net; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'" />
+
   <!-- 当前应用版本号：bump 它即可让所有访客下次访问时拿到最新版（绕过 GitHub Pages 10 分钟缓存） -->
-  <meta name="app-version" content="20260905t" />
+  <meta name="app-version" content="20260905u" />
   <script>
     (function(){
       try {
@@ -522,7 +526,7 @@ html[data-accent="wine"][data-theme="dark"]{--accent:#c06a5c;--accent-soft:#dd9a
         <button class="tier-btn tier-community" data-tier="community" type="button"><i class="tier-dot" style="color:#185FA5"></i>社区</button>
       </span>
       <button class="tool-btn" id="expandBtn" type="button" aria-pressed="false" title="默认隐藏机器合成与翻译填充内容，开启后显示全部">含扩充库 <span class="chip-count" id="expandCount"></span></button>
-      <span class="result-count" id="resultCount"></span>
+      <span class="result-count" id="resultCount" aria-live="polite"></span>
     </div>
   </div>
 
@@ -603,13 +607,13 @@ html[data-accent="wine"][data-theme="dark"]{--accent:#c06a5c;--accent-soft:#dd9a
   </div>
 </aside>
 
-<div class="toast" id="toast">已复制到剪贴板</div>
+<div class="toast" id="toast" role="status" aria-live="polite">已复制到剪贴板</div>
 
 <!-- ══ 投稿弹窗（回移植 v2：本地保存 + 生成投稿文本） ══ -->
 <div class="modal" id="submitModal" hidden>
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="submitTitle">
     <div class="modal-head">
-      <div><h3 class="modal-title" id="submitTitle">✍ 投稿提示词</h3><p class="modal-sub">「保存到本机」仅存于本机浏览器；公开入库请用「生成投稿文本」，粘贴到仓库 Issue。</p></div>
+      <div><h3 class="modal-title" id="submitTitle">✍ 投稿提示词</h3><p class="modal-sub">「保存到本机」仅存于本机浏览器；点「生成投稿文本」复制后，粘贴到 GitHub 投稿表单即可公开入库。</p></div>
       <button class="icon-btn" id="submitClose" aria-label="关闭">✕</button>
     </div>
     <form id="submitForm">
@@ -621,6 +625,7 @@ html[data-accent="wine"][data-theme="dark"]{--accent:#c06a5c;--accent-soft:#dd9a
       <div class="field"><label for="sf-source">来源 / 署名</label><input id="sf-source" name="source" placeholder="默认：社区投稿" /></div>
       <div class="field"><label for="sf-prompt">提示词全文 *</label><textarea id="sf-prompt" name="prompt" required placeholder="粘贴完整提示词（保留原文，勿翻译）…"></textarea></div>
       <div class="modal-foot">
+        <a class="btn-ghost" href="https://github.com/huanglihui123456789-web/prompt-hub-site/issues/new?template=tougao.yml" target="_blank" rel="noopener" style="margin-right:auto">去 GitHub 投稿 ↗</a>
         <button class="btn-ghost" id="submitCancel" type="button">取消</button>
         <button class="btn-ghost" id="submitCopyText" type="button">生成投稿文本</button>
         <button class="btn btn--solid" type="submit">保存到本机</button>
@@ -647,17 +652,17 @@ html[data-accent="wine"][data-theme="dark"]{--accent:#c06a5c;--accent-soft:#dd9a
 </div>
 
 <!-- 数据：首屏仅同步 chunk-1（约 465KB），chunk-2~5 由浏览器顺序执行补全，全部就绪后再初始化界面 -->
-<script src="assets/js/data/chunk-1.js?v=20260905t" defer></script>
-<script src="assets/js/data/chunk-2.js?v=20260905t" defer></script>
-<script src="assets/js/data/chunk-3.js?v=20260905t" defer></script>
-<script src="assets/js/data/chunk-4.js?v=20260905t" defer></script>
-<script src="assets/js/data/chunk-5.js?v=20260905t" defer></script>
+<script src="assets/js/data/chunk-1.js?v=20260905u" defer></script>
+<script src="assets/js/data/chunk-2.js?v=20260905u" defer></script>
+<script src="assets/js/data/chunk-3.js?v=20260905u" defer></script>
+<script src="assets/js/data/chunk-4.js?v=20260905u" defer></script>
+<script src="assets/js/data/chunk-5.js?v=20260905u" defer></script>
 <script>
 window.addEventListener('DOMContentLoaded', function(){
 /* ═══ 数据源：优先真实生产库（chunk-1~5 → window.PROMPTS，2202 条），缺失时显示提示 ═══ */
 const RAW = (window.PROMPTS && window.PROMPTS.length) ? window.PROMPTS : [];
 const IS_FULL = !!RAW.length;
-const VER = '20260905t';
+const VER = '20260905u';
 
 function normalize(p, i){
   return Object.assign({}, p, {
@@ -1115,7 +1120,7 @@ $('#submitCopyText').onclick=()=>{
   if(!title||!prompt){ toastMsg('请先填写标题与提示词全文'); return; }
   const tags=(fd.get('tags')||'').toString().split(/[,，]/).map(s=>s.trim()).filter(Boolean);
   const src=(fd.get('source')||'').toString().trim()||'社区投稿';
-  const txt='## 投稿提示词\n\n- 标题：'+title+'\n- 行业：'+(fd.get('cat')||'')+'\n- 标签：'+tags.join('、')+'\n- 来源/署名：'+src+'\n\n```json\n'+JSON.stringify({title:title,cat:fd.get('cat')||'',tags:tags,prompt:prompt,source:src},null,1)+'\n```\n\n（复制以上内容到仓库 GitHub Issue 即可公开投稿）';
+  const txt='## 投稿提示词\n\n- 标题：'+title+'\n- 行业：'+(fd.get('cat')||'')+'\n- 标签：'+tags.join('、')+'\n- 来源/署名：'+src+'\n\n```json\n'+JSON.stringify({title:title,cat:fd.get('cat')||'',tags:tags,prompt:prompt,source:src},null,1)+'\n```\n\n（复制以上内容，点「去 GitHub 投稿」打开表单，粘贴到「提示词全文」输入框即可）';
   copyText(txt, null);
 };
 $('#fillCopy').onclick=()=>{
