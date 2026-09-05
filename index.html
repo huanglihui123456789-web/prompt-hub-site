@@ -9,7 +9,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PROMPT 提示词库" />
   <meta property="og:title" content="PROMPT 提示词库 · 各行业 AI Prompt 精选" />
-  <meta property="og:description" content="收录 2000 条精选中文 / 英文提示词，覆盖 13 个行业，支持搜索、分类筛选、收藏点赞与一键复制。" />
+  <meta property="og:description" content="收录 2500 余条精选中文 / 英文提示词，覆盖 14 个行业，支持搜索、分类筛选、收藏点赞与一键复制。" />
   <meta property="og:url" content="https://huanglihui123456789-web.github.io/prompt-hub-site/" />
   <meta property="og:image" content="https://huanglihui123456789-web.github.io/prompt-hub-site/assets/img/og-cover.jpg" />
   <meta property="og:image:width" content="1280" />
@@ -27,7 +27,7 @@
     "name": "PROMPT 提示词库",
     "alternateName": "PROMPT · 各行业 AI Prompt 精选",
     "url": "https://huanglihui123456789-web.github.io/prompt-hub-site/",
-    "description": "收录 2000 条精选中文 / 英文 AI 提示词，覆盖编程、教育、写作、营销、商业、法律、医疗、设计、翻译、生活、游戏、科研等行业，支持搜索、分类筛选、收藏点赞与一键复制。",
+    "description": "收录 2500 余条精选中文 / 英文 AI 提示词，覆盖编程、教育、写作、营销、商业、法律、医疗、设计、翻译、生活、游戏、科研等行业，支持搜索、分类筛选、收藏点赞与一键复制。",
     "inLanguage": "zh-CN",
     "potentialAction": {
       "@type": "SearchAction",
@@ -45,7 +45,7 @@
   <meta http-equiv="Expires" content="0" />
 
   <!-- 当前应用版本号：bump 它即可让所有访客下次访问时拿到最新版（绕过 GitHub Pages 10 分钟缓存） -->
-  <meta name="app-version" content="20260905q" />
+  <meta name="app-version" content="20260905r" />
   <script>
     (function(){
       try {
@@ -415,7 +415,7 @@ footer{background:var(--bg-sunk);border-top:1px solid var(--line);padding:clamp(
   <div class="section-head">
     <span class="kicker">提示词库 · PROMPT LIBRARY</span>
     <h2 class="section-title">按栏目浏览，按需复制</h2>
-    <p class="section-desc">13 个行业归并为 5 大栏目。点栏目 → 联动显示该栏目下的行业与热门话题 → 可继续收窄。每张卡片带档案编号，一键复制（默认带出处署名）。</p>
+    <p class="section-desc">14 个行业归并为 5 大栏目。点栏目 → 联动显示该栏目下的行业与热门话题 → 可继续收窄。每张卡片带档案编号，一键复制（默认带出处署名）。</p>
   </div>
 
   <div class="rubrics" id="rubrics" role="group" aria-label="栏目筛选"></div>
@@ -512,17 +512,17 @@ footer{background:var(--bg-sunk);border-top:1px solid var(--line);padding:clamp(
 <div class="toast" id="toast">已复制到剪贴板</div>
 
 <!-- 数据：首屏仅同步 chunk-1（约 465KB），chunk-2~5 由浏览器顺序执行补全，全部就绪后再初始化界面 -->
-<script src="assets/js/data/chunk-1.js?v=20260905q" defer></script>
-<script src="assets/js/data/chunk-2.js?v=20260905q" defer></script>
-<script src="assets/js/data/chunk-3.js?v=20260905q" defer></script>
-<script src="assets/js/data/chunk-4.js?v=20260905q" defer></script>
-<script src="assets/js/data/chunk-5.js?v=20260905q" defer></script>
+<script src="assets/js/data/chunk-1.js?v=20260905r" defer></script>
+<script src="assets/js/data/chunk-2.js?v=20260905r" defer></script>
+<script src="assets/js/data/chunk-3.js?v=20260905r" defer></script>
+<script src="assets/js/data/chunk-4.js?v=20260905r" defer></script>
+<script src="assets/js/data/chunk-5.js?v=20260905r" defer></script>
 <script>
 window.addEventListener('DOMContentLoaded', function(){
 /* ═══ 数据源：优先真实生产库（chunk-1~5 → window.PROMPTS，2202 条），缺失时显示提示 ═══ */
 const RAW = (window.PROMPTS && window.PROMPTS.length) ? window.PROMPTS : [];
 const IS_FULL = !!RAW.length;
-const VER = '20260905q';
+const VER = '20260905r';
 
 function normalize(p, i){
   return Object.assign({}, p, {
@@ -571,10 +571,10 @@ function rebuild(){
 
 /* ═══ 13 行业 → 5 大栏目（count 由真实数据动态计算） ═══ */
 const RUBRICS = [
-  { key:'all', name:'全部', count:0, sub:'13 个行业', cats:[] },
+  { key:'all', name:'全部', count:0, sub:'14 个行业', cats:[] },
   { key:'tech', name:'技术与开发', count:0, sub:'编程 · 前端', cats:['编程/技术','前端开发'] },
   { key:'knowledge', name:'知识与效率', count:0, sub:'教育 · 科研 · 生活', cats:['教育','效率/生活','科研/科学','医疗健康','法律'] },
-  { key:'creative', name:'创意与设计', count:0, sub:'设计 · 娱乐', cats:['设计','娱乐/游戏'] },
+  { key:'creative', name:'创意与设计', count:0, sub:'AI绘画 · 设计 · 娱乐', cats:['设计','娱乐/游戏','AI绘画'] },
   { key:'content', name:'内容与表达', count:0, sub:'写作 · 营销 · 翻译', cats:['写作/内容','营销/自媒体','翻译/语言'] },
   { key:'biz', name:'商业与金融', count:0, sub:'商业金融', cats:['商业/金融'] },
 ];
@@ -588,6 +588,7 @@ function rubricCount(r){
 const ICONS = {
   '编程/技术':'<path d="m8 6-6 6 6 6M16 6l6 6-6 6"/>','前端开发':'<path d="m9 18-6-6 6-6M15 6l6 6-6 6"/>',
   '设计':'<circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><path d="M12 2 9 8l-6 .5L7 13l-2 6 7-4 7 4-2-6 4-4.5L15 8Z"/>',
+  'AI绘画':'<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/>',
   '娱乐/游戏':'<rect x="2" y="6" width="20" height="12" rx="5"/><path d="M7 12h4M9 10v4M16 12h.01M18 14h.01"/>',
   '写作/内容':'<path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>',
   '营销/自媒体':'<path d="M3 11v10h18V11M2 3h20v8H2Z"/><path d="M10 7h4"/>',

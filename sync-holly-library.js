@@ -93,7 +93,7 @@ for (const file of files) {
   } else {
     const entry = {
       id: targetId,
-      cat: '设计',
+      cat: 'AI绘画',
       tags: ['设计', 'Midjourney', '电影美学', '好莱坞', filmZh, 'AI绘画'],
       title: engTitle,
       titleZh,

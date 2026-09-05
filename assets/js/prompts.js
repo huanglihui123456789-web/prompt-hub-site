@@ -46602,7 +46602,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-matrix",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46629,7 +46629,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-blade-runner-2049",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46656,7 +46656,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-godfather",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46683,7 +46683,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-interstellar",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46710,7 +46710,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-crouching-tiger",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46737,7 +46737,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-hero-2002",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46764,7 +46764,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-in-the-mood-for-love",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46791,7 +46791,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-grandmaster",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46818,7 +46818,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-shadow-2018",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46845,7 +46845,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-assassin",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46872,7 +46872,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-raise-red-lantern",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46899,7 +46899,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-curse-golden-flower",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46926,7 +46926,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-chungking-express",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46953,7 +46953,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-banquet",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -46980,7 +46980,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-peaky-blinders",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47007,7 +47007,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-pride-prejudice",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47034,7 +47034,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-tinker-tailor",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47061,7 +47061,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-lock-stock",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47088,7 +47088,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-skyfall",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47115,7 +47115,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-barry-lyndon",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47142,7 +47142,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-1917-film",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47169,7 +47169,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-sweeney-todd",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47196,7 +47196,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-atonement",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47223,7 +47223,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-kingsman",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47250,7 +47250,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-jurassic-park",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47277,7 +47277,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-crimson-tide",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47304,7 +47304,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-social-network",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47331,7 +47331,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-collateral",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47358,7 +47358,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-baby-driver",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47385,7 +47385,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-midsommar",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47412,7 +47412,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-ex-machina",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47439,7 +47439,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-kingdom-of-heaven",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47466,7 +47466,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-tenet",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47493,7 +47493,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-gangs-of-new-york",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47520,7 +47520,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-se7en",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47547,7 +47547,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-alien-1979",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47574,7 +47574,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-la-la-land",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47601,7 +47601,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-gladiator",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47628,7 +47628,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-space-odyssey-2001",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47655,7 +47655,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-once-upon-a-time",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47682,7 +47682,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-mandalorian",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47709,7 +47709,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-wolf-of-wall-street",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47736,7 +47736,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-life-of-pi",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47763,7 +47763,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-hateful-eight",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47790,7 +47790,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-wizard-of-oz",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47817,7 +47817,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-girl-with-dragon-tattoo",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47844,7 +47844,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-abyss",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47871,7 +47871,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-fistful-of-dollars",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47898,7 +47898,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-fall",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47925,7 +47925,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-ida",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47952,7 +47952,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-mad-max-2",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -47979,7 +47979,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-joker",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48006,7 +48006,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-revenant",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48033,7 +48033,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-shining",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48060,7 +48060,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-dune-part-two",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48087,7 +48087,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-fight-club",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48114,7 +48114,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-vertigo",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48141,7 +48141,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-black-swan",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48168,7 +48168,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-uncut-gems",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48195,7 +48195,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-prometheus",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48222,7 +48222,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-no-country-old-men",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48249,7 +48249,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-french-dispatch",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48276,7 +48276,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-alien-romulus",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48303,7 +48303,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-lighthouse",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48330,7 +48330,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-apocalypse-now-khmer-ruins",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48357,7 +48357,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-matrix-subterranean-chasm",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48384,7 +48384,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-shining-snow-labyrinth",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48411,7 +48411,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-dune2-coriolis-storm-basin",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48438,7 +48438,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-blade-runner-subterranean-bay",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48465,7 +48465,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-alien-nostromo-hypersleep",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48492,7 +48492,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-godfather-estate-gate",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48519,7 +48519,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-interstellar-wormhole-interior",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48546,7 +48546,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-inception-corridor",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48573,7 +48573,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-space-odyssey-centrifuge",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48600,7 +48600,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-apocalypse-now-bridge",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48627,7 +48627,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-manhattan-bridge-dawn",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48654,7 +48654,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-dune2-giedi-prime-infrared",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48681,7 +48681,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-aliens-industrial-vents",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48708,7 +48708,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-no-country-motel-night",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48735,7 +48735,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-titanic-wreck-bow",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48762,7 +48762,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-shape-of-water",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48789,7 +48789,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-john-wick-4",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48816,7 +48816,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-schindlers-list",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48843,7 +48843,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-green-knight",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48870,7 +48870,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-roma",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48897,7 +48897,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-sicario",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48924,7 +48924,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-oblivion",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48951,7 +48951,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-apocalypse-now",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -48978,7 +48978,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-carol",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49005,7 +49005,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-dunkirk-aerial",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49032,7 +49032,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-blade-runner-archives",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49059,7 +49059,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-interstellar-water-wall",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49086,7 +49086,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-shining-red-room",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49113,7 +49113,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-dune-arrakis-terrace",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49140,7 +49140,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-alien-derelict-corridor",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49167,7 +49167,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-se7en-rainy-alley",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49194,7 +49194,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-budapest-alpine-station",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49221,7 +49221,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-godfather-study",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49248,7 +49248,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-shawshank-redemption",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49275,7 +49275,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-dark-knight",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49302,7 +49302,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-pulp-fiction",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49329,7 +49329,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-apocalypse-now-valkyrie",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49356,7 +49356,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-argonath-lotr",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49383,7 +49383,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-blade-runner-1982",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49410,7 +49410,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-lawrence-of-arabia",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49437,7 +49437,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-citizen-kane",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49464,7 +49464,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-fengshen-longde-palace",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49491,7 +49491,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-thousand-li-rivers-mountains",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49518,7 +49518,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-hero-qin-legion-grid",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49545,7 +49545,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-wandering-earth-engine",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49572,7 +49572,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-curse-golden-flower-plaza",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49599,7 +49599,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-assassin-alpine-plateau",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49626,7 +49626,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-banquet-ceremonial-altar",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49653,7 +49653,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-legend-demon-cat-feast",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49680,7 +49680,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-qin-mausoleum-mercury",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49707,7 +49707,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-hanging-monastery-precipice",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49734,7 +49734,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-astronomical-clock-tower",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49761,7 +49761,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-mogao-caves-sandstone-cliff",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49788,7 +49788,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-kuimen-yangtze-gorge",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49815,7 +49815,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-beacon-towers-snowy-ridge",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49842,7 +49842,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-daming-palace-terrace",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49869,7 +49869,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-wuyi-danxia-stream",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49896,7 +49896,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-shadow-taiji-courtyard",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49923,7 +49923,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-the-assassin-tang-pavilion",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49950,7 +49950,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-crouching-tiger-moon-pond",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -49977,7 +49977,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-in-the-mood-tenement-kitchen",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50004,7 +50004,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-dragon-inn-desert-sunset",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50031,7 +50031,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-hero-library-bamboo-scrolls",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50058,7 +50058,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-raise-red-lantern-snowy-roofs",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50085,7 +50085,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-last-emperor-forbidden-city-plaza",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50112,7 +50112,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-contact-vla-milkyway",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50139,7 +50139,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-interstellar-saturn-rings",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50166,7 +50166,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-tree-of-life-cosmic-nebula",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50193,7 +50193,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-apollo13-lunar-earthrise",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50220,7 +50220,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-space-odyssey-monolith-alignment",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50247,7 +50247,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-arrival-montana-valley-vessel",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50274,7 +50274,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-gravity-aurora-debris-orbit",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50301,7 +50301,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-dune-arrakis-twin-moons",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50328,7 +50328,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-binary-star-roche-lobe",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50355,7 +50355,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-gas-giant-ring-system-eclipse",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50382,7 +50382,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-magnetar-quantum-vacuum",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50409,7 +50409,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-comet-nucleus-sublimation-jets",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50436,7 +50436,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-interstellar-kerr-blackhole",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50463,7 +50463,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-contact-vla-deepsky",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50490,7 +50490,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-tree-of-life-spectroscopy-nebula",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50517,7 +50517,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-space-odyssey-jupiter-cyclones",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50544,7 +50544,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-stalker-submerged-zone",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50571,7 +50571,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-roy-andersson-pastel-hallway",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50598,7 +50598,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-expressionist-caligari-alley",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50625,7 +50625,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-biopunk-chitin-chamber",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50652,7 +50652,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-mirrors-maze-reflection",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50679,7 +50679,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-days-of-heaven-magic-hour",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50706,7 +50706,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-thx-1138-white-void",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50733,7 +50733,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-victorian-railway-steam-engine",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50760,7 +50760,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-holy-mountain-alchemical-chamber",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50787,7 +50787,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-del-toro-clockwork-abyss",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50814,7 +50814,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-jarmusch-dead-man-salt-flats",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50841,7 +50841,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-lynch-red-room-chevron",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50868,7 +50868,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-engineer-homeworld-plaza",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50895,7 +50895,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-blade-runner-sea-wall",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50922,7 +50922,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-planetary-tectonic-fissure",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50949,7 +50949,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-metropolis-space-elevator",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -50976,7 +50976,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-gladiator-colosseum-dawn",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51003,7 +51003,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-helms-deep-fortress-thunderstorm",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51030,7 +51030,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-solaris-colloidal-ocean",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51057,7 +51057,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-parasite-mansion-monsoon",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51084,7 +51084,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-pulsar-lighthouse-beam",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51111,7 +51111,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-globular-cluster-core-stars",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51138,7 +51138,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-relativistic-jet-shock-front",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51165,7 +51165,7 @@ window.PROMPTS = [
  },
  {
   "id": "hollylib-bipolar-hourglass-nebula",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51192,7 +51192,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51217,7 +51217,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-01-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51242,7 +51242,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-01-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51267,7 +51267,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-01-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51292,7 +51292,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-01-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51317,7 +51317,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-01-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51342,7 +51342,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-01-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51367,7 +51367,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-01-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51392,7 +51392,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-01-09",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51417,7 +51417,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-01-10",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51442,7 +51442,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-02-11",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51467,7 +51467,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-02-12",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51492,7 +51492,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-02-13",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51517,7 +51517,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-02-14",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51542,7 +51542,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-02-15",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51567,7 +51567,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-02-16",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51592,7 +51592,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-02-17",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51617,7 +51617,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-02-18",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51642,7 +51642,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-02-19",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51667,7 +51667,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-02-20",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51692,7 +51692,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-03-21",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51717,7 +51717,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-03-22",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51742,7 +51742,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-03-23",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51767,7 +51767,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-03-24",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51792,7 +51792,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-03-25",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51817,7 +51817,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-03-26",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51842,7 +51842,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-03-27",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51867,7 +51867,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-03-28",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51892,7 +51892,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-03-29",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51917,7 +51917,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s01-03-30",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51942,7 +51942,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51967,7 +51967,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-01-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -51992,7 +51992,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-01-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52017,7 +52017,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-01-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52042,7 +52042,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-01-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52067,7 +52067,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-01-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52092,7 +52092,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-01-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52117,7 +52117,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-01-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52142,7 +52142,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-01-09",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52167,7 +52167,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-01-10",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52192,7 +52192,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-02-11",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52217,7 +52217,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-02-12",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52242,7 +52242,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-02-13",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52267,7 +52267,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-02-14",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52292,7 +52292,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-02-15",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52317,7 +52317,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-02-16",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52342,7 +52342,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-02-17",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52367,7 +52367,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-02-18",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52392,7 +52392,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-02-19",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52417,7 +52417,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-02-20",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52442,7 +52442,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-03-21",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52467,7 +52467,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-03-22",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52492,7 +52492,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-03-23",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52517,7 +52517,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-03-24",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52542,7 +52542,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-03-25",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52567,7 +52567,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-03-26",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52592,7 +52592,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-03-27",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52617,7 +52617,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-03-28",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52642,7 +52642,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-03-29",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52667,7 +52667,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s02-03-30",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52692,7 +52692,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52717,7 +52717,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-01-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52742,7 +52742,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-01-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52767,7 +52767,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-01-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52792,7 +52792,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-01-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52817,7 +52817,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-01-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52842,7 +52842,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-01-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52867,7 +52867,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-01-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52892,7 +52892,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-01-09",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52917,7 +52917,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-01-10",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52942,7 +52942,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-02-11",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52967,7 +52967,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-02-12",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -52992,7 +52992,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-02-13",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53017,7 +53017,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-02-14",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53042,7 +53042,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-02-15",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53067,7 +53067,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-02-16",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53092,7 +53092,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-02-17",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53117,7 +53117,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-02-18",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53142,7 +53142,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-02-19",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53167,7 +53167,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-02-20",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53192,7 +53192,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-03-21",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53217,7 +53217,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-03-22",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53242,7 +53242,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-03-23",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53267,7 +53267,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-03-24",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53292,7 +53292,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-03-25",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53317,7 +53317,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-03-26",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53342,7 +53342,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-03-27",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53367,7 +53367,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-03-28",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53392,7 +53392,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-03-29",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53417,7 +53417,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s03-03-30",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53442,7 +53442,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53467,7 +53467,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-01-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53492,7 +53492,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-01-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53517,7 +53517,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-01-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53542,7 +53542,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-01-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53567,7 +53567,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-01-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53592,7 +53592,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-01-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53617,7 +53617,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-01-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53642,7 +53642,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-01-09",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53667,7 +53667,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-01-10",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53692,7 +53692,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-02-11",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53717,7 +53717,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-02-12",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53742,7 +53742,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-02-13",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53767,7 +53767,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-02-14",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53792,7 +53792,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-02-15",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53817,7 +53817,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-02-16",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53842,7 +53842,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-02-17",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53867,7 +53867,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-02-18",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53892,7 +53892,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-02-19",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53917,7 +53917,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-02-20",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53942,7 +53942,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-03-21",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53967,7 +53967,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-03-22",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -53992,7 +53992,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-03-23",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54017,7 +54017,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-03-24",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54042,7 +54042,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-03-25",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54067,7 +54067,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-03-26",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54092,7 +54092,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-03-27",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54117,7 +54117,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-03-28",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54142,7 +54142,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-03-29",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54167,7 +54167,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s04-03-30",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54192,7 +54192,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54217,7 +54217,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-01-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54242,7 +54242,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-01-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54267,7 +54267,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-01-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54292,7 +54292,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-01-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54317,7 +54317,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-01-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54342,7 +54342,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-01-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54367,7 +54367,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-01-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54392,7 +54392,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-01-09",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54417,7 +54417,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-01-10",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54442,7 +54442,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-02-11",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54467,7 +54467,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-02-12",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54492,7 +54492,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-02-13",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54517,7 +54517,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-02-14",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54542,7 +54542,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-02-15",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54567,7 +54567,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-02-16",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54592,7 +54592,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-02-17",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54617,7 +54617,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-02-18",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54642,7 +54642,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-02-19",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54667,7 +54667,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-02-20",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54692,7 +54692,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-03-21",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54717,7 +54717,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-03-22",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54742,7 +54742,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-03-23",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54767,7 +54767,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-03-24",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54792,7 +54792,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-03-25",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54817,7 +54817,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-03-26",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54842,7 +54842,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-03-27",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54867,7 +54867,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-03-28",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54892,7 +54892,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-03-29",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54917,7 +54917,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s05-03-30",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54942,7 +54942,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54967,7 +54967,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-01-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -54992,7 +54992,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-01-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55017,7 +55017,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-01-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55042,7 +55042,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-01-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55067,7 +55067,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-01-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55092,7 +55092,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-01-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55117,7 +55117,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-01-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55142,7 +55142,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-01-09",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55167,7 +55167,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-01-10",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55192,7 +55192,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-02-11",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55217,7 +55217,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-02-12",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55242,7 +55242,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-02-13",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55267,7 +55267,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-02-14",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55292,7 +55292,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-02-15",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55317,7 +55317,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-02-16",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55342,7 +55342,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-02-17",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55367,7 +55367,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-02-18",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55392,7 +55392,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-02-19",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55417,7 +55417,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-02-20",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55442,7 +55442,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-03-21",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55467,7 +55467,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-03-22",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55492,7 +55492,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-03-23",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55517,7 +55517,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-03-24",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55542,7 +55542,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-03-25",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55567,7 +55567,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-03-26",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55592,7 +55592,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-03-27",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55617,7 +55617,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-03-28",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55642,7 +55642,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-03-29",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55667,7 +55667,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s06-03-30",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55692,7 +55692,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55717,7 +55717,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-01-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55742,7 +55742,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-01-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55767,7 +55767,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-01-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55792,7 +55792,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-01-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55817,7 +55817,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-01-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55842,7 +55842,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-01-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55867,7 +55867,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-01-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55892,7 +55892,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-01-09",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55917,7 +55917,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-01-10",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55942,7 +55942,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-02-11",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55967,7 +55967,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-02-12",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -55992,7 +55992,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-02-13",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56017,7 +56017,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-02-14",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56042,7 +56042,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-02-15",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56067,7 +56067,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-02-16",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56092,7 +56092,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-02-17",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56117,7 +56117,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-02-18",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56142,7 +56142,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-02-19",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56167,7 +56167,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-02-20",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56192,7 +56192,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-03-21",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56217,7 +56217,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-03-22",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56242,7 +56242,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-03-23",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56267,7 +56267,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-03-24",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56292,7 +56292,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-03-25",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56317,7 +56317,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-03-26",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56342,7 +56342,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-03-27",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56367,7 +56367,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-03-28",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56392,7 +56392,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-03-29",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56417,7 +56417,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s07-03-30",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56442,7 +56442,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56467,7 +56467,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-01-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56492,7 +56492,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-01-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56517,7 +56517,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-01-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56542,7 +56542,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-01-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56567,7 +56567,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-01-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56592,7 +56592,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-01-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56617,7 +56617,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-01-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56642,7 +56642,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-01-09",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56667,7 +56667,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-01-10",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56692,7 +56692,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-02-11",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56717,7 +56717,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-02-12",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56742,7 +56742,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-02-13",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56767,7 +56767,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-02-14",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56792,7 +56792,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-02-15",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56817,7 +56817,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-02-16",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56842,7 +56842,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-02-17",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56867,7 +56867,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-02-18",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56892,7 +56892,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-02-19",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56917,7 +56917,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-02-20",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56942,7 +56942,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-03-21",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56967,7 +56967,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-03-22",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -56992,7 +56992,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-03-23",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57017,7 +57017,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-03-24",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57042,7 +57042,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-03-25",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57067,7 +57067,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-03-26",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57092,7 +57092,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-03-27",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57117,7 +57117,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-03-28",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57142,7 +57142,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-03-29",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57167,7 +57167,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-s08-03-30",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57192,7 +57192,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj31-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57217,7 +57217,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj31-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57242,7 +57242,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj31-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57267,7 +57267,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj31-04-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57292,7 +57292,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj31-05-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57317,7 +57317,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj31-06-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57342,7 +57342,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj31-07-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57367,7 +57367,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj31-08-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57392,7 +57392,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj33-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57417,7 +57417,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj33-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57442,7 +57442,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj33-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57467,7 +57467,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj33-04-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57492,7 +57492,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj33-05-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57517,7 +57517,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj33-06-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57542,7 +57542,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj33-07-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57567,7 +57567,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj33-08-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57592,7 +57592,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj32-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57617,7 +57617,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj32-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57642,7 +57642,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj32-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57667,7 +57667,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj32-04-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57692,7 +57692,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj32-05-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57717,7 +57717,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj32-06-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57742,7 +57742,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj32-07-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57767,7 +57767,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj32-08-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57792,7 +57792,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj35-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57817,7 +57817,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj35-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57842,7 +57842,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj35-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57867,7 +57867,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj35-04-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57892,7 +57892,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj35-05-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57917,7 +57917,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj35-06-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57942,7 +57942,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj35-07-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57967,7 +57967,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj35-08-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -57992,7 +57992,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj34-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58017,7 +58017,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj34-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58042,7 +58042,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj34-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58067,7 +58067,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj34-04-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58092,7 +58092,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj34-05-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58117,7 +58117,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj34-06-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58142,7 +58142,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj34-07-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58167,7 +58167,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj34-08-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58192,7 +58192,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj30-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58217,7 +58217,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj30-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58242,7 +58242,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj30-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58267,7 +58267,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj30-04-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58292,7 +58292,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj30-05-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58317,7 +58317,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj30-06-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58342,7 +58342,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj30-07-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58367,7 +58367,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj30-08-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58392,7 +58392,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj00-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58417,7 +58417,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj00-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58442,7 +58442,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj00-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58467,7 +58467,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj00-04-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58492,7 +58492,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj29-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58517,7 +58517,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj29-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58542,7 +58542,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj29-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58567,7 +58567,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj29-04-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58592,7 +58592,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj29-05-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58617,7 +58617,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj29-06-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58642,7 +58642,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj29-07-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58667,7 +58667,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj29-08-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58692,7 +58692,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj37-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58717,7 +58717,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj37-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58742,7 +58742,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj37-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58767,7 +58767,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj37-04-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58792,7 +58792,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj37-05-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58817,7 +58817,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj37-06-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58842,7 +58842,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj37-07-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58867,7 +58867,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj37-08-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58892,7 +58892,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj36-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58917,7 +58917,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj36-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58942,7 +58942,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj36-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58967,7 +58967,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj36-04-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -58992,7 +58992,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj36-05-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59017,7 +59017,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj36-06-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59042,7 +59042,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj36-07-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59067,7 +59067,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-sj36-08-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59092,7 +59092,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-zs28-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59117,7 +59117,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-zs28-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59142,7 +59142,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-zs28-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59167,7 +59167,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-zs28-04-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59192,7 +59192,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-zsjj-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59217,7 +59217,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-zsjj-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59242,7 +59242,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-zsjj-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59267,7 +59267,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-zsjj-04-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59292,7 +59292,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-zszj-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59317,7 +59317,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-zszj-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59342,7 +59342,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-zszj-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59367,7 +59367,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb1-01-01",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59392,7 +59392,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb1-02-02",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59417,7 +59417,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb1-03-03",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59442,7 +59442,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb1-04-04",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59467,7 +59467,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb2-05-05",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59492,7 +59492,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb2-06-06",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59517,7 +59517,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb2-07-07",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59542,7 +59542,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb2-08-08",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59567,7 +59567,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb2-09-09",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59592,7 +59592,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb2-10-10",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59617,7 +59617,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb2-11-11",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59642,7 +59642,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb2-12-12",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59667,7 +59667,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb3-13-13",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59692,7 +59692,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb3-14-14",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59717,7 +59717,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb3-15-15",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59742,7 +59742,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb3-16-16",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59767,7 +59767,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb3-17-17",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59792,7 +59792,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb3-18-18",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59817,7 +59817,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb3-19-19",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",
@@ -59842,7 +59842,7 @@ window.PROMPTS = [
  },
  {
   "id": "imglib-cb3-20-20",
-  "cat": "设计",
+  "cat": "AI绘画",
   "tags": [
    "设计",
    "Midjourney",

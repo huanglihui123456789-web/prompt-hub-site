@@ -160,7 +160,7 @@ for (const series of SERIES) {
     } else {
       const entry = {
         id,
-        cat: '设计',
+        cat: 'AI绘画',
         tags,
         title: titleZh,
         titleZh,
