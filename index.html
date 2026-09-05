@@ -16,7 +16,7 @@
   <meta property="og:image:height" content="720" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="PROMPT 提示词库 · 各行业 AI Prompt 精选" />
-  <meta name="twitter:description" content="收录 2000 条精选中文 / 英文提示词，一键复制即用。" />
+  <meta name="twitter:description" content="收录 2500 余条精选中文 / 英文提示词，一键复制即用。" />
   <meta name="twitter:image" content="https://huanglihui123456789-web.github.io/prompt-hub-site/assets/img/og-cover.jpg" />
 
   <!-- 结构化数据：帮助搜索引擎理解站点内容规模 -->
@@ -45,7 +45,7 @@
   <meta http-equiv="Expires" content="0" />
 
   <!-- 当前应用版本号：bump 它即可让所有访客下次访问时拿到最新版（绕过 GitHub Pages 10 分钟缓存） -->
-  <meta name="app-version" content="20260905s" />
+  <meta name="app-version" content="20260905t" />
   <script>
     (function(){
       try {
@@ -323,6 +323,63 @@ footer{background:var(--bg-sunk);border-top:1px solid var(--line);padding:clamp(
 .footer-brand strong{font-family:var(--serif);font-size:18px;display:block;margin-bottom:8px}
 .footer-brand p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.7}
 
+/* ═══ 回移植 v2：骨架屏 ═══ */
+.skel-card{border:1px solid var(--line);border-radius:16px;background:var(--bg-elev);padding:22px;box-shadow:var(--shadow-sm)}
+.skel{position:relative;display:block;overflow:hidden;background:var(--bg-sunk);border-radius:8px}
+.skel::after{content:"";position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);animation:skelWave 1.4s infinite}
+[data-theme="dark"] .skel::after{background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),transparent)}
+@keyframes skelWave{100%{transform:translateX(100%)}}
+.skel-ico{width:42px;height:42px;border-radius:12px}
+.skel-line{height:13px;margin-top:12px}
+.skel-line.w40{width:40%}.skel-line.w50{width:50%}.skel-line.w60{width:60%}.skel-line.w70{width:70%}.skel-line.w85{width:85%}
+.skel-block{height:64px;margin-top:16px;border-radius:10px}
+
+/* ═══ 回移植 v2：强调色换肤（沿用旧版 4 套色板 + 默认铜金） ═══ */
+html[data-accent="ember"]{--accent:#c2601b;--accent-soft:#d98a4a;--accent-2:#8a4a2a}
+html[data-accent="ember"][data-theme="dark"]{--accent:#e08a4a;--accent-soft:#f0b078;--accent-2:#a86a35}
+html[data-accent="navy"]{--accent:#2f5d7a;--accent-soft:#5a8fb0;--accent-2:#1f3f55}
+html[data-accent="navy"][data-theme="dark"]{--accent:#5d9bc4;--accent-soft:#8fbfe0;--accent-2:#3c6d92}
+html[data-accent="olive"]{--accent:#5b6b3c;--accent-soft:#8a9c62;--accent-2:#3d4a28}
+html[data-accent="olive"][data-theme="dark"]{--accent:#93a86a;--accent-soft:#b8c98f;--accent-2:#5f7045}
+html[data-accent="wine"]{--accent:#8a3a3a;--accent-soft:#b06a58;--accent-2:#5c2626}
+html[data-accent="wine"][data-theme="dark"]{--accent:#c06a5c;--accent-soft:#dd9a86;--accent-2:#8a4438}
+.accent-picker{display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border:1px solid var(--line-strong);border-radius:999px;background:var(--bg-elev);flex:none}
+.acc-dot{width:16px;height:16px;border-radius:50%;border:2px solid transparent;background:var(--c);transition:transform .2s,box-shadow .2s;padding:0;flex:none}
+.acc-dot:hover{transform:scale(1.18)}
+.acc-dot.is-active{border-color:var(--bg-elev);box-shadow:0 0 0 2px var(--c);transform:scale(1.12)}
+
+/* ═══ 回移植 v2：占位符高亮 + 热榜徽标 ═══ */
+.drawer__prompt mark.ph,.fill-preview mark.ph{background:color-mix(in srgb,var(--accent) 16%,transparent);color:inherit;border-bottom:2px dotted var(--accent);border-radius:3px;padding:0 2px}
+.drawer__prompt mark.ph-filled,.fill-preview mark.ph-filled{background:color-mix(in srgb,var(--accent-2) 20%,transparent);color:inherit;border-radius:3px;padding:0 2px;font-weight:600}
+.hot-rank{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:700;color:var(--accent-3);border:1px solid color-mix(in srgb,var(--accent-3) 40%,transparent);background:color-mix(in srgb,var(--accent-3) 8%,transparent);padding:1px 8px;border-radius:999px}
+
+/* ═══ 回移植 v2：弹窗（投稿 / 占位符填充） ═══ */
+.modal{position:fixed;inset:0;z-index:130;display:grid;place-items:center;padding:20px;background:rgba(23,22,15,.46)}
+.modal[hidden]{display:none}
+.modal-card{width:min(640px,94vw);max-height:min(86vh,860px);overflow-y:auto;background:var(--bg-elev);border:1px solid var(--line-strong);border-radius:20px;box-shadow:var(--shadow-lg);padding:26px}
+.modal-card.wide{width:min(760px,94vw)}
+.modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:16px}
+.modal-title{font-family:var(--serif);font-size:21px;font-weight:700;margin:0}
+.modal-sub{font-size:13px;color:var(--muted);margin:4px 0 0;line-height:1.6}
+.field{display:grid;gap:6px;margin-bottom:14px}
+.field label{font-size:12.5px;font-weight:600;color:var(--ink-soft);letter-spacing:.02em}
+.field input,.field select,.field textarea{font:inherit;font-size:14px;color:var(--ink);background:var(--bg);border:1px solid var(--line-strong);border-radius:10px;padding:10px 12px;outline:none;transition:border-color .2s,box-shadow .2s;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}
+.field textarea{min-height:130px;resize:vertical;line-height:1.7}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.modal-foot{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;margin-top:6px}
+.fill-row{display:grid;grid-template-columns:minmax(110px,32%) 1fr;gap:10px;align-items:center;margin-bottom:10px}
+.fill-label{font-size:12.5px;color:var(--accent);font-weight:600;word-break:break-all}
+.fill-preview{white-space:pre-wrap;word-break:break-word;font-size:13.5px;line-height:1.8;background:var(--bg);border:1px dashed var(--line-strong);border-radius:12px;padding:14px;margin-top:6px;max-height:34vh;overflow-y:auto}
+
+/* ═══ 回移植 v2：关于 section ═══ */
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.about-card{border:1px solid var(--line);border-radius:16px;background:var(--bg-elev);padding:24px;box-shadow:var(--shadow-sm)}
+.about-card h3{font-family:var(--serif);font-size:17px;margin:0 0 8px;display:flex;align-items:center;gap:8px}
+.about-card h3 .k{color:var(--accent-3);font-size:13px}
+.about-card p{font-size:13.5px;color:var(--ink-soft);margin:0;line-height:1.85}
+.about-card .big{font-family:var(--serif);font-size:34px;font-weight:700;color:var(--accent);line-height:1.1;font-variant-numeric:tabular-nums}
+
 @media (max-width:900px){
   .site-nav{display:none}
   .hero-spark{display:none}
@@ -332,6 +389,9 @@ footer{background:var(--bg-sunk);border-top:1px solid var(--line);padding:clamp(
 
 /* ═══ 手机端（≤760px）：对齐线上已定稿方案——chips 单行横滑 ═══ */
 @media (max-width:760px){
+  .accent-picker{gap:4px;padding:4px 6px}
+  .acc-dot{width:13px;height:13px}
+  .field-row{grid-template-columns:1fr}
   .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px}
   .chips::-webkit-scrollbar{display:none}
   .chip{flex:none}
@@ -373,6 +433,13 @@ footer{background:var(--bg-sunk);border-top:1px solid var(--line);padding:clamp(
         <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
         <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
       </button>
+      <span class="accent-picker header-only" role="group" aria-label="强调色换肤">
+        <button class="acc-dot" data-accent="default" style="--c:#b07d2b" type="button" aria-label="默认铜金"></button>
+        <button class="acc-dot" data-accent="ember" style="--c:#c2601b" type="button" aria-label="窑火橙"></button>
+        <button class="acc-dot" data-accent="navy" style="--c:#2f5d7a" type="button" aria-label="黛蓝"></button>
+        <button class="acc-dot" data-accent="olive" style="--c:#5b6b3c" type="button" aria-label="橄榄绿"></button>
+        <button class="acc-dot" data-accent="wine" style="--c:#8a3a3a" type="button" aria-label="酒红"></button>
+      </span>
     </div>
   </div>
 </header>
@@ -385,7 +452,7 @@ footer{background:var(--bg-sunk);border-top:1px solid var(--line);padding:clamp(
   <span class="hero-side" aria-hidden="true">Prompt Library · 提示词库 · 2026</span>
   <span class="hero-spark" aria-hidden="true">✦</span>
   <div class="hero-content">
-    <p class="hero-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 17l9 5 9-5"/></svg> 13 个行业 · 开源精选 · 一键复制</p>
+    <p class="hero-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 17l9 5 9-5"/></svg> 14 个行业 · 开源精选 · 一键复制</p>
     <h1 class="hero-title">把好问题，<br />交给 <em>每一个行业</em></h1>
     <p class="hero-sub">收录精选中文 / 英文提示词；全部来自开源社区（CC0 · MIT · Apache-2.0），保留原文、逐字校准。附法·德·西·葡·荷多语言包，搜一搜，复制即用。</p>
     <div class="search-wrap">
@@ -402,7 +469,7 @@ footer{background:var(--bg-sunk);border-top:1px solid var(--line);padding:clamp(
     </div>
     <div class="hero-stats">
       <div><strong id="statTotal">—</strong><span>条提示词</span></div>
-      <div><strong>13</strong><span>个行业</span></div>
+      <div><strong>14</strong><span>个行业</span></div>
       <div><strong>CC0</strong><span>公开领域</span></div>
     </div>
   </div>
@@ -430,6 +497,8 @@ footer{background:var(--bg-sunk);border-top:1px solid var(--line);padding:clamp(
     </label>
     <button class="tool-btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7l3-7Z"/></svg> 我的收藏</button>
     <button class="tool-btn" type="button" id="surpriseBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.2"/><circle cx="15.5" cy="15.5" r="1.2"/><circle cx="15.5" cy="8.5" r="1.2"/><circle cx="8.5" cy="15.5" r="1.2"/></svg> 随机一条</button>
+    <button class="tool-btn" id="hotBtn" type="button" aria-pressed="false" title="按综合热度（评分 × 浏览 × 复制）排序的 Top 100">🔥 热榜</button>
+    <button class="tool-btn" id="submitBtn" type="button" title="投稿你的提示词">✍ 投稿</button>
     <span class="lang-filter" role="group" aria-label="按语言筛选">
       <button class="tool-btn lang-btn is-active" data-lang="all" type="button">全部</button>
       <button class="tool-btn lang-btn" data-lang="zh" type="button">中文</button>
@@ -462,7 +531,15 @@ footer{background:var(--bg-sunk);border-top:1px solid var(--line);padding:clamp(
     <span><i class="tier-dot dot-blue"></i>社区 / 原生 · 未校验</span>
   </p>
 
-  <div class="card-grid" id="promptGrid"></div>
+  <div class="card-grid" id="promptGrid" aria-busy="true">
+    <!-- 骨架屏：分片数据就绪后被 render() 覆盖 -->
+    <div class="skel-card" aria-hidden="true"><span class="skel skel-ico"></span><span class="skel skel-line w60"></span><span class="skel skel-line w85"></span><span class="skel skel-line w85"></span><span class="skel skel-line w40"></span><span class="skel skel-block"></span></div>
+    <div class="skel-card" aria-hidden="true"><span class="skel skel-ico"></span><span class="skel skel-line w50"></span><span class="skel skel-line w85"></span><span class="skel skel-line w70"></span><span class="skel skel-line w40"></span><span class="skel skel-block"></span></div>
+    <div class="skel-card" aria-hidden="true"><span class="skel skel-ico"></span><span class="skel skel-line w70"></span><span class="skel skel-line w85"></span><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span><span class="skel skel-block"></span></div>
+    <div class="skel-card" aria-hidden="true"><span class="skel skel-ico"></span><span class="skel skel-line w40"></span><span class="skel skel-line w85"></span><span class="skel skel-line w85"></span><span class="skel skel-line w50"></span><span class="skel skel-block"></span></div>
+    <div class="skel-card" aria-hidden="true"><span class="skel skel-ico"></span><span class="skel skel-line w60"></span><span class="skel skel-line w70"></span><span class="skel skel-line w85"></span><span class="skel skel-line w40"></span><span class="skel skel-block"></span></div>
+    <div class="skel-card" aria-hidden="true"><span class="skel skel-ico"></span><span class="skel skel-line w50"></span><span class="skel skel-line w85"></span><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span><span class="skel skel-block"></span></div>
+  </div>
 
   <div class="empty-state" id="emptyState" hidden>
     <span class="mark">✦</span>
@@ -473,9 +550,25 @@ footer{background:var(--bg-sunk);border-top:1px solid var(--line);padding:clamp(
   </div>
 </div>
 </section>
+<!-- ══ 关于（回移植 v2） ══ -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">关于来源 · ABOUT</span>
+      <h2 class="section-title">内容从哪里来</h2>
+      <p class="section-desc">本站是纯静态提示词库：没有黑箱、没有搬运，每一条都标注来源与可信档位。</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-card"><h3><span class="k">✦</span>零翻译原则</h3><p>提示词正文保留源语言原文、逐字收录，绝不做机器翻译——翻译会损耗指令细节、降低执行与出图的准确率。标题对照与标签由人工整理，正文一字不改。</p></div>
+      <div class="about-card"><h3><span class="k">✦</span>来源可信</h3><p>内容来自开源社区与作者自有库：MAGA-ROLE-80、gretelai（Apache-2.0）、PlexPt、LangGPT 等数据集，以及好莱坞电影风格库、极限工业级图片库。绿标 = 已校准 / 精选，蓝标 = 社区 / 原生。</p></div>
+      <div class="about-card"><h3><span class="k">✦</span>数据规模</h3><p class="big" id="aboutTotal">—</p><p><span id="aboutCats">14</span> 个行业归并为 5 大栏目，另附法 / 德 / 西 / 葡 / 荷多语言分包，按需懒加载。</p></div>
+      <div class="about-card"><h3><span class="k">✦</span>参与投稿</h3><p>有好提示词想让更多人用上？填写投稿表单：可先保存到本机预览效果，也可一键生成投稿文本，粘贴到仓库 Issue 即可公开入库。</p><p style="margin-top:12px"><button class="btn-ghost" id="submitOpen2" type="button">✍ 我要投稿</button></p></div>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer id="about">
+<footer>
   <div class="container footer-inner">
     <div class="footer-brand">
       <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 17l9 5 9-5"/></svg></span>
@@ -505,33 +598,82 @@ footer{background:var(--bg-sunk);border-top:1px solid var(--line);padding:clamp(
   </div>
   <div class="drawer__foot">
     <button class="btn btn--solid" id="dCopy">复制提示词</button>
+    <button class="btn btn--ghost" id="dFill" hidden>🪄 填充占位符</button>
     <button class="btn btn--ghost" id="dClose2">关闭</button>
   </div>
 </aside>
 
 <div class="toast" id="toast">已复制到剪贴板</div>
 
+<!-- ══ 投稿弹窗（回移植 v2：本地保存 + 生成投稿文本） ══ -->
+<div class="modal" id="submitModal" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="submitTitle">
+    <div class="modal-head">
+      <div><h3 class="modal-title" id="submitTitle">✍ 投稿提示词</h3><p class="modal-sub">「保存到本机」仅存于本机浏览器；公开入库请用「生成投稿文本」，粘贴到仓库 Issue。</p></div>
+      <button class="icon-btn" id="submitClose" aria-label="关闭">✕</button>
+    </div>
+    <form id="submitForm">
+      <div class="field"><label for="sf-title">标题 *</label><input id="sf-title" name="title" required maxlength="60" placeholder="如：小红书爆款文案写手" /></div>
+      <div class="field-row">
+        <div class="field"><label for="sf-cat">行业 *</label><select id="sf-cat" name="cat"></select></div>
+        <div class="field"><label for="sf-tags">标签（逗号分隔）</label><input id="sf-tags" name="tags" placeholder="写作, 自媒体" /></div>
+      </div>
+      <div class="field"><label for="sf-source">来源 / 署名</label><input id="sf-source" name="source" placeholder="默认：社区投稿" /></div>
+      <div class="field"><label for="sf-prompt">提示词全文 *</label><textarea id="sf-prompt" name="prompt" required placeholder="粘贴完整提示词（保留原文，勿翻译）…"></textarea></div>
+      <div class="modal-foot">
+        <button class="btn-ghost" id="submitCancel" type="button">取消</button>
+        <button class="btn-ghost" id="submitCopyText" type="button">生成投稿文本</button>
+        <button class="btn btn--solid" type="submit">保存到本机</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ══ 占位符填充弹窗（回移植 v2） ══ -->
+<div class="modal" id="fillModal" hidden>
+  <div class="modal-card wide" role="dialog" aria-modal="true" aria-labelledby="fillTitle">
+    <div class="modal-head">
+      <div><h3 class="modal-title" id="fillTitle">🪄 填充占位符</h3><p class="modal-sub">填入具体内容，实时预览，一键复制成品提示词。空着的占位符保持原样。</p></div>
+      <button class="icon-btn" id="fillClose" aria-label="关闭">✕</button>
+    </div>
+    <div id="fillRows"></div>
+    <p class="label" style="margin:14px 0 6px">实时预览</p>
+    <div class="fill-preview" id="fillPreview"></div>
+    <div class="modal-foot">
+      <button class="btn-ghost" id="fillCancel" type="button">取消</button>
+      <button class="btn btn--solid" id="fillCopy">复制成品提示词</button>
+    </div>
+  </div>
+</div>
+
 <!-- 数据：首屏仅同步 chunk-1（约 465KB），chunk-2~5 由浏览器顺序执行补全，全部就绪后再初始化界面 -->
-<script src="assets/js/data/chunk-1.js?v=20260905s" defer></script>
-<script src="assets/js/data/chunk-2.js?v=20260905s" defer></script>
-<script src="assets/js/data/chunk-3.js?v=20260905s" defer></script>
-<script src="assets/js/data/chunk-4.js?v=20260905s" defer></script>
-<script src="assets/js/data/chunk-5.js?v=20260905s" defer></script>
+<script src="assets/js/data/chunk-1.js?v=20260905t" defer></script>
+<script src="assets/js/data/chunk-2.js?v=20260905t" defer></script>
+<script src="assets/js/data/chunk-3.js?v=20260905t" defer></script>
+<script src="assets/js/data/chunk-4.js?v=20260905t" defer></script>
+<script src="assets/js/data/chunk-5.js?v=20260905t" defer></script>
 <script>
 window.addEventListener('DOMContentLoaded', function(){
 /* ═══ 数据源：优先真实生产库（chunk-1~5 → window.PROMPTS，2202 条），缺失时显示提示 ═══ */
 const RAW = (window.PROMPTS && window.PROMPTS.length) ? window.PROMPTS : [];
 const IS_FULL = !!RAW.length;
-const VER = '20260905s';
+const VER = '20260905t';
 
 function normalize(p, i){
   return Object.assign({}, p, {
     no: String(i + 1).padStart(4, '0'),
     snippet: (p.prompt || '').replace(/\s+/g, ' ').slice(0, 300),
-    chars: (p.prompt || '').length || 0
+    chars: (p.prompt || '').length || 0,
+    heat: p.heat || 0, views: p.views || 0, copies: p.copies || 0, score: p.score || 0
   });
 }
-const BASE = RAW.map(normalize);
+/* —— 回移植 v2：本地社区投稿（localStorage，仅存本机） —— */
+function lsGet(k, f){ try{ var v = localStorage.getItem(k); return v == null ? f : v; }catch(e){ return f; } }
+function lsSet(k, v){ try{ localStorage.setItem(k, v); }catch(e){} }
+let COMMUNITY = [];
+try { COMMUNITY = JSON.parse(lsGet('prompt-community', '[]')) || []; } catch(e) {}
+function saveCommunity(){ lsSet('prompt-community', JSON.stringify(COMMUNITY)); }
+const BASE = RAW.map(normalize).concat(COMMUNITY.map(normalize));
 let DATA = BASE.slice();
 const REAL_COUNTS = {};
 let TOTAL = DATA.length;
@@ -567,6 +709,8 @@ function rebuild(){
   TOTAL = DATA.length;
   EXPANDED_COUNT = DATA.filter(p => EXPANDED_RE.test(p.source || '')).length;
   $('#statTotal').textContent = TOTAL;
+  const at = $('#aboutTotal'); if (at) at.textContent = TOTAL + ' 条';
+  const ac = $('#aboutCats'); if (ac) ac.textContent = new Set(DATA.map(p => p.cat)).size;
 }
 
 /* ═══ 13 行业 → 5 大栏目（count 由真实数据动态计算） ═══ */
@@ -600,7 +744,7 @@ const ICONS = {
   '法律':'<path d="M12 2v20M7 6h10M7 18h10M2 10h20"/>',
   '商业/金融':'<path d="M3 3v18h18M7 15l4-5 3 3 5-7"/>'
 };
-const state = { rubric:'all', cat:null, tag:null, tier:'all', lang:'all', q:'', sort:'default', expanded:false };
+const state = { rubric:'all', cat:null, tag:null, tier:'all', lang:'all', q:'', sort:'default', expanded:false, view:'all' };
 const $ = s => document.querySelector(s);
 const esc = s => String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const zh = p => (p.titleZh && p.titleZh.trim()) ? p.titleZh.trim() : (p.title || '未命名');
@@ -608,6 +752,104 @@ const icon = c => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
 
 if (!IS_FULL){
   const t = $('#toast'); t.textContent = '⚠️ 数据未加载，请刷新页面'; t.dataset.show = 'true';
+}
+
+/* ═══ 回移植 v2：占位符高精度识别 / 高亮 / 填充 ═══
+   规则沿用旧版：括号片段仅当内部为纯标识符 +（全大写 ≥2 字母 或 命中占位关键词）+ 非 HTML 标签名
+   才判定为「待填变量」，避免把 <div>、{{ scale:1.03 }} 之类代码误标。复制仍取原始正文。 */
+const HTML_TAGS = new Set(('div span p a img ul ol li h1 h2 h3 h4 h5 h6 header footer nav section ' +
+  'article main aside br hr svg path link head body title script style table tr td th ' +
+  'form input button label select option textarea video audio source iframe canvas meta small ' +
+  'strong em code pre blockquote figure figcaption picture details summary dialog ' +
+  'defs g circle rect line polyline polygon use lineargradient radialgradient stop').split(' '));
+const PH_KW = ['placeholder','topic','subject','input','example','paste','insert','describe','context',
+  'requirement','constraint','goal','location','workflow','challenge','aspect','target','audience',
+  'product','company','user','content','task','question','keyword','summary','language','style',
+  'tone','format','field','value','date','count','list','item','name','prompt'];
+function phRegex(){ return /\{\{[^{}]*\}\}|\[\[[^\]]*\]\]|<<[^>]*>>|\[[^\]]*\]|<[^>]*>/g; }
+function isPlaceholder(inner){
+  if(!/^[A-Za-z_][A-Za-z0-9_ ]*$/.test(inner)) return false;
+  const low = inner.toLowerCase();
+  if(HTML_TAGS.has(low)) return false;
+  const allCaps = inner.replace(/[^A-Za-z]/g, '').length >= 2 && inner === inner.toUpperCase();
+  return allCaps || PH_KW.some(k => low.indexOf(k) !== -1);
+}
+function highlightPlaceholders(raw){
+  if(!raw) return '';
+  let out = '', last = 0, m; const re = phRegex();
+  while((m = re.exec(raw))){
+    const tok = m[0], inner = tok.slice(1, -1);
+    out += esc(raw.slice(last, m.index));
+    out += isPlaceholder(inner) ? `<mark class="ph" title="可替换占位符">${esc(tok)}</mark>` : esc(tok);
+    last = m.index + tok.length;
+  }
+  return out + esc(raw.slice(last));
+}
+function fillPrompt(raw, valMap){
+  let out = '', last = 0, m; const re = phRegex();
+  while((m = re.exec(raw))){
+    const tok = m[0], inner = tok.slice(1, -1);
+    out += raw.slice(last, m.index);
+    out += (isPlaceholder(inner) && valMap[tok] != null && valMap[tok].length) ? valMap[tok] : tok;
+    last = m.index + tok.length;
+  }
+  return out + raw.slice(last);
+}
+function toastMsg(msg){
+  const t = $('#toast');
+  t.textContent = msg; t.dataset.show = 'true';
+  clearTimeout(t._t); t._t = setTimeout(() => t.dataset.show = 'false', 2000);
+}
+function openModal(m){ m.hidden = false; document.body.style.overflow = 'hidden'; }
+function closeModal(m){ m.hidden = true; document.body.style.overflow = ''; }
+function openFillModal(raw){
+  const modal = $('#fillModal'), rows = $('#fillRows'), preview = $('#fillPreview');
+  const seen = {}, uniq = []; let m; const re = phRegex(); re.lastIndex = 0;
+  while((m = re.exec(raw))){
+    const tok = m[0], inner = tok.slice(1, -1);
+    if(isPlaceholder(inner) && !seen[tok]){ seen[tok] = true; uniq.push(tok); }
+  }
+  if(!uniq.length){ toastMsg('这条提示词没有可填充的占位符'); return; }
+  rows.innerHTML = uniq.map(tok =>
+    `<label class="fill-row"><span class="fill-label">${esc(tok)}</span><input type="text" data-tok="${esc(tok)}" placeholder="填入具体内容…" /></label>`).join('');
+  const inputs = [...rows.querySelectorAll('input')];
+  const buildMap = () => { const v = {}; inputs.forEach(i => v[i.dataset.tok] = i.value); return v; };
+  function update(){
+    const map = buildMap(); let html = '', last = 0, mm; const pr = phRegex(); pr.lastIndex = 0;
+    while((mm = pr.exec(raw))){
+      const tok = mm[0], inner = tok.slice(1, -1);
+      html += esc(raw.slice(last, mm.index));
+      html += isPlaceholder(inner)
+        ? ((map[tok] && map[tok].length) ? `<mark class="ph-filled">${esc(map[tok])}</mark>` : esc(tok))
+        : esc(tok);
+      last = mm.index + tok.length;
+    }
+    preview.innerHTML = html + esc(raw.slice(last));
+  }
+  inputs.forEach(i => i.addEventListener('input', update));
+  update();
+  modal._raw = raw;
+  openModal(modal);
+  if(inputs[0]) inputs[0].focus();
+}
+function buildSubmitCats(){
+  const sel = $('#sf-cat');
+  if(!sel) return;
+  sel.innerHTML = [...new Set(DATA.map(p => p.cat))].map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join('');
+}
+function initAccent(){
+  const KEY = 'prompt-accent';
+  const saved = lsGet(KEY, '');
+  if(saved && saved !== 'default') document.documentElement.setAttribute('data-accent', saved);
+  const dots = [...document.querySelectorAll('.acc-dot')];
+  const sync = () => dots.forEach(d => d.classList.toggle('is-active', (d.dataset.accent || 'default') === (document.documentElement.getAttribute('data-accent') || 'default')));
+  sync();
+  dots.forEach(d => d.addEventListener('click', () => {
+    const v = d.dataset.accent || 'default';
+    if(v === 'default') document.documentElement.removeAttribute('data-accent');
+    else document.documentElement.setAttribute('data-accent', v);
+    sync(); lsSet(KEY, v);
+  }));
 }
 
 /* ── 栏目 ── */
@@ -665,7 +907,7 @@ function filtered(){
 }
 
 /* ── 卡片（★ 档案编号；浏览时首条为编辑式头条） ── */
-function cardHTML(p,isLead){
+function cardHTML(p,isLead,rank){
   return `<article class="prompt-card${isLead?' is-lead':''}" data-id="${esc(p.id)}" tabindex="0" role="button" aria-label="查看提示词详情">
     <span class="card-glare"></span>
     <div class="card-top">
@@ -673,6 +915,7 @@ function cardHTML(p,isLead){
       <span class="card-head-text">
         <span class="card-cat">
           <span class="card-no">${esc(p.no)}</span>
+          ${rank ? `<span class="hot-rank">🔥 #${rank}</span>` : ''}
           <span>${esc(p.cat)}</span>
           <span class="tier-badge ${p.verified?'tier-green':'tier-blue'}"><i class="tier-dot" style="color:${p.verified?'#3B6D11':'#185FA5'}"></i>${p.verified?'已校准':'社区'}</span>
         </span>
@@ -694,9 +937,11 @@ function render(){
   renderRubrics();
   const items = filtered();
   renderCats(); renderTags(items);
-  $('#resultCount').innerHTML = `找到 <b>${items.length}</b> 条`;
+  const grid = $('#promptGrid'); grid.removeAttribute('aria-busy');
+  const hot = state.view === 'hot';
   const precise = !!(state.q.trim()||state.cat||state.tag||state.tier!=='all'||state.lang!=='all');
   if(!items.length){
+    $('#resultCount').innerHTML = hot ? '热榜暂无内容' : '找到 <b>0</b> 条';
     $('#promptGrid').innerHTML=''; $('#emptyState').hidden=false;
     $('#emptyChips').innerHTML=['周报','文案','简历','翻译','代码','设计','法律顾问','电影感','小说']
       .map(q=>`<button class="empty-chip" data-q="${q}">${q}</button>`).join('');
@@ -704,8 +949,12 @@ function render(){
     return;
   }
   $('#emptyState').hidden = true;
-  const lead = !precise && items.length>3;
-  $('#promptGrid').innerHTML = items.map((p,i)=>cardHTML(p, lead && i===0)).join('');
+  const list = hot
+    ? items.slice().sort((a,b)=>((b.score||0)*(b.views||0)*(b.copies||0))-((a.score||0)*(a.views||0)*(a.copies||0))).slice(0,100)
+    : items;
+  $('#resultCount').innerHTML = hot ? `热榜 <b>${list.length}</b> 条 · 综合热度 Top 100` : `找到 <b>${items.length}</b> 条`;
+  const lead = !precise && !hot && items.length>3;
+  $('#promptGrid').innerHTML = list.map((p,i)=>cardHTML(p, lead && i===0, hot ? i+1 : 0)).join('');
   bind();
 }
 
@@ -777,7 +1026,12 @@ function openDrawer(id){
   $('#dNo').textContent = 'No.' + p.no;
   $('#dRubric').textContent = p.cat;
   $('#dTitle').textContent = zh(p);
-  $('#dPrompt').textContent = p.prompt || p.snippet || '（无正文）';
+  const body = p.prompt || p.snippet || '（无正文）';
+  $('#dPrompt').innerHTML = highlightPlaceholders(body);
+  let hasPh = false; const re = phRegex(); re.lastIndex = 0; let mm;
+  while ((mm = re.exec(p.prompt || ''))) { if (isPlaceholder(mm[0].slice(1, -1))) { hasPh = true; break; } }
+  const fb = $('#dFill'); fb.hidden = !hasPh;
+  if (hasPh) fb.onclick = () => openFillModal(p.prompt || '');
   $('#dMeta').innerHTML = `
     <div class="meta-row"><dt>编号</dt><dd>No.${esc(p.no)}</dd></div>
     <div class="meta-row"><dt>分类</dt><dd>${esc(p.cat)}</dd></div>
@@ -809,7 +1063,7 @@ document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{
   else render();
 });
 document.querySelectorAll('.hero-chip').forEach(b=>b.onclick=()=>{state.q=b.dataset.q;$('#searchInput').value=b.dataset.q;render();document.querySelector('#library').scrollIntoView({behavior:'smooth'})});
-$('#clearAll').onclick=()=>{Object.assign(state,{rubric:'all',cat:null,tag:null,tier:'all',lang:'all',q:'',sort:'default'});$('#searchInput').value='';document.querySelectorAll('[data-tier],[data-lang]').forEach(x=>x.classList.remove('is-active'));document.querySelector('[data-tier="all"]').classList.add('is-active');document.querySelector('[data-lang="all"]').classList.add('is-active');render()};
+$('#clearAll').onclick=()=>{Object.assign(state,{rubric:'all',cat:null,tag:null,tier:'all',lang:'all',q:'',sort:'default',view:'all'});$('#searchInput').value='';document.querySelectorAll('[data-tier],[data-lang]').forEach(x=>x.classList.remove('is-active'));document.querySelector('[data-tier="all"]').classList.add('is-active');document.querySelector('[data-lang="all"]').classList.add('is-active');const hb=$('#hotBtn');hb.classList.remove('is-active');hb.setAttribute('aria-pressed','false');render()};
 $('#expandCount').textContent = '+' + EXPANDED_COUNT;
 $('#expandBtn').onclick=()=>{
   state.expanded = !state.expanded;
@@ -819,6 +1073,59 @@ $('#expandBtn').onclick=()=>{
   render();
 };
 $('#themeToggle').onclick=()=>{const h=document.documentElement;h.dataset.theme=h.dataset.theme==='dark'?'light':'dark'};
+
+/* ── 回移植 v2 接线：热榜 / 投稿 / 填充 / 换肤 ── */
+$('#hotBtn').onclick=()=>{
+  state.view = state.view==='hot' ? 'all' : 'hot';
+  const b=$('#hotBtn');
+  b.classList.toggle('is-active', state.view==='hot');
+  b.setAttribute('aria-pressed', String(state.view==='hot'));
+  render();
+};
+[['#submitModal','#submitClose','#submitCancel'],['#fillModal','#fillClose','#fillCancel']].forEach(([ms,c1,c2])=>{
+  const m=$(ms);
+  m.addEventListener('click',e=>{ if(e.target===m) closeModal(m); });
+  $(c1).addEventListener('click',()=>closeModal(m));
+  $(c2).addEventListener('click',()=>closeModal(m));
+});
+const openSubmit=()=>{ buildSubmitCats(); openModal($('#submitModal')); };
+$('#submitBtn').onclick=openSubmit;
+$('#submitOpen2').onclick=openSubmit;
+$('#submitForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const fd=new FormData(e.target);
+  const title=(fd.get('title')||'').toString().trim();
+  const prompt=(fd.get('prompt')||'').toString().trim();
+  if(!title||!prompt){ toastMsg('请填写标题与提示词'); return; }
+  const entry={
+    id:'c-'+Date.now(), cat:(fd.get('cat')||'效率/生活').toString(),
+    tags:(fd.get('tags')||'').toString().split(/[,，]/).map(s=>s.trim()).filter(Boolean),
+    title:title, titleZh:title, prompt:prompt,
+    source:(fd.get('source')||'').toString().trim()||'社区投稿', sourceUrl:'', contributor:'社区用户',
+    heat:0, views:0, copies:0, score:0, verified:false, community:true, lang:'zh'
+  };
+  COMMUNITY.push(entry); saveCommunity();
+  BASE.push(normalize(entry)); rebuild(); render();
+  closeModal($('#submitModal')); e.target.reset();
+  toastMsg('已保存到本机浏览器（刷新后仍在）');
+});
+$('#submitCopyText').onclick=()=>{
+  const fd=new FormData($('#submitForm'));
+  const title=(fd.get('title')||'').toString().trim(), prompt=(fd.get('prompt')||'').toString().trim();
+  if(!title||!prompt){ toastMsg('请先填写标题与提示词全文'); return; }
+  const tags=(fd.get('tags')||'').toString().split(/[,，]/).map(s=>s.trim()).filter(Boolean);
+  const src=(fd.get('source')||'').toString().trim()||'社区投稿';
+  const txt='## 投稿提示词\n\n- 标题：'+title+'\n- 行业：'+(fd.get('cat')||'')+'\n- 标签：'+tags.join('、')+'\n- 来源/署名：'+src+'\n\n```json\n'+JSON.stringify({title:title,cat:fd.get('cat')||'',tags:tags,prompt:prompt,source:src},null,1)+'\n```\n\n（复制以上内容到仓库 GitHub Issue 即可公开投稿）';
+  copyText(txt, null);
+};
+$('#fillCopy').onclick=()=>{
+  const m=$('#fillModal'), raw=m._raw; if(!raw) return;
+  const map={};
+  document.querySelectorAll('#fillRows input').forEach(i=>map[i.dataset.tok]=i.value);
+  copyText(fillPrompt(raw, map), $('#fillCopy'));
+  closeModal(m);
+};
+initAccent();
 $('#scrim').onclick=closeDrawer;
 $('#dClose').onclick=closeDrawer;
 $('#dClose2').onclick=closeDrawer;
@@ -826,10 +1133,15 @@ $('#dCopy').onclick=()=>current&&copyText(current.prompt||current.snippet||'',$(
 addEventListener('scroll',()=>{$('#siteHeader').classList.toggle('scrolled',scrollY>20)},{passive:true});
 document.addEventListener('keydown',e=>{
   if(e.key==='/'&&document.activeElement!==$('#searchInput')){e.preventDefault();$('#searchInput').focus()}
-  if(e.key==='Escape')closeDrawer();
+  if(e.key==='Escape'){
+    if(!$('#fillModal').hidden) closeModal($('#fillModal'));
+    else if(!$('#submitModal').hidden) closeModal($('#submitModal'));
+    else closeDrawer();
+  }
 });
 rebuild();
 render();
+buildSubmitCats();
 });
 </script>
 </body>
